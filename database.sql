@@ -3,7 +3,6 @@
 -- You must use double quotes in every query that user is in:
 -- ex. SELECT * FROM "user";
 -- Otherwise you will have errors!
-
 CREATE TABLE "client" (
 "id" SERIAL PRIMARY KEY,
 "first_name" VARCHAR(50),
@@ -20,6 +19,7 @@ CREATE TABLE "state" (
 );
 CREATE TABLE "user" (
 "id" SERIAL PRIMARY KEY,
+"username" VARCHAR (255),
 "first_name" VARCHAR(50),
 "last_name" VARCHAR(50),
 "email" VARCHAR(50),
@@ -29,6 +29,7 @@ CREATE TABLE "user" (
 "company" VARCHAR(50),
 "access_level" INT DEFAULT 2
 );
+
 CREATE TABLE "state_user" (
 "id" SERIAL PRIMARY KEY,
 "state_id" SERIAL REFERENCES "state"
