@@ -19,6 +19,14 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
+import ArticleOne from '../ArticleOne/ArticleOne';
+import ArticleTwo from '../ArticleTwo/ArticleTwo';
+import ArticleThree from '../ArticleThree/ArticleThree';
+import ArticleFour from '../ArticleFour/ArticleFour';
+import ArticleFive from '../ArticleFive/ArticleFive';
+import ArticleSix from '../ArticleSix/ArticleSix';
+
+
 
 import './App.css';
 
@@ -37,9 +45,35 @@ function App() {
         <Nav />
         <Switch>
 
-          <Route exact from="/resources">
+        {/* Resources Tab & Articles */}
+          <Route exact path="/resources">
             <ResourcesPage />
           </Route>
+
+          <Route exact path="/1">
+            <ArticleOne />
+          </Route>
+
+          <Route exact path="/2">
+            <ArticleTwo />
+          </Route>
+
+          <Route exact path="/3">
+            <ArticleThree />
+          </Route>
+
+          <Route exact path="/4">
+            <ArticleFour />
+          </Route>
+
+          <Route exact path="/5">
+            <ArticleFive />
+          </Route>
+
+          <Route exact path="/6">
+            <ArticleSix />
+          </Route>
+
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
 
