@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// LEFT OFF ------ Fix spacing for mobile view AND set width for desktop view
 
 function AboutPage() {
   
