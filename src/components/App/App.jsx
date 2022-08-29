@@ -18,6 +18,8 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
+import ResourcesPage from '../ResourcesPage/ResourcesPage';
+
 import './App.css';
 
 function App() {
@@ -34,6 +36,10 @@ function App() {
       <div>
         <Nav />
         <Switch>
+
+          <Route exact from="/resources">
+            <ResourcesPage />
+          </Route>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
 
