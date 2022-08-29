@@ -18,7 +18,7 @@ CREATE TABLE "state" (
 "id" SERIAL PRIMARY KEY,
 "name" VARCHAR(25)
 );
-CREATE TABLE "agent" (
+CREATE TABLE "user" (
 "id" SERIAL PRIMARY KEY,
 "first_name" VARCHAR(50),
 "last_name" VARCHAR(50),
@@ -29,18 +29,18 @@ CREATE TABLE "agent" (
 "company" VARCHAR(50),
 "access_level" INT DEFAULT 2
 );
-CREATE TABLE "state_agent" (
+CREATE TABLE "state_user" (
 "id" SERIAL PRIMARY KEY,
 "state_id" SERIAL REFERENCES "state"
 ON DELETE CASCADE,
-"agent_id" SERIAL REFERENCES "agent"
+"user_id" SERIAL REFERENCES "user"
 ON DELETE CASCADE
 );
-CREATE TABLE "client_agent" (
+CREATE TABLE "client_user" (
 "id" SERIAL PRIMARY KEY,
 "client_id" SERIAL REFERENCES "client"
 ON DELETE CASCADE,
-"agent_id" SERIAL REFERENCES "agent"
+"user_id" SERIAL REFERENCES "user"
 ON DELETE CASCADE,
 "status" INT,
 "matched_date" DATE
