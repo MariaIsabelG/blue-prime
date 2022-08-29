@@ -28,9 +28,9 @@ function Nav() {
     //           Home
     //         </Link>
 
-    //         <Link className="navLink" to="/info">
-    //           Info Page
-    //         </Link>
+            <Link className="navLink" to="/resources">
+              Resources
+            </Link>
 
     //         <LogOutButton className="navLink" />
     //       </>
