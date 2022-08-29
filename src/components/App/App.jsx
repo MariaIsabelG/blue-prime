@@ -19,12 +19,17 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
-import ArticleOne from '../ArticleOne/ArticleOne';
-import ArticleTwo from '../ArticleTwo/ArticleTwo';
-import ArticleThree from '../ArticleThree/ArticleThree';
-import ArticleFour from '../ArticleFour/ArticleFour';
-import ArticleFive from '../ArticleFive/ArticleFive';
-import ArticleSix from '../ArticleSix/ArticleSix';
+import CategoryOne from '../Categories/CategoryOne/CategoryOne';
+import CategoryTwo from '../Categories/CategoryTwo/CategoryTwo';
+import CategoryThree from '../Categories/CategoryThree/CategoryThree';
+import CategoryFour from '../Categories/CategoryFour/CategoryFour';
+
+import ArticleOne from '../Articles/ArticleOne/ArticleOne';
+import ArticleTwo from '../Articles/ArticleTwo/ArticleTwo';
+import ArticleThree from '../Articles/ArticleThree/ArticleThree';
+import ArticleFour from '../Articles/ArticleFour/ArticleFour';
+import ArticleFive from '../Articles/ArticleFive/ArticleFive';
+import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
 
 
@@ -45,34 +50,56 @@ function App() {
         <Nav />
         <Switch>
 
-        {/* Resources Tab & Articles */}
+        {/* Resource Landing Page */}
           <Route exact path="/resources">
             <ResourcesPage />
           </Route>
 
-          <Route exact path="/1">
+          {/* Categories */}
+          <Route exact path="/c1">
+            <CategoryOne />
+          </Route>
+
+          <Route exact path="/c2">
+            <CategoryTwo />
+          </Route>
+
+          <Route exact path="/c3">
+            <CategoryThree />
+          </Route>
+
+          <Route exact path="/c4">
+            <CategoryFour />
+          </Route>
+
+
+          {/* Articles */}
+
+          <Route exact path="/a1">
             <ArticleOne />
           </Route>
 
-          <Route exact path="/2">
+          <Route exact path="/a2">
             <ArticleTwo />
           </Route>
 
-          <Route exact path="/3">
+          <Route exact path="/a3">
             <ArticleThree />
           </Route>
 
-          <Route exact path="/4">
+          <Route exact path="/a4">
             <ArticleFour />
           </Route>
 
-          <Route exact path="/5">
+          <Route exact path="/a5">
             <ArticleFive />
           </Route>
 
-          <Route exact path="/6">
+          <Route exact path="/a6">
             <ArticleSix />
           </Route>
+
+          
 
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
