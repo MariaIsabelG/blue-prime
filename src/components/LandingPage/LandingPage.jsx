@@ -43,7 +43,7 @@ function LandingPage() {
 
             <a
               className="inline-flex items-center px-8 py-3 mt-8 text-white bg-blue-900 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
-              href="/get-started"
+              onClick={() => history.push('/findPro')}
             >
               <span className="text-sm font-medium"> Find Your Pro </span>
 
@@ -81,51 +81,44 @@ function LandingPage() {
     <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
 
     {/* CATEGORY 1*/}
-      <div>
-      <a
+      <div
         className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10"
-        href="/"
+        onClick={() => history.push('/c1')}
       >
         <h3 className="m-4 text-xl font-bold text-white text-center">Category 1</h3>
-      </a>
+
       </div>
 
       {/* CATEGORY 2 */}
-      <div>
-      <a
+      <div
         className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10"
-        href="/"
+        onClick={() => history.push('/c2')}
       >
         <h3 className="m-4 text-xl font-bold text-white text-center">Category 2</h3>
 
-      </a>
       </div>
 
             {/* CATEGORY 3 */}
-            <div>
-            <a
+            <div
         className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10"
-        href="/"
+        onClick={() => history.push('/c3')}
       >
         <h3 className="m-4 text-xl font-bold text-white text-center">Category 3</h3>
 
-      </a>
       </div>
 
                   {/* CATEGORY 4 */}
-                  <div>
-                  <a
+                  <div
         className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10"
-        href="/"
+        onClick={() => history.push('/c4')}
       >
         <h3 className="m-4 text-xl font-bold text-white text-center">Category 4</h3>
 
-      </a>
       </div>
 
     </div>
 
-    <div className="mt-12 text-center">
+    {/* <div className="mt-12 text-center">
       <a
         className="inline-flex items-center px-8 py-3 mt-8 text-black bg-white border border-gray-600 rounded hover:bg-transparent active:text-blue-500 focus:outline-none focus:ring"
         href="/get-started"
@@ -147,7 +140,7 @@ function LandingPage() {
           />
         </svg>
       </a>
-    </div>
+    </div> */}
   </div>
 </section>
 
