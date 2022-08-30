@@ -37,6 +37,7 @@ function AboutPage() {
         <article className="space-y-4 text-black mb-5 px-12">
           <p className="font-bold mt-5 lg:mt-5">Who is BlueVest Pro?</p>
           <p className="font-bold">What sets BlueVest Pro apart?</p>
+          <button type="button" className="border-2 rounded-xl bg-blue-600 text-white hover:shadow-lg w-32 h-12">Find my Pro!</button>
         </article>
         </div>
   </div>
