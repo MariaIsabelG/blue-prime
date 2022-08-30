@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import LogOutButton from '../LogOutButton/LogOutButton';
+import React, { useState } from 'react';
 import './Nav.css';
 import { useSelector } from 'react-redux';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function Nav() {
 	const [nav, setNav] = useState(false);
 	const user = useSelector((store) => store.user);
 	const dispatch = useDispatch();
+	const history = useHistory();
 
 	const handleNav = () => {
 		setNav(!nav);
@@ -63,7 +63,11 @@ function Nav() {
 								className='cursor-pointer hover:text-white'>
 								Resources
 							</li>
-							<li className='cursor-pointer hover:text-white'>About Us</li>
+							<li
+								onClick={() => history.push('/about')}
+								className='cursor-pointer hover:text-white'>
+								About Us
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -75,24 +79,43 @@ function Nav() {
 						: 'top-0 h-full ease-in-out duration-500 fixed left-[-100%]'
 				}>
 				<h1
-					onClick={() => history.push('/home')}
+					onClick={() => {
+						history.push('/home');
+						handleNav();
+					}}
 					className='w-full text-2xl font-bold text-white m-4'>
 					BlueVest
 				</h1>
 				<li
-					onClick={() => history.push('/home')}
+					onClick={() => {
+						history.push('/home');
+						handleNav();
+					}}
 					className='p-4 border-b border-gray-600 text-white'>
 					Home
 				</li>
 				<li
-					onClick={() => history.push('/resources')}
+					onClick={() => {
+						history.push('/resources');
+						handleNav();
+					}}
 					className='p-4 border-b border-gray-600 text-white'>
 					Resources
 				</li>
-				<li className='p-4 border-b border-gray-600 text-white'>About</li>
+				<li
+					onClick={() => {
+						history.push('/about');
+						handleNav();
+					}}
+					className='p-4 border-b border-gray-600 text-white'>
+					About
+				</li>
 				{user.id ? (
 					<li
-						onClick={() => dispatch({ type: 'LOGOUT' })}
+						onClick={() => {
+							dispatch({ type: 'LOGOUT' });
+							handleNav();
+						}}
 						className='p-4 border-b border-gray-600 text-white'>
 						Log Out
 					</li>
