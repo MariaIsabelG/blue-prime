@@ -28,8 +28,9 @@ function Nav() {
 					</div>
 					<div className='flex md:order-2'>
 						<button
+							onClick={() => history.push('/login')} 
 							type='button'
-							className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-1'>
+							className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-50'>
 							I'm An Agent
 						</button>
 						<button
