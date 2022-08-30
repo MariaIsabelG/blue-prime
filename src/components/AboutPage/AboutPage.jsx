@@ -12,7 +12,7 @@ function AboutPage() {
         Our Process
       </h2>
 
-      <div className="lg:py-0 bg-[#d6e2ed] border rounded-b-xl mb-5 xl:mx-36">
+      <div className="lg:py-0 bg-[#d6e2ed] border rounded-b-xl mb-10 xl:mx-36">
         <article className="space-y-4 text-black mb-5 px-12">
           <h3 className="font-bold mt-5 lg:mt-5">
             Step 1. 
