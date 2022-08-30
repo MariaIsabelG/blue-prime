@@ -1,6 +1,5 @@
 import React from 'react';
 
-// LEFT OFF ------ Fix spacing for mobile view AND set width for desktop view
 
 function AboutPage() {
   
@@ -34,10 +33,10 @@ function AboutPage() {
         <h2 className="text-3xl text-white font-bold sm:text-4xl p-6 bg-blue-600 border rounded-t-xl xl:mx-36">
           Why work with us?
         </h2>
-        <div className="lg:py-16 bg-[#d6e2ed] border rounded-b-xl xl:mx-36">
-        <article className="space-y-4 text-black">
-          <p>Who is BlueVest Pro?</p>
-          <p>What sets BlueVest Pro apart?</p>
+        <div className="lg:py-16 bg-[#d6e2ed] border rounded-b-xl xl:mx-36 mb-10">
+        <article className="space-y-4 text-black mb-5 px-12">
+          <p className="font-bold mt-5 lg:mt-5">Who is BlueVest Pro?</p>
+          <p className="font-bold">What sets BlueVest Pro apart?</p>
         </article>
         </div>
   </div>
