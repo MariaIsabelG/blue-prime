@@ -15,6 +15,7 @@ function Nav() {
 		setNav(!nav);
 	};
 
+
 	return (
 		<div>
 			<nav className='h-20 bg-blue-600 px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
