@@ -6,61 +6,66 @@ import './LandingPage.css';
 import RegisterForm from '../RegisterForm/RegisterForm';
 
 function LandingPage() {
-	const [heading, setHeading] = useState('Welcome');
-	const history = useHistory();
+  const [heading, setHeading] = useState('Welcome');
+  const history = useHistory();
 
-	const onLogin = (event) => {
-		history.push('/login');
-	};
+  const onLogin = (event) => {
+    history.push('/login');
+  };
 
-	return (
-		<div>
-			{/* FIND A PRO SECTION */}
-			<section>
-				<div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
-					<div className='grid grid-cols-1 gap-2 lg:grid-cols-2'>
-						<div className='relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full'>
-							<img
-								className='flex inset-0 object-cover md:w-1/2'
-								src='https://www.hyperui.dev/photos/man-1.jpeg'
-								alt='Man using a computer'
-							/>
-						</div>
+  return (
+    <div>
+      {/* FIND A PRO SECTION */}
+      <section>
+        <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
+            <div
+              className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:h-full"
+            >
+              <img
+                className="flex inset-0 object-cover md:w-1/2"
+                src="https://www.hyperui.dev/photos/man-1.jpeg"
+                alt="Man using a computer"
+              />
+            </div>
 
-						<div className='lg:py-24'>
-							<h2 className='text-3xl font-bold sm:text-4xl'>Find Your Finacial Professional</h2>
+          <div className="lg:py-24">
+            <h2 className="text-3xl font-bold sm:text-4xl">Find Your Finacial Professional</h2>
 
-							<p className='mt-4 text-gray-600'>A little bit about Blue Vest.</p>
+            <p className="mt-4 text-gray-600">
+              A little bit about Blue Vest.
+            </p>
 
-							<p className='mt-4 text-gray-600'>
-								Answer a few short quick questions and get connected with us!
-							</p>
+            <p className="mt-4 text-gray-600">
+              Answer a few short quick questions and get connected with us!
+            </p>
 
-							<a
-								className='inline-flex items-center px-8 py-3 mt-8 text-white bg-blue-900 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring'
-								href='/get-started'>
-								<span className='text-sm font-medium'> Find Your Pro </span>
+            <a
+              className="inline-flex items-center px-8 py-3 mt-8 text-white bg-blue-900 border border-indigo-600 rounded hover:bg-transparent hover:text-indigo-600 active:text-indigo-500 focus:outline-none focus:ring"
+              onClick={() => history.push('/findPro')}
+            >
+              <span className="text-sm font-medium"> Find Your Pro </span>
 
-								<svg
-									className='w-5 h-5 ml-3'
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 24 24'
-									stroke='currentColor'>
-									<path
-										strokeLinecap='round'
-										strokeLinejoin='round'
-										strokeWidth='2'
-										d='M17 8l4 4m0 0l-4 4m4-4H3'
-									/>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* RESOURCES SECTION */}
+              <svg
+                className="w-5 h-5 ml-3"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+</section>
+{/* RESOURCES SECTION */}
 			<section className='text-white bg-blue-900'>
 				<div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
 					<div className='max-w-lg mx-auto text-center'>
@@ -130,8 +135,8 @@ function LandingPage() {
 					</div>
 				</div>
 			</section>
-		</div>
-	);
+    </div>
+  );
 }
 
 export default LandingPage;
