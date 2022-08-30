@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{js,jsx,ts,tsx}'],
+	content: ['./src/**/*.{js,jsx,ts,tsx}', './src/components/**/*.{js,jsx,ts,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				primary: '#4A3AFF',
+			},
+			backgroundImage: {
+				Hero: "url('assets/Hero.png')",
+			},
+		},
 	},
 	plugins: [],
 };
