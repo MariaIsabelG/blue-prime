@@ -11,12 +11,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import ProtectedRouteAdmin from '../ProtectedRoute/ProtectedRouteAdmin';
+import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
-import RegisterPage from '../RegisterPage/RegisterPage';
+import RegisterForm from '../RegisterForm/RegisterForm';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import CategoryOne from '../Categories/CategoryOne/CategoryOne';
@@ -31,12 +32,15 @@ import ArticleFour from '../Articles/ArticleFour/ArticleFour';
 import ArticleFive from '../Articles/ArticleFive/ArticleFive';
 import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
+import FindPro from '../FindPro/FindPro';
+import Canopy from '../Canopy/Canopy';
 import AgentDashboard from '../AgentDashboard/AgentDashboard';
 import AgentLeads from '../AgentLeads/AgentLeads';
 import AgentPotentials from '../Agent Potentials/AgentPotentials';
 import AgentWon from '../AgentWon/AgentWon';
 import AgentLost from '../AgentLost/AgentLost';
 import ClientInfo from '../ClientInfo/ClientInfo';
+// import AdminDashboard from '../AdminDashboard/AdminDashboard'; DELETE AFTER STEPHON PUSHES ADMIN DASHBOARD
 
 import './App.css';
 
@@ -55,10 +59,24 @@ function App() {
         <Nav />
         <Switch>
 
+
+        <Route exact path="/findPro">
+          <FindPro />
+        </Route>
+
+        <Route exact path="/canopy">
+          <Canopy />
+        </Route>
+
           {/* Agent Dashboard */}
-          <ProtectedRoute exact path="/agent">
+          <ProtectedRouteAgent exact path="/agent">
             <AgentDashboard />
-          </ProtectedRoute>
+          </ProtectedRouteAgent>
+
+          <ProtectedRouteAdmin exact path="/admin">
+            {/* <AdminDashboard /> */}
+          </ProtectedRouteAdmin>
+
 
           <ProtectedRoute exact path="/agent/leads">
             <AgentLeads/>
@@ -152,28 +170,19 @@ function App() {
             exact
             path="/login"
           >
-            {user.id ?
+            {user.access_level === 1 && 
               // If the user is already logged in, 
               // redirect to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the login page
-              <LoginPage />
-            }
-          </Route>
+              <Redirect to="/admin" />}
 
-          <Route
-            exact
-            path="/registration"
-          >
-            {user.id ?
+            {user.access_level === 2 && 
               // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/home" />
-              :
-              // Otherwise, show the registration page
-              <RegisterPage />
-            }
+              // redirect to the /user page
+              <Redirect to="/agent" />}
+        
+              {/* Otherwise, show the login page */}
+              <LoginPage />
+            
           </Route>
 
           <Route
