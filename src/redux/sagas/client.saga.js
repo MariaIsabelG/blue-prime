@@ -14,4 +14,4 @@ function* clientSaga() {
     yield takeLatest('GET_CLIENTS', getClients)
 }
 
-export default clientSaga
+export default clientSaga;
