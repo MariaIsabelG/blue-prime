@@ -39,7 +39,7 @@ function LoginForm() {
           <label htmlFor="username">
             Username:
             <input
-              className="border rounded-md border-slate-400 bg-slate-200"
+              className="border rounded-sm border-slate-400 bg-slate-100 px-1"
               type="text"
               name="username"
               required
@@ -52,7 +52,7 @@ function LoginForm() {
           <label htmlFor="password">
             Password:
             <input
-              className="border rounded-md border-slate-400 bg-slate-200"
+              className="border rounded-sm border-slate-400 bg-slate-100 px-1"
               type="password"
               name="password"
               required
@@ -62,7 +62,7 @@ function LoginForm() {
           </label>
         </div>
         <div>
-          <input className="btn" type="submit" name="submit" value="Log In" />
+          <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white" type="submit" name="submit" value="Log In">Login</button>
         </div>
       </form>
     </div>

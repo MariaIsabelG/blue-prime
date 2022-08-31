@@ -28,7 +28,7 @@ Container
 Button
 -------------------------------------------------------------------------------- */
 
-.btn {
+/* .btn {
 	display: inline-block;
 	padding: 10px 20px;
 	border-color: #014041;
@@ -39,7 +39,7 @@ Button
 	font-size: 1.1rem;
 	outline: 0;
 	cursor: pointer;
-}
+} */
 
 .btn_sizeMin {
 	min-height: 50px;
@@ -97,16 +97,7 @@ Alert
 Form Treatment
 -------------------------------------------------------------------------------- */
 
-/* .formPanel {
-	box-sizing: border-box;
-	width: 400px;
-	max-width: 100%;
-	padding: 25px;
-	margin: 0 auto 20px;
-	background-color: #efefef;
-	border-radius: 3px;
-	box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
-} */
+
 
 input {
 	margin: 5px;
