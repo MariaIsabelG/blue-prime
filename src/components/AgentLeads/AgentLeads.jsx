@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import AgentDashboard from "../AgentDashboard/AgentDashboard";
 
 function AgentLeads() {
 
@@ -7,6 +8,8 @@ function AgentLeads() {
 
     return(
         <>
+            <AgentDashboard />
+            
             {clientList.map(client => {
                 if (client.status === 1) {
                     return (
