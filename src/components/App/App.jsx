@@ -11,7 +11,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import ProtectedRouteAdmin from '../ProtectedRoute/ProtectedRouteAdmin';
+import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
@@ -34,6 +35,7 @@ import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
 import AgentDashboard from '../AgentDashboard/AgentDashboard';
+// import AdminDashboard from '../AdminDashboard/AdminDashboard'; DELETE AFTER STEPHON PUSHES ADMIN DASHBOARD
 
 
 import './App.css';
@@ -63,9 +65,13 @@ function App() {
         </Route>
 
           {/* Agent Dashboard */}
-          <ProtectedRoute exact path="/agent">
+          <ProtectedRouteAgent exact path="/agent">
             <AgentDashboard />
-          </ProtectedRoute>
+          </ProtectedRouteAgent>
+
+          <ProtectedRouteAdmin exact path="/admin">
+            {/* <AdminDashboard /> */}
+          </ProtectedRouteAdmin>
 
 
         {/* Resource Landing Page */}
@@ -140,14 +146,19 @@ function App() {
             exact
             path="/login"
           >
-            {user.id ?
+            {user.access_level === 1 && 
               // If the user is already logged in, 
               // redirect to the /user page
-              <Redirect to="/user" />
-              :
-              // Otherwise, show the login page
+              <Redirect to="/admin" />}
+
+            {user.access_level === 2 && 
+              // If the user is already logged in, 
+              // redirect to the /user page
+              <Redirect to="/agent" />}
+        
+              {/* Otherwise, show the login page */}
               <LoginPage />
-            }
+            
           </Route>
 
           <Route
