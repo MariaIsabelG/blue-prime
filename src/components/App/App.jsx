@@ -16,7 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
-import RegisterPage from '../RegisterPage/RegisterPage';
+import RegisterForm from '../RegisterForm/RegisterForm';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import CategoryOne from '../Categories/CategoryOne/CategoryOne';
@@ -135,20 +135,6 @@ function App() {
               :
               // Otherwise, show the login page
               <LoginPage />
-            }
-          </Route>
-
-          <Route
-            exact
-            path="/registration"
-          >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/home" />
-              :
-              // Otherwise, show the registration page
-              <RegisterPage />
             }
           </Route>
 
