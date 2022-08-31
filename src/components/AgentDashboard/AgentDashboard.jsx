@@ -8,11 +8,11 @@ function AgentDashboard() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const agentId = useSelector(store => store.user);
-    console.log('agentId', agent);
+    const agent = useSelector(store => store.user);
+    console.log('agent id', agent.id);
 
     useEffect(() => {
-        dispatch({type: 'GET_CLIENTS', payload: agentId})
+        dispatch({type: 'GET_CLIENTS', payload: agent.id})
     }, [])
 
 return(

@@ -3,8 +3,8 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 
-router.get('/', (req, res) => {
-    const id = user.id 
+router.get('/:id', (req, res) => {
+    const id = req.params.id
     let queryText = `SELECT * FROM "client" 
     JOIN "client_user" ON "client"."id" = "client_user"."client_id" 
     WHERE "client_user"."user_id" = ${id};`
