@@ -78,25 +78,25 @@ function App() {
           </ProtectedRouteAdmin>
 
 
-          <ProtectedRoute exact path="/agent/leads">
+          <ProtectedRouteAgent exact path="/agent/leads">
             <AgentLeads/>
-          </ProtectedRoute>
+          </ProtectedRouteAgent>
 
-          <ProtectedRoute exact path="/agent/potentials">
+          <ProtectedRouteAgent exact path="/agent/potentials">
             <AgentPotentials/>
-          </ProtectedRoute>
+          </ProtectedRouteAgent>
 
-          <ProtectedRoute exact path="/agent/won">
+          <ProtectedRouteAgent exact path="/agent/won">
             <AgentWon/>
-          </ProtectedRoute>
+          </ProtectedRouteAgent>
 
-          <ProtectedRoute exact path="/agent/lost">
+          <ProtectedRouteAgent exact path="/agent/lost">
             <AgentLost/>
-          </ProtectedRoute>
+          </ProtectedRouteAgent>
 
-          <ProtectedRoute exact path="/client/:id">
+          <ProtectedRouteAgent exact path="/client/:id">
             <ClientInfo/>
-          </ProtectedRoute>
+          </ProtectedRouteAgent>
 
         {/* Resource Landing Page */}
           <Route exact path="/resources">
