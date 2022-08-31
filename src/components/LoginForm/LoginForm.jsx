@@ -35,6 +35,7 @@ function LoginForm() {
             {errors.loginMessage}
           </h3>
         )}
+        <div className="lg:py-0 bg-[#d6e2ed] border rounded-b-xl xl:mx-36">
         <div className="mt-6 px-6">
           <label htmlFor="username">
             Username:
@@ -61,8 +62,9 @@ function LoginForm() {
             />
           </label>
         </div>
-        <div>
-          <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white" type="submit" name="submit" value="Log In">Login</button>
+        <div className="flex items-center justify-center mt-6 ">
+          <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white mb-6" type="submit" name="submit" value="Log In">Login</button>
+        </div>
         </div>
       </form>
     </div>
