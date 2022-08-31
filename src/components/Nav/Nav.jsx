@@ -15,7 +15,6 @@ function Nav() {
 		setNav(!nav);
 	};
 
-
 	return (
 		<div>
 			<nav className='h-20 bg-blue-600 px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
@@ -36,7 +35,7 @@ function Nav() {
 							onClick={() => history.push('/findPro')}
 							type='button'
 							className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-50'>
-							Find A Pro
+							Find Your Pro
 						</button>
 						{user.id ? (
 							<button
