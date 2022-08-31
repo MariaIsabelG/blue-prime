@@ -16,7 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
-import RegisterPage from '../RegisterPage/RegisterPage';
+import RegisterForm from '../RegisterForm/RegisterForm';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import CategoryOne from '../Categories/CategoryOne/CategoryOne';
@@ -33,6 +33,8 @@ import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
+import AgentDashboard from '../AgentDashboard/AgentDashboard';
+
 
 import './App.css';
 
@@ -51,6 +53,7 @@ function App() {
         <Nav />
         <Switch>
 
+
         <Route exact path="/findPro">
           <FindPro />
         </Route>
@@ -58,6 +61,12 @@ function App() {
         <Route exact path="/canopy">
           <Canopy />
         </Route>
+
+          {/* Agent Dashboard */}
+          <ProtectedRoute exact path="/agent">
+            <AgentDashboard />
+          </ProtectedRoute>
+
 
         {/* Resource Landing Page */}
           <Route exact path="/resources">
@@ -143,30 +152,16 @@ function App() {
 
           <Route
             exact
-            path="/registration"
-          >
-            {user.id ?
-              // If the user is already logged in, 
-              // redirect them to the /user page
-              <Redirect to="/home" />
-              :
-              // Otherwise, show the registration page
-              <RegisterPage />
-            }
-          </Route>
-
-          <Route
-            exact
             path="/home"
           >
-            {user.id ?
+            {/* {user.id ?
               // If the user is already logged in, 
               // redirect them to the /user page
               <Redirect to="/user" />
               :
-              // Otherwise, show the Landing page
+              // Otherwise, show the Landing page */}
               <LandingPage />
-            }
+            {/* } */}
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
