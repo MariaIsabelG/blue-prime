@@ -70,7 +70,7 @@ function App() {
           </ProtectedRouteAgent>
 
           <ProtectedRouteAdmin exact path="/admin">
-            <AdminDashboard />
+            {/* <AdminDashboard /> */}
           </ProtectedRouteAdmin>
 
 
