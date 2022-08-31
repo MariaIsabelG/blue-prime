@@ -7,15 +7,19 @@ function LoginPage() {
   const history = useHistory();
 
   return (
-    <div className="grid grid-cols-3 gap-4 place-content-around">
-        <div className="col-span-2">
-          <h3>Benefits of joining BlueVest!</h3>
+    <div className="">
+        <div className="">
+          <h3 className="text-2xl text-white text-center font-bold sm:text-1xl p-6">Why work with us?</h3>
+            <ol className="text-center">
+              <li>We're your strategic growth partner</li>
+            </ol>
+
         </div>
         <div>
           <LoginForm />
         </div>
         
-        <div className="">
+        <div>
           <RegisterForm />
         </div>
     </div>
