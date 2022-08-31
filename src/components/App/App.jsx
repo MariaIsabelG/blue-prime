@@ -31,6 +31,8 @@ import ArticleFour from '../Articles/ArticleFour/ArticleFour';
 import ArticleFive from '../Articles/ArticleFive/ArticleFive';
 import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
+import FindPro from '../FindPro/FindPro';
+import Canopy from '../Canopy/Canopy';
 import AgentDashboard from '../AgentDashboard/AgentDashboard';
 
 
@@ -51,10 +53,20 @@ function App() {
         <Nav />
         <Switch>
 
+
+        <Route exact path="/findPro">
+          <FindPro />
+        </Route>
+
+        <Route exact path="/canopy">
+          <Canopy />
+        </Route>
+
           {/* Agent Dashboard */}
           <ProtectedRoute exact path="/agent">
             <AgentDashboard />
           </ProtectedRoute>
+
 
         {/* Resource Landing Page */}
           <Route exact path="/resources">
