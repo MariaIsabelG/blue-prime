@@ -4,8 +4,9 @@ import { combineReducers } from 'redux';
 //     swtich (action.type) {
 
 //     }
-// }
+    
+// };
 
-export default combineReducers({
-
-});
+// export default combineReducers({
+//     clientList
+// });

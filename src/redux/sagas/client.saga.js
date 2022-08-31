@@ -10,7 +10,7 @@ function* getClients(action) {
     }
 }
 
-function clientSaga() {
+function* clientSaga() {
     yield takeLatest('GET_CLIENTS', getClients)
 }
 
