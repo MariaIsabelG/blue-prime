@@ -31,7 +31,8 @@ import ArticleFour from '../Articles/ArticleFour/ArticleFour';
 import ArticleFive from '../Articles/ArticleFive/ArticleFive';
 import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
-
+import FindPro from '../FindPro/FindPro';
+import Canopy from '../Canopy/Canopy';
 
 import './App.css';
 
@@ -49,6 +50,14 @@ function App() {
       <div>
         <Nav />
         <Switch>
+
+        <Route exact path="/findPro">
+          <FindPro />
+        </Route>
+
+        <Route exact path="/canopy">
+          <Canopy />
+        </Route>
 
         {/* Resource Landing Page */}
           <Route exact path="/resources">

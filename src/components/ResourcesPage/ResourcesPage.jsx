@@ -14,7 +14,7 @@ function ResourcesPage() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-16 lg:items-center"
           >
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              <a
+              <div
                 className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
                 onClick={()=>history.push('/c1')}
               >
@@ -24,9 +24,9 @@ function ResourcesPage() {
                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                   Lorem ipsum dolor sit amet consectetur.
                 </p>
-              </a>
+              </div>
 
-              <a
+              <div
                 className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
                 onClick={()=>history.push('/c2')}
               >
@@ -36,9 +36,9 @@ function ResourcesPage() {
                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                   Lorem ipsum dolor sit amet consectetur.
                 </p>
-              </a>
+              </div>
 
-              <a
+              <div
                 className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
                 onClick={()=>history.push('/c3')}
               >
@@ -48,9 +48,9 @@ function ResourcesPage() {
                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                   Lorem ipsum dolor sit amet consectetur.
                 </p>
-              </a>
+              </div>
 
-              <a
+              <div
                 className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
                 onClick={()=>history.push('/c4')}
               >
@@ -60,7 +60,7 @@ function ResourcesPage() {
                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                   Lorem ipsum dolor sit amet consectetur.
                 </p>
-              </a>
+              </div>
 
             </div>
           </div>
