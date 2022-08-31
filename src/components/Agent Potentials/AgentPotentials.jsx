@@ -1,15 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import AgentDashboard from "../AgentDashboard/AgentDashboard";
 
 function AgentPotentials() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const clientList = useSelector(store => store.clients.clientList);
 
     const handleClientClick = (clientId) => {
         console.log('clientId', clientId)
         dispatch({type: 'GET_THIS_CLIENT', payload: clientId})
+        
+        history.push(`/client/${clientId}`)
     };
 
     return(

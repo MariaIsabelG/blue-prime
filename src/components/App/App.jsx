@@ -36,6 +36,7 @@ import AgentLeads from '../AgentLeads/AgentLeads';
 import AgentPotentials from '../Agent Potentials/AgentPotentials';
 import AgentWon from '../AgentWon/AgentWon';
 import AgentLost from '../AgentLost/AgentLost';
+import ClientInfo from '../ClientInfo/ClientInfo';
 
 import './App.css';
 
@@ -73,6 +74,10 @@ function App() {
 
           <ProtectedRoute exact path="/agent/lost">
             <AgentLost/>
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/client/:id">
+            <ClientInfo/>
           </ProtectedRoute>
 
         {/* Resource Landing Page */}
