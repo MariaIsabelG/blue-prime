@@ -27,15 +27,15 @@ function LoginForm() {
   }; // end login
 
   return (
-    <div className="w-5/12">
+    <div className="sm:w-5/12 ">
       <form className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24 text-center" onSubmit={login}>
-      <h3 className="text-1xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl ">Welcome back!</h3>
+      <h3 className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl">Welcome back!</h3>
         {errors.loginMessage && (
           <h3 className="alert" role="alert">
             {errors.loginMessage}
           </h3>
         )}
-        <div>
+        <div className="mt-6">
           <label htmlFor="username">
             Username:
             <input

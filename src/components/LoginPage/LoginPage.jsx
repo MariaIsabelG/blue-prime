@@ -7,7 +7,9 @@ function LoginPage() {
 
   return (
     <div>
-      <LoginForm />
+      <div className="flex flex-row justify-center items-center" >
+        <LoginForm />
+      </div>
 
       <center>
         <button
