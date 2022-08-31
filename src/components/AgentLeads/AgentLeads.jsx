@@ -4,12 +4,11 @@ import AgentDashboard from "../AgentDashboard/AgentDashboard";
 function AgentLeads() {
 
     const clientList = useSelector(store => store.clients.clientList);
-    console.log('clientList', clientList);
 
     return(
         <>
             <AgentDashboard />
-            
+
             {clientList.map(client => {
                 if (client.status === 1) {
                     return (
