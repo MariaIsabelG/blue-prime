@@ -32,7 +32,10 @@ import ArticleFive from '../Articles/ArticleFive/ArticleFive';
 import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
 import AgentDashboard from '../AgentDashboard/AgentDashboard';
-
+import AgentLeads from '../AgentLeads/AgentLeads';
+import AgentPotentials from '../Agent Potentials/AgentPotentials';
+import AgentWon from '../AgentWon/AgentWon';
+import AgentLost from '../AgentLost/AgentLost';
 
 import './App.css';
 
@@ -54,6 +57,22 @@ function App() {
           {/* Agent Dashboard */}
           <ProtectedRoute exact path="/agent">
             <AgentDashboard />
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/agent/leads">
+            <AgentLeads/>
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/agent/potentials">
+            <AgentPotentials/>
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/agent/won">
+            <AgentWon/>
+          </ProtectedRoute>
+
+          <ProtectedRoute exact path="/agent/lost">
+            <AgentLost/>
           </ProtectedRoute>
 
         {/* Resource Landing Page */}
