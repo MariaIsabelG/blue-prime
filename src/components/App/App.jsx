@@ -31,6 +31,7 @@ import ArticleFour from '../Articles/ArticleFour/ArticleFour';
 import ArticleFive from '../Articles/ArticleFive/ArticleFive';
 import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
+import AgentDashboard from '../AgentDashboard/AgentDashboard';
 
 
 import './App.css';
@@ -49,6 +50,11 @@ function App() {
       <div>
         <Nav />
         <Switch>
+
+          {/* Agent Dashboard */}
+          <ProtectedRoute exact path="/agent">
+            <AgentDashboard />
+          </ProtectedRoute>
 
         {/* Resource Landing Page */}
           <Route exact path="/resources">
