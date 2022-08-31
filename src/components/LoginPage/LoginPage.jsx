@@ -1,33 +1,23 @@
 import React from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
-import RegisterPage from '../RegisterPage/RegisterPage';
+import RegisterForm from '../RegisterForm/RegisterForm';
 
 function LoginPage() {
   const history = useHistory();
 
   return (
-    <div>
-      <div>
-        <div className="flex flex-row justify-center items-center" >
+    <div className="grid grid-cols-3 gap-4 place-content-around">
+        <div className="col-span-2">
+          <h3>Benefits of joining BlueVest!</h3>
+        </div>
+        <div>
           <LoginForm />
         </div>
-
-        {/* <center>
-          <button
-            type="button"
-            className="btn btn_asLink"
-            onClick={() => {
-              history.push('/registration');
-            }}
-          >
-            Register
-          </button>
-        </center> */}
-      </div>
-    <div>
-        <RegisterPage />
-    </div>
+        
+        <div className="">
+          <RegisterForm />
+        </div>
     </div>
 
   );
