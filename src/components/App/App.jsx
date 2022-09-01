@@ -12,7 +12,6 @@ import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
-import RegisterForm from '../RegisterForm/RegisterForm';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import CategoryOne from '../Categories/CategoryOne/CategoryOne';
@@ -221,7 +220,7 @@ function App() {
 					</Route>
 
 					<Route exact path='/home'>
-						<LoginPage />
+						<LandingPage />
 					</Route>
 
 					<Route exact path='/home'>
