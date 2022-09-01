@@ -12,17 +12,22 @@ function AgentPotentials() {
 
     const [newStatus, setNewStatus] = useState('');
 
-    const handleClientClick = (clientId) => {
-        console.log('clientId', clientId)
-        dispatch({type: 'GET_THIS_CLIENT', payload: clientId})
+    // const handleClientClick = (clientId) => {
+    //     console.log('clientId', clientId)
+    //     dispatch({type: 'GET_THIS_CLIENT', payload: clientId})
         
-        history.push(`/client/${clientId}`)
-    };
+    //     history.push(`/client/${clientId}`)
+    // };
 
     const handleStatusChange = (event) => {
         setNewStatus(event.target.value)
         console.log('newStatus', newStatus)
 
+    }
+
+    const handleStatusUpdate = (id) => {
+        console.log('id to update:', id);
+        dispatch({type: 'UPDATE_CLIENT', payload: {newStatus, id}})
     }
 
     return(
@@ -42,8 +47,9 @@ function AgentPotentials() {
                                 <p>{client.email}</p>
                                 <p>{client.phone_number}</p>
                                 <p>{client.state} {client.zip_code}</p>
-                                <h3>{client.status}</h3>
-                                <h3>{newStatus}</h3>
+                                <h3>client status: {client.status}</h3>
+                                <h3>newStatus: {newStatus}</h3>
+                                <h3>client id: {client.id}</h3>
 
                                 <div className="mt-8">
                                     <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
@@ -58,7 +64,7 @@ function AgentPotentials() {
                                     </select>
                                     <button 
 									className='mt-2 inline-block rounded-md border border-transparent bg-blue-600 py-3 px-8 text-center font-medium text-white hover:bg-blue-700'
-                                    onClick={() => handleStatusUpdate(newStatus)}
+                                    onClick={() => handleStatusUpdate(client.id)}
                                     >Update</button>
                                 </div>
                             </div>
