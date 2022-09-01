@@ -18,4 +18,19 @@ router.get('/agents', (req, res) => {
 	}
 });
 
+router.get('/clients', (req, res) => {
+	if (req.user) {
+		const queryText = 'SELECT * FROM "client";';
+		pool
+			.query(queryText)
+			.then((result) => {
+				res.send(result.rows);
+			})
+			.catch((error) => {
+				console.log('ERROR GETTING IN /clients', error);
+				res.sendStatus(500);
+			});
+	}
+});
+
 module.exports = router;
