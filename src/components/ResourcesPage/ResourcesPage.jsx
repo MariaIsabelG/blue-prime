@@ -6,7 +6,7 @@ function ResourcesPage() {
 	const history = useHistory();
 
 	return (
-		<div className='container'>
+		<div className='bg-white w-screen'>
 			<section>
 				<h1 className='text-center text-2xl'>Select a Category</h1>
 				<div className='max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
