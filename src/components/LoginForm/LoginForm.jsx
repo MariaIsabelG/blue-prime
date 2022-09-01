@@ -25,15 +25,17 @@ function LoginForm() {
   }; // end login
 
   return (
-    <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 xl:mt-20">
+    <div className="w-sreen h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 xl:mt-20">
       <form  onSubmit={login}>
-        <h3 className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl ">Welcome back!</h3>
+        <div className="text-2xl text-white text-center font-bold sm:text-1xl  p-6 bg-blue-600 border rounded-t-xl ">
+          <h3>Welcome back!</h3>
           {errors.loginMessage && (
           <h3 className="alert" role="alert">
             {errors.loginMessage}
           </h3>
           )}
-        <div className="lg:py-0 bg-[#d6e2ed] border rounded-b-xl xl:mx-36">
+        </div>
+        <div className="text-center font-bold sm:text-1xl p-6 lg:py-0 bg-[#d6e2ed] border rounded-b-xl  ">
           <div className="mt-6 px-6">
             <label htmlFor="username">
               Username:
