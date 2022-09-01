@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 function ResourcesPage() {
+
 	const history = useHistory();
 
 	return (
@@ -54,6 +55,7 @@ function ResourcesPage() {
 			</section>
 		</div>
 	);
+
 }
 
 export default ResourcesPage;

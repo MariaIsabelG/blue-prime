@@ -11,8 +11,19 @@ function* getClients(action) {
     }
 }
 
+function* getThisClient(action) {
+    try {
+        const response = yield axios.get(`/api/client/details/${action.payload}`);
+        yield put({type: 'SET_THIS_CLIENT', payload: response.data});
+    }
+    catch(error) {
+        console.log('error in getThisClient', error);
+    }
+}
+
 function* clientSaga() {
-    yield takeLatest('GET_CLIENTS', getClients)
+    yield takeLatest('GET_CLIENTS', getClients);
+    yield takeLatest('GET_THIS_CLIENT', getThisClient);
 }
 
 export default clientSaga;
