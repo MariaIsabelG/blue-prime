@@ -17,32 +17,30 @@ function Nav() {
 
 	return (
 		<div>
-			<nav className='h-20 bg-blue-600 px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600'>
+			<nav className='h-20 bg-blue-600 px-2 sm:px-4 py-2.5 w-full z-20 top-0 left-0 border-b border-gray-200'>
 				<div className='container flex flex-wrap justify-between items-center mx-auto'>
 					<div onClick={() => history.push('/home')} className='flex items-center'>
 						<img src='images/blueVestLogo.png' className='mr-3 h-6 sm:h-9' />
-						<span className='self-center text-xl font-semibold whitespace-nowrap dark:text-white'>
-							BlueVest
-						</span>
+						<span className='self-center text-xl font-semibold whitespace-nowrap'>BlueVest</span>
 					</div>
 					<div className='flex md:order-2'>
 						<button
-							onClick={() => history.push('/login')} 
+							onClick={() => history.push('/login')}
 							type='button'
-							className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-50'>
+							className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center md:mr-50'>
 							I'm An Agent
 						</button>
 						<button
 							onClick={() => history.push('/findPro')}
 							type='button'
-							className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-50'>
+							className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center md:mr-50'>
 							Find Your Pro
 						</button>
 						{user.id ? (
 							<button
 								onClick={() => dispatch({ type: 'LOGOUT' })}
 								type='button'
-								className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0'>
+								className='hidden md:flex text-white bg-inherit hover:bg-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center md:mr-0'>
 								Log Out
 							</button>
 						) : (
@@ -69,6 +67,15 @@ function Nav() {
 								className='cursor-pointer hover:text-white'>
 								About Us
 							</li>
+							{user.id && user.access_level === 1 ? (
+								<li
+									onClick={() => history.push('/admin')}
+									className='cursor-pointer hover:text-white'>
+									Admin
+								</li>
+							) : (
+								''
+							)}
 						</ul>
 					</div>
 				</div>
