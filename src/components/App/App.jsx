@@ -69,6 +69,11 @@ function App() {
 						<ResourcesPage />
 					</Route>
 
+          {/* Resource Landing Page */}
+					<Route exact path='/findPro'>
+						<FindPro />
+					</Route>
+
 					{/* Categories */}
 					<Route exact path='/c1'>
 						<CategoryOne />
