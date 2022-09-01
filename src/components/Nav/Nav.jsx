@@ -67,6 +67,15 @@ function Nav() {
 								className='cursor-pointer hover:text-white'>
 								About Us
 							</li>
+							{user.id && user.access_level === 1 ? (
+								<li
+									onClick={() => history.push('/admin')}
+									className='cursor-pointer hover:text-white'>
+									Admin
+								</li>
+							) : (
+								''
+							)}
 						</ul>
 					</div>
 				</div>
