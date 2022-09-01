@@ -10,8 +10,18 @@ function* getAgents() {
 	}
 }
 
+function* getAllClients() {
+	try {
+		const response = yield axios.get(`/api/admin/clients`);
+		yield put({ type: 'SET_ALL_CLIENTS', payload: response.data });
+	} catch (error) {
+		console.log('error in getAllClients', error);
+	}
+}
+
 function* adminSaga() {
 	yield takeLatest('GET_AGENTS', getAgents);
+	yield takeLatest('GET_ALL_CLIENTS', getAllClients);
 }
 
 export default adminSaga;

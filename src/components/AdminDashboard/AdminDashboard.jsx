@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function AdminDashboard() {
 	const [openTab, setOpenTab] = useState(1);
 	const color = 'blue';
 	const dispatch = useDispatch();
+	const agentList = useSelector((state) => state.agentList);
 
 	useEffect(() => {
 		dispatch({ type: 'GET_AGENTS' });
@@ -82,96 +83,24 @@ function AdminDashboard() {
 									: 'hidden'
 							}
 							id='link1'>
-							<div className='block card w-66 mb-3 md:w-96 md:mr-5 bg-neutral text-neutral-content'>
-								<div className='card-body items-center text-center'>
-									<ul>
-										<li>Company Name</li>
-										<li>First and Last Name</li>
-										<li>Email</li>
-										<li>State's of Licensure</li>
-										<li># of Leads</li>
-									</ul>
-									<div className='card-actions justify-end'>
-										<button className='btn btn-ghost'>Edit</button>
-										<button className='btn btn-ghost'>Delete</button>
+							{agentList.map((agent) => (
+								<div className='block card w-46 mb-3 md:w-66 md:mr-5 bg-neutral text-neutral-content'>
+									<div className='card-body items-center text-center'>
+										<ul>
+											<li className='text-xl'>
+												{agent?.first_name} {agent?.last_name}
+											</li>
+											<li>{agent?.company}</li>
+											<li>{agent?.email}</li>
+											<li>{agent?.phone_number}</li>
+										</ul>
+										<div className='card-actions justify-end'>
+											<button className='btn btn-ghost'>Edit</button>
+											<button className='btn btn-ghost'>Delete</button>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div className='block card w-66 mb-3 md:mb-0 md:w-96 md:mr-5 bg-neutral text-neutral-content'>
-								<div className='card-body items-center text-center'>
-									<ul>
-										<li>Company Name</li>
-										<li>First and Last Name</li>
-										<li>Email</li>
-										<li>State's of Licensure</li>
-										<li># of Leads</li>
-									</ul>
-									<div className='card-actions justify-end'>
-										<button className='btn btn-ghost'>Edit</button>
-										<button className='btn btn-ghost'>Delete</button>
-									</div>
-								</div>
-							</div>
-							<div className='block card w-66 mb-3 md:mb-0 md:w-96 md:mr-5 bg-neutral text-neutral-content'>
-								<div className='card-body items-center text-center'>
-									<ul>
-										<li>Company Name</li>
-										<li>First and Last Name</li>
-										<li>Email</li>
-										<li>State's of Licensure</li>
-										<li># of Leads</li>
-									</ul>
-									<div className='card-actions justify-end'>
-										<button className='btn btn-ghost'>Edit</button>
-										<button className='btn btn-ghost'>Delete</button>
-									</div>
-								</div>
-							</div>
-							<div className='block card w-66 mb-3 md:mb-0 md:w-96 md:mr-5 bg-neutral text-neutral-content'>
-								<div className='card-body items-center text-center'>
-									<ul>
-										<li>Company Name</li>
-										<li>First and Last Name</li>
-										<li>Email</li>
-										<li>State's of Licensure</li>
-										<li># of Leads</li>
-									</ul>
-									<div className='card-actions justify-end'>
-										<button className='btn btn-ghost'>Edit</button>
-										<button className='btn btn-ghost'>Delete</button>
-									</div>
-								</div>
-							</div>
-							<div className='block card w-66 mb-3 md:mb-0 md:w-96 md:mr-5 bg-neutral text-neutral-content'>
-								<div className='card-body items-center text-center'>
-									<ul>
-										<li>Company Name</li>
-										<li>First and Last Name</li>
-										<li>Email</li>
-										<li>State's of Licensure</li>
-										<li># of Leads</li>
-									</ul>
-									<div className='card-actions justify-end'>
-										<button className='btn btn-ghost'>Edit</button>
-										<button className='btn btn-ghost'>Delete</button>
-									</div>
-								</div>
-							</div>
-							<div className='block card w-66 mb-3 md:mb-0 md:w-96 md:mr-5 bg-neutral text-neutral-content'>
-								<div className='card-body items-center text-center'>
-									<ul>
-										<li>Company Name</li>
-										<li>First and Last Name</li>
-										<li>Email</li>
-										<li>State's of Licensure</li>
-										<li># of Leads</li>
-									</ul>
-									<div className='card-actions justify-end'>
-										<button className='btn btn-ghost'>Edit</button>
-										<button className='btn btn-ghost'>Delete</button>
-									</div>
-								</div>
-							</div>
+							))}
 						</div>
 						<div
 							className={
