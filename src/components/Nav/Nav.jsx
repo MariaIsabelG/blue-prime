@@ -119,18 +119,27 @@ function Nav() {
 					About
 				</li>
 				<li
-					onClick={() => history.push('/login')}
+					onClick={() => {
+						history.push('/login');
+						handleNav();
+					}}
 					className='p-4 border-b border-gray-600 text-white'>
 					I'm An Agent
 				</li>
 				<li
-					onClick={() => history.push('/findPro')}
+					onClick={() => {
+						history.push('/findPro');
+						handleNav();
+					}}
 					className='p-4 border-b border-gray-600 text-white'>
 					Find Your Pro
 				</li>
 				{user.id && user.access_level === 1 ? (
 					<li
-						onClick={() => history.push('/admin')}
+						onClick={() => {
+							history.push('/admin');
+							handleNav();
+						}}
 						className='p-4 border-b border-gray-600 text-white'>
 						Admin
 					</li>
