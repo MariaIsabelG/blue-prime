@@ -14,6 +14,11 @@ function LoginPage() {
           <li className="text-center text-black mb-1">Financial professionals spend a bulk of their time prospecting.</li>
           <li className="text-center text-black mb-1">By working with us, you'll spend less time marketing yourself, and more time advising your clients.</li>
         <h3 className="text-xl text-center text-black mt-6">BlueVest has helped some of the biggest names in financial services grow their brand and practice.</h3>
+        <div className="flex items-center justify-center">
+          <img className="w-1/12 mr-6" src="images/State-Farm-Logo.png"/>
+          <img className="w-1/12 mr-6" src="images/farmers-logo2.png"/>
+          <img className="w-2/12" src="images/NW-Mutual.png"/>
+        </div>
       </div>
       <div class="px-8 h-full text-gray-800">
         <div class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
