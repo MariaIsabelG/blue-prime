@@ -6,7 +6,7 @@ function AboutPage() {
   
   return (
   
-    <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24 text-center ">
+    <div className="w-screen px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24 text-center bg-white">
       <h2 className="text-2xl text-white font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl xl:mx-36">
         Our Process
       </h2>
