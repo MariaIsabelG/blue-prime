@@ -8,16 +8,16 @@ function LoginPage() {
 
   return (
     <section class="h-full">
-      <div className="md:pt-32 md:pb-32 sm:pt-20 sm:pb-20 md:pt-20 md:pb-20 pb-12 pt-12 bg-orange-200  mb-16">
+      <div className="md:pt-32 md:pb-32 sm:pt-10 sm:pb-10 md:pt-10 md:pb-10 pb-10 pt-10 bg-orange-200  mb-16">
         <h3 className="text-xl text-center text-black mb-4">Why work with us? </h3>
           <li className="text-center text-black mb-1">We're your strategic growth partner</li>
           <li className="text-center text-black mb-1">Financial professionals spend a bulk of their time prospecting.</li>
           <li className="text-center text-black mb-1">By working with us, you'll spend less time marketing yourself, and more time advising your clients.</li>
         <h3 className="text-xl text-center text-black mt-6">BlueVest has helped some of the biggest names in financial services grow their brand and practice.</h3>
         <div className="flex items-center justify-center">
-          <img className="w-1/12 mr-6" src="images/State-Farm-Logo.png"/>
-          <img className="w-1/12 mr-6" src="images/farmers-logo2.png"/>
-          <img className="w-2/12" src="images/NW-Mutual.png"/>
+          <img className="w-3/12 sm:w-3/12 md:w-2/12 lg:w-2/12 xl:w-2/12 mr-6" src="images/State-Farm-Logo.png"/>
+          <img className="w-3/12 sm:w-3/12 md:w-2/12 lg:w-2/12 xl:w-2/12 mr-6" src="images/farmers-logo2.png"/>
+          <img className="w-3/12  sm:w-3/12 md:w-3/12 lg:w-3/12 xl:w-3/12" src="images/NW-Mutual.png"/>
         </div>
       </div>
       <div class="px-8 h-full text-gray-800">
