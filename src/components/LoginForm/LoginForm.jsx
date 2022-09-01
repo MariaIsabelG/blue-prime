@@ -25,9 +25,9 @@ function LoginForm() {
   }; // end login
 
   return (
-    <div className="w-sreen h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 xl:mt-20">
+    <div className="w-sreen h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 ">
       <form  onSubmit={login}>
-        <div className="text-2xl text-white text-center font-bold sm:text-1xl  p-6 bg-blue-600 border rounded-t-xl ">
+        <div className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl ">
           <h3>Welcome back!</h3>
           {errors.loginMessage && (
           <h3 className="alert" role="alert">
