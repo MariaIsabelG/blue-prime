@@ -52,3 +52,22 @@ VALUES ('Alabama'), ('Alaska'), ('Arizona'), ('Arkansas'), ('California'), ('Col
 ('Kentucky'), ('Louisiana'), ('Maine'), ('Maryland'), ('Massachusetts'), ('Michigan'), ('Minnesota'), ('Mississippi'), ('Missouri'), ('Montana'), ('Nebraska'), ('Nevada'), ('New Hampshire'), ('New Jersey'),
 ('New Mexico'), ('New York'), ('North Carolina'), ('North Dakota'), ('Ohio'), ('Oklahoma'), ('Oregon'), ('Pennsylvania'),
 ('Rhode Island'), ('South Carolina'), ('South Dakota'), ('Tennessee'), ('Texas'), ('Utah'), ('Vermont'), ('Virginia'), ('Washington'), ('West Virginia'), ('Wisconsin'), ('Wyoming');
+
+
+INSERT INTO "user" ("first_name", "last_name")
+VALUES ('Rachel', 'Bruce'), ('SomeOtherGuy', 'Guy'), ('Steve', 'Stevenson');
+
+INSERT INTO "client" ("first_name", "last_name", "email", "state", "zip_code", "phone_number", "comments")
+VALUES ('Pickle', 'cat', 'email', 'Minnesota', '55555', '888-888-8888', 'cool guy'),
+ ('Beanjamin', 'cat', 'email', 'Nebraska', '55555', '888-888-8888', 'fine young man'),
+ ('Peach', 'cat', 'email', 'Minnesota', '55555', '888-888-8888', 'loves insurance'),
+ ('Pumpkin', 'cat', 'email', 'Iowa', '55555', '888-888-8888', 'nice'),
+ ('Popeye', 'cat', 'email', 'Minnesota', '55555', '888-888-8888', 'very orange'),
+ ('Thomas', 'cat', 'email', 'Wisconsin', '55555', '888-888-8888', 'chill dude'),
+ ('Mindy', 'cat', 'email', 'Colorado', '55555', '888-888-8888', 'very fluffy'),
+ ('Tigger', 'cat', 'email', 'Iowa', '55555', '888-888-8888', 'kind of rude tbh'),
+ ('Dorothy', 'cat', 'email', 'Colorado', '55555', '888-888-8888', 'hates insurance and the government'),
+ ('Stanley', 'cat', 'email', 'Colorado', '55555', '888-888-8888', 'is very handsome, has the longest whiskers');
+
+ INSERT INTO "client_user" ("client_id", "user_id", "status")
+VALUES (9, 3, 4), (1, 3, 1), (2, 3, 2), (4, 2, 4), (5, 3, 1), (6, 2, 2), (7, 3, 4), (8, 3, 3), (10, 3, 2), (3, 3, 3);

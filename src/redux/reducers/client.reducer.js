@@ -9,6 +9,16 @@ const clientList = (state = [], action) => {
     }
 }
 
+const thisClient = (state = {}, action) => {
+    switch (action.type) {
+        case 'SET_THIS_CLIENT':
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({
-    clientList
+    clientList,
+    thisClient
 });

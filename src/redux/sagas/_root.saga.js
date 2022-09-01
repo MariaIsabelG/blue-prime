@@ -4,6 +4,7 @@ import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
 import clientForm from './client.form';
 import clientSaga from './client.saga';
+import adminSaga from './admin.saga';
 
 
 // rootSaga is the primary saga.
@@ -14,11 +15,14 @@ import clientSaga from './client.saga';
 // the registration triggers a login
 // and login triggers setting the user
 export default function* rootSaga() {
-  yield all([
-    loginSaga(), // login saga is now registered
-    registrationSaga(),
-    userSaga(),
+
+	yield all([
+		loginSaga(), // login saga is now registered
+		registrationSaga(),
+		userSaga(),
     clientForm(), //client interest form
-    clientSaga()
-  ]);
+		clientSaga(),
+		adminSaga(),
+	]);
+
 }

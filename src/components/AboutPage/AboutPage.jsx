@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-function AboutPage() {
-  
+function AboutPage() {  
   
   return (
   
@@ -43,6 +41,5 @@ function AboutPage() {
   </div>
 
   );
-}
 
 export default AboutPage;
