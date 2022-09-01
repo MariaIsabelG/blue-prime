@@ -50,10 +50,14 @@ function App() {
 						<AgentDashboard />
 					</ProtectedRoute>
 
-					{/* Agent Dashboard */}
-					<ProtectedRoute exact path='/admin'>
+					{/* Admin Dashboard */}
+					{/* <ProtectedRoute exact path='/admin'>
 						<AdminDashboard />
-					</ProtectedRoute>
+					</ProtectedRoute> */}
+
+					<Route exact path='/admin'>
+						<AdminDashboard />
+					</Route>
 
 					{/* Resource Landing Page */}
 					<Route exact path='/resources'>
