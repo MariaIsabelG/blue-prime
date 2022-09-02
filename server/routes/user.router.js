@@ -47,4 +47,7 @@ router.post('/logout', (req, res) => {
   res.sendStatus(200);
 });
 
+router.get('/states', (req, res) => {
+  )
+
 module.exports = router;
