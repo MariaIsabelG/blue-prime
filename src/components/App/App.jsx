@@ -12,6 +12,7 @@ import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
+import RegisterPage from '../RegisterPage/RegisterPage';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import Article from '../Article/Article';
@@ -47,6 +48,9 @@ function App() {
         <Nav />
         <Switch>
 
+        <Route exact path="/registerforbluevest2022">
+          <RegisterPage />
+        </Route>
 
         <Route exact path="/findPro">
           <FindPro />
