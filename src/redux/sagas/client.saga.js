@@ -23,9 +23,9 @@ function* getClients(action) {
 
 function* updateClientStatus(action) {
     try{
-        yield console.log('action.payload', action.payload)
+        // yield console.log('action.payload', action.payload)
         const clientStatus = {status : action.payload.newStatus}
-        yield console.log('clientStatus,', clientStatus);
+        // yield console.log('clientStatus,', clientStatus);
         const response = yield axios.put(`/api/client/${action.payload.id}`, clientStatus);
         yield put({type: 'GET_CLIENTS', payload: action.payload.agentId})
 
@@ -36,10 +36,20 @@ function* updateClientStatus(action) {
     }
 }
 
+function* deleteClient(action) {
+    try{
+        yield console.log('action.payload', action.payload)
+    }
+    catch(error) {
+        console.log('error deleting client', error);
+    }
+}
+
 function* clientSaga() {
     yield takeLatest('GET_CLIENTS', getClients);
     // yield takeLatest('GET_THIS_CLIENT', getThisClient);
     yield takeLatest('UPDATE_CLIENT_STATUS', updateClientStatus);
+    yield takeLatest('DELETE_CLIENT', deleteClient);
 }
 
 export default clientSaga;

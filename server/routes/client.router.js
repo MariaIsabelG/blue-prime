@@ -2,7 +2,6 @@ const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
 
-//GET clients for a specific agent
 
 router.post('/', (req, res) => {
     const info = req.body;
@@ -23,6 +22,7 @@ router.post('/', (req, res) => {
 
 })
 
+//GET clients for a specific agent
 router.get('/:id', (req, res) => {
     const id = req.params.id
     let queryText = `SELECT * FROM "client" 
