@@ -18,9 +18,9 @@ function LoginPage() {
           <li className="text-center text-black mb-1">By working with us, you'll spend less time marketing yourself, and more time advising your clients.</li>
         <h3 className="text-xl text-center text-black mt-6">BlueVest has helped some of the biggest names in financial services grow their brand and practice.</h3>
         <div className="flex items-center justify-center">
-          <img className="w-3/12 sm:w-3/12 md:w-2/12 lg:w-2/12 xl:w-2/12 mr-6" src="images/State-Farm-Logo.png"/>
-          <img className="w-3/12 sm:w-3/12 md:w-2/12 lg:w-2/12 xl:w-2/12 mr-6" src="images/farmers-logo2.png"/>
-          <img className="w-3/12  sm:w-3/12 md:w-3/12 lg:w-3/12 xl:w-3/12" src="images/NW-Mutual.png"/>
+          <img className="w-5/12 sm:w-3/12 md:w-2/12 lg:w-2/12 xl:w-2/12 mr-6" src="images/State-Farm-Logo.png"/>
+          <img className="w-5/12 sm:w-3/12 md:w-2/12 lg:w-2/12 xl:w-2/12 mr-6" src="images/farmers-logo2.png"/>
+          <img className="w-6/12  sm:w-3/12 md:w-3/12 lg:w-3/12 xl:w-3/12" src="images/NW-Mutual.png"/>
         </div>
       </div>
       <div className="px-20 md:pt-32 sm:pt-10 sm:pb-10 md:pt-10 md:pb-10 lg:pt-8 lg:pb-8 pb-2 pt-10 bg-white ">
