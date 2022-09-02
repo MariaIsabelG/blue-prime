@@ -20,7 +20,7 @@ function AgentDashboard() {
     }, [])
 
 return(
-    <>
+    <div>
         <h1>Hi {agent.first_name}!</h1>
 
 
@@ -43,6 +43,7 @@ return(
             </li>
         </ul>
 
+
         {/* {clientList.map(client => {
             return (
                 <div key={client.id}>
@@ -58,7 +59,7 @@ return(
                 </div>
         )
         })} */}
-    </>
+    </div>
 )
 }
 
