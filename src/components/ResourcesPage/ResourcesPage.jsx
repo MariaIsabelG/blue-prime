@@ -17,7 +17,7 @@ function ResourcesPage() {
 	return (
 		<div className='mt-10'>
 
-<div className='border-t-black border-t-[3px] border-b-black border-b-[2px] mt-10'>
+    <div className='border-t-black border-t-[3px] border-b-black border-b-[2px] mt-10'>
 					<h1 className='text-center text-2xl pt-1 pb-1'>Finance</h1>
 				</div>
 			<div>
