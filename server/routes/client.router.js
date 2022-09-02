@@ -56,10 +56,8 @@ router.get('/:id', (req, res) => {
 // })
 
 router.put('/:id', (req, res) => {
-
-    console.log('req.params', req.params);
-    console.log('req.body', req.body)
-
+    // console.log('req.params', req.params);
+    // console.log('req.body', req.body)
     const queryText = `UPDATE "client_user" SET "status" = $1 WHERE "client_user"."client_id" = $2;`
     pool.query(queryText, [req.body.status, req.params.id])
         .then((result => {
@@ -68,6 +66,19 @@ router.put('/:id', (req, res) => {
             console.log('error updating client status', error);
             res.sendStatus(500);
         })
+})
+
+router.delete('/:id', (req, res) => {
+    console.log('req.params.id:', req.params.id);
+    const queryText = `DELETE FROM "client_user" WHERE "client_id" = $1;`
+    pool.query(queryText, [req.params.id])
+    .then(() => {
+        res.sendStatus(201);
+    })
+    .catch(error => {
+        console.log('error deleting client', error);
+        res.sendStatus(500);
+    })
 })
 
 /**

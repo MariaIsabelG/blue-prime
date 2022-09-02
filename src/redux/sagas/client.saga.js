@@ -39,6 +39,8 @@ function* updateClientStatus(action) {
 function* deleteClient(action) {
     try{
         yield console.log('action.payload', action.payload)
+        yield axios.delete(`/api/client/${action.payload.id}`)
+        yield put({type: 'GET_CLIENTS', payload: action.payload.agentId})
     }
     catch(error) {
         console.log('error deleting client', error);

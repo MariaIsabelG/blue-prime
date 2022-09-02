@@ -25,7 +25,7 @@ function AgentLost() {
 
     const handleDelete = (id) => {
         console.log('id to delete', id)
-        dispatch({type: 'DELETE_CLIENT', payload: id})
+        dispatch({type: 'DELETE_CLIENT', payload: {id, agentId}})
     }
 
     return(
