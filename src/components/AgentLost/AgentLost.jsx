@@ -23,6 +23,11 @@ function AgentLost() {
         dispatch({type: 'UPDATE_CLIENT_STATUS', payload: {newStatus, id, agentId}})
     }
 
+    const handleDelete = (id) => {
+        console.log('id to delete', id)
+        dispatch({type: 'DELETE_CLIENT', payload: id})
+    }
+
     return(
         <div>
             <AgentDashboard />
@@ -54,7 +59,16 @@ function AgentLost() {
                                     <button 
                                         className='mt-2 inline-block rounded-md border border-transparent bg-blue-600 py-3 px-8 text-center font-medium text-white hover:bg-blue-700'
                                         onClick={() => handleStatusUpdate(newStatus, client.client_id)}
-                                            >Update</button>
+                                            >Update
+                                    </button>
+
+                                    <button 
+                                    className='ml-4 mt-2 inline-block rounded-md border border-transparent bg-red-600 py-3 px-8 text-center font-medium text-white hover:bg-red-700'
+                                        onClick={() => handleDelete(client.client_id)}
+                                            >Delete
+                                    </button>
+
+                                    
                                 </div>
                             </div>
                         </div>
