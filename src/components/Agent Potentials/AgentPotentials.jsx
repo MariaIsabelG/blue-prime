@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import axios from 'axios';
+
 import AgentDashboard from "../AgentDashboard/AgentDashboard";
 
 function AgentPotentials() {
@@ -9,6 +11,7 @@ function AgentPotentials() {
     const history = useHistory();
 
     const clientList = useSelector(store => store.clients.clientList);
+    const agentId = useSelector(store => store.user.id)
 
     const [newStatus, setNewStatus] = useState('');
 
@@ -25,9 +28,19 @@ function AgentPotentials() {
 
     }
 
-    const handleStatusUpdate = (id) => {
-        console.log('id to update:', id);
-        dispatch({type: 'UPDATE_CLIENT', payload: {newStatus, id}})
+    // const handleStatusUpdate = (newStatus, id) => {
+    //     console.log('newStatus:', newStatus)
+    //     console.log('id to update:', id);
+    //     axios.put(`/api/client/${id}`, {status: newStatus})
+    //     .then((response => {
+    //         console.log(response);
+    //     }))
+    // }
+
+    const handleStatusUpdate = (newStatus, id) => {
+        console.log('newStatus:', newStatus);
+        console.log('id to update', id);
+        dispatch({type: 'UPDATE_CLIENT_STATUS', payload: {newStatus, id, agentId}})
     }
 
     return(
@@ -49,7 +62,7 @@ function AgentPotentials() {
                                 <p>{client.state} {client.zip_code}</p>
                                 <h3>client status: {client.status}</h3>
                                 <h3>newStatus: {newStatus}</h3>
-                                <h3>client id: {client.id}</h3>
+                                <h3>client id: {client.client_id}</h3>
 
                                 <div className="mt-8">
                                     <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
@@ -64,7 +77,7 @@ function AgentPotentials() {
                                     </select>
                                     <button 
 									className='mt-2 inline-block rounded-md border border-transparent bg-blue-600 py-3 px-8 text-center font-medium text-white hover:bg-blue-700'
-                                    onClick={() => handleStatusUpdate(client.id)}
+                                    onClick={() => handleStatusUpdate(newStatus, client.client_id)}
                                     >Update</button>
                                 </div>
                             </div>

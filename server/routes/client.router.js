@@ -40,19 +40,34 @@ router.get('/:id', (req, res) => {
 
 
 //GET a specific client
-router.get('/details/:id', (req, res) => {
-    const id = req.params.id;
-    let queryText = `SELECT * FROM "client" 
-    JOIN "client_user" ON "client"."id" = "client_user"."client_id" 
-    WHERE "client"."id" = ${id};`
-    pool.query(queryText)
-    .then(result => {
-        res.send(result.rows)
-    })
-    .catch(error => {
-        console.log('error getting a specific client', error)
-        res.sendStatus(500);
-    }) 
+// router.get('/details/:id', (req, res) => {
+//     const id = req.params.id;
+//     let queryText = `SELECT * FROM "client" 
+//     JOIN "client_user" ON "client"."id" = "client_user"."client_id" 
+//     WHERE "client"."id" = ${id};`
+//     pool.query(queryText)
+//     .then(result => {
+//         res.send(result.rows)
+//     })
+//     .catch(error => {
+//         console.log('error getting a specific client', error)
+//         res.sendStatus(500);
+//     }) 
+// })
+
+router.put('/:id', (req, res) => {
+
+    console.log('req.params', req.params);
+    console.log('req.body', req.body)
+
+    const queryText = `UPDATE "client_user" SET "status" = $1 WHERE "client_user"."client_id" = $2;`
+    pool.query(queryText, [req.body.status, req.params.id])
+        .then((result => {
+            res.sendStatus(200);
+        })).catch(error => {
+            console.log('error updating client status', error);
+            res.sendStatus(500);
+        })
 })
 
 /**

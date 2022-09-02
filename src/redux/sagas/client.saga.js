@@ -23,8 +23,11 @@ function* getClients(action) {
 
 function* updateClientStatus(action) {
     try{
-        const response = yield axios.put(`/api/client/${action.payload.id}`)
-        yield put({type: 'GET_CLIENTS'})
+        yield console.log('action.payload', action.payload)
+        const clientStatus = {status : action.payload.newStatus}
+        yield console.log('clientStatus,', clientStatus);
+        const response = yield axios.put(`/api/client/${action.payload.id}`, clientStatus);
+        yield put({type: 'GET_CLIENTS', payload: action.payload.agentId})
 
         yield console.log('response', response)
     }
