@@ -36,6 +36,22 @@ router.put('/agents/:id', (req, res) => {
 	}
 });
 
+router.delete('/agents/:id', (req, res) => {
+	if (req.user) {
+		const id = req.params.id;
+		const queryText = 'DELETE FROM "user" WHERE id = $1;';
+		pool
+			.query(queryText, [id])
+			.then((result) => {
+				res.sendStatus(200);
+			})
+			.catch((error) => {
+				console.log('ERROR DELETING IN /agents', error);
+				res.sendStatus(500);
+			});
+	}
+});
+
 router.get('/clients', (req, res) => {
 	if (req.user) {
 		const queryText = 'SELECT * FROM "client";';

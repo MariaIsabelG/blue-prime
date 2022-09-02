@@ -31,6 +31,11 @@ function AgentItem({ agent }) {
 		closeModel();
 	};
 
+	const handleDelete = () => {
+		const id = agent.id;
+		dispatch({ type: 'DELETE_AGENT', payload: id });
+	};
+
 	return (
 		<div>
 			<div className='block card w-46 mb-3 md:w-66 md:mr-5 bg-white border-2 text-neutral-focus text-neutral-content shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10'>
@@ -47,7 +52,9 @@ function AgentItem({ agent }) {
 						<button onClick={openModel} className='btn btn-ghost'>
 							Edit
 						</button>
-						<button className='btn btn-ghost'>Delete</button>
+						<button onClick={handleDelete} className='btn btn-ghost'>
+							Delete
+						</button>
 					</div>
 				</div>
 			</div>
