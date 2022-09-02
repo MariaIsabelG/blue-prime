@@ -20,17 +20,8 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterForm from '../RegisterForm/RegisterForm';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
-import CategoryOne from '../Categories/CategoryOne/CategoryOne';
-import CategoryTwo from '../Categories/CategoryTwo/CategoryTwo';
-import CategoryThree from '../Categories/CategoryThree/CategoryThree';
-import CategoryFour from '../Categories/CategoryFour/CategoryFour';
+import Article from '../Article/Article';
 
-import ArticleOne from '../Articles/ArticleOne/ArticleOne';
-import ArticleTwo from '../Articles/ArticleTwo/ArticleTwo';
-import ArticleThree from '../Articles/ArticleThree/ArticleThree';
-import ArticleFour from '../Articles/ArticleFour/ArticleFour';
-import ArticleFive from '../Articles/ArticleFive/ArticleFive';
-import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
@@ -103,49 +94,15 @@ function App() {
             <ResourcesPage />
           </Route>
 
-          {/* Categories */}
-          <Route exact path="/c1">
-            <CategoryOne />
-          </Route>
 
-          <Route exact path="/c2">
-            <CategoryTwo />
-          </Route>
-
-          <Route exact path="/c3">
-            <CategoryThree />
-          </Route>
-
-          <Route exact path="/c4">
-            <CategoryFour />
-          </Route>
 
 
           {/* Articles */}
 
-          <Route exact path="/a1">
-            <ArticleOne />
+          <Route exact path="/a1/:id">
+            <Article />
           </Route>
 
-          <Route exact path="/a2">
-            <ArticleTwo />
-          </Route>
-
-          <Route exact path="/a3">
-            <ArticleThree />
-          </Route>
-
-          <Route exact path="/a4">
-            <ArticleFour />
-          </Route>
-
-          <Route exact path="/a5">
-            <ArticleFive />
-          </Route>
-
-          <Route exact path="/a6">
-            <ArticleSix />
-          </Route>
 
           
 

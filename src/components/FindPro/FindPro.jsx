@@ -48,7 +48,7 @@ function FindPro() {
                     className="lg:py-0 bg-[#D6E2ED] border rounded-b-xl">
 
                     <div className="md:gap-2 items-center justify-center md:pt-5">
-                        <div className="flex flex-col md:flex-row md:gap-2 items-center justify-center pt-10">
+                        <div className="flex flex-col lg:flex-row md:gap-2 items-center justify-center pt-10">
                             <div>
                                 <label className="px-1 after:content-['*'] after:ml-0.5  after:text-red-500">First name</label>
                                 <div>
