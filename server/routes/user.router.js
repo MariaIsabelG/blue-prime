@@ -48,6 +48,18 @@ router.post('/logout', (req, res) => {
 });
 
 router.get('/states', (req, res) => {
-  )
+  const queryText = `SELECT * FROM "state" ORDER BY "name" ASC;`;
+  pool.query( queryText )
+  .then ( response =>{
+    res.send( response.rows );
+    console.log( response.rows ); 
+    }).catch((error) => {
+      console.log('Error getting states:', error);
+      res.sendStatus(500);
+    });
+  });
+
+
+
 
 module.exports = router;
