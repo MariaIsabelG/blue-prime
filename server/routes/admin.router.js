@@ -18,6 +18,24 @@ router.get('/agents', (req, res) => {
 	}
 });
 
+router.put('/agents/:id', (req, res) => {
+	if (req.user) {
+		const id = req.params.id;
+		const { firstName, lastName, company, phoneNumber, email } = req.body;
+		const queryText =
+			'UPDATE "user" SET first_name = $1, last_name = $2, company = $3, phone_number = $4, email = $5 WHERE id = $6;';
+		pool
+			.query(queryText, [firstName, lastName, company, phoneNumber, email, id])
+			.then((result) => {
+				res.sendStatus(200);
+			})
+			.catch((error) => {
+				console.log('ERROR UPDATING IN /agents', error);
+				res.sendStatus(500);
+			});
+	}
+});
+
 router.get('/clients', (req, res) => {
 	if (req.user) {
 		const queryText = 'SELECT * FROM "client";';

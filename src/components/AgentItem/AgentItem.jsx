@@ -20,11 +20,15 @@ function AgentItem({ agent }) {
 		document.body.style.overflow = 'unset';
 	};
 
-	const submitEdit = () => {
+	const submitEdit = (e) => {
+		const id = agent.id;
+		e.preventDefault();
+		console.log('Ummmm helloooo');
 		dispatch({
 			type: 'UPDATE_AGENT',
-			payload: { firstName, lastName, company, phoneNumber, email },
+			payload: { id, firstName, lastName, company, phoneNumber, email },
 		});
+		closeModel();
 	};
 
 	return (
@@ -158,7 +162,6 @@ function AgentItem({ agent }) {
 									</div>
 									<button
 										onClick={submitEdit}
-										type='submit'
 										className='w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center focus:ring-blue-800'>
 										Submit Edit
 									</button>

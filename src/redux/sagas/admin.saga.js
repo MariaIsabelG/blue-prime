@@ -20,8 +20,15 @@ function* getAllClients() {
 }
 
 function* updateAgent(action) {
+	const { firstName, lastName, company, phoneNumber, email } = action.payload;
 	try {
-		yield axios.put(`/api/admin/agents`, action.payload);
+		yield axios.put(`/api/admin/agents/${action.payload.id}`, {
+			firstName,
+			lastName,
+			company,
+			phoneNumber,
+			email,
+		});
 		yield put({ type: 'GET_AGENTS' });
 	} catch (error) {
 		console.log('error in updateAgents', error);
