@@ -13,7 +13,7 @@ function AgentPotentials() {
     const clientList = useSelector(store => store.clients.clientList);
     const agentId = useSelector(store => store.user.id)
 
-    const [newStatus, setNewStatus] = useState('');
+    const [newStatus, setNewStatus] = useState(2);
 
     // const handleClientClick = (clientId) => {
     //     console.log('clientId', clientId)
@@ -60,9 +60,6 @@ function AgentPotentials() {
                                 <p>{client.email}</p>
                                 <p>{client.phone_number}</p>
                                 <p>{client.state} {client.zip_code}</p>
-                                <h3>client status: {client.status}</h3>
-                                <h3>newStatus: {newStatus}</h3>
-                                <h3>client id: {client.client_id}</h3>
 
                                 <div className="mt-8">
                                     <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
