@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import AgentItem from '../AgentItem/AgentItem';
 
 function AdminDashboard() {
 	const [openTab, setOpenTab] = useState(1);
@@ -86,24 +87,7 @@ function AdminDashboard() {
 							}
 							id='link1'>
 							{agentList.map((agent) => (
-								<div
-									key={agent?.id}
-									className='block card w-46 mb-3 md:w-66 md:mr-5 bg-neutral text-neutral-content'>
-									<div className='card-body items-center text-center'>
-										<ul>
-											<li className='text-xl'>
-												{agent?.first_name} {agent?.last_name}
-											</li>
-											<li>{agent?.company}</li>
-											<li>{agent?.phone_number}</li>
-											<li>{agent?.email}</li>
-										</ul>
-										<div className='card-actions justify-end'>
-											<button className='btn btn-ghost'>Edit</button>
-											<button className='btn btn-ghost'>Delete</button>
-										</div>
-									</div>
-								</div>
+								<AgentItem key={agent.id} agent={agent} />
 							))}
 						</div>
 						<div

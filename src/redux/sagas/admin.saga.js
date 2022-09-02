@@ -19,9 +19,19 @@ function* getAllClients() {
 	}
 }
 
+function* updateAgent(action) {
+	try {
+		yield axios.put(`/api/admin/agents`, action.payload);
+		yield put({ type: 'GET_AGENTS' });
+	} catch (error) {
+		console.log('error in updateAgents', error);
+	}
+}
+
 function* adminSaga() {
 	yield takeLatest('GET_AGENTS', getAgents);
 	yield takeLatest('GET_ALL_CLIENTS', getAllClients);
+	yield takeLatest('UPDATE_AGENT', updateAgent);
 }
 
 export default adminSaga;
