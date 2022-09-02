@@ -6,10 +6,12 @@ function ResourcesPage() {
 	const history = useHistory();
 
 	return (
-		<div className='container'>
+
+		<div className='bg-white w-screen'>
+
 			<section>
-				<h1 className='text-center text-2xl'>Select a Category</h1>
-				<div className='max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
+				<h1 className='mt-5 text-center text-2xl'>Select a Category</h1>
+				<div className='flex justify-center items-center max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
 					<div className='flex-col flex md:flex-row justify-space-between justify-center items-center mt-8'>
 						<a
 							className='block transition mb-2 mr-4 p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200'

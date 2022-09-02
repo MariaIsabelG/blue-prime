@@ -20,7 +20,7 @@ function RegisterForm() {
   }; // end registerUser
 
   return (
-    <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 xl:mt-20">
+    <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">
       <form onSubmit={registerUser}>
         <h3 className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl w-">Register</h3>
         {errors.registrationMessage && (
@@ -28,7 +28,7 @@ function RegisterForm() {
             {errors.registrationMessage}
           </h3>
         )}
-        <div className="lg:py-0 bg-[#d6e2ed] border rounded-b-xl xl:mx-36">
+        <div className="text-center font-bold sm:text-1xl p-6 lg:py-0 bg-[#d6e2ed] border rounded-b-xl  ">
           <div className="mt-6 px-6">
             <label htmlFor="username">
               Username:
