@@ -20,9 +20,9 @@ function* getAllClients() {
 }
 
 function* updateAgent(action) {
-	const { firstName, lastName, company, phoneNumber, email } = action.payload;
+	const { id, firstName, lastName, company, phoneNumber, email } = action.payload;
 	try {
-		yield axios.put(`/api/admin/agents/${action.payload.id}`, {
+		yield axios.put(`/api/admin/agents/${id}`, {
 			firstName,
 			lastName,
 			company,
@@ -44,11 +44,29 @@ function* deleteAgent(action) {
 	}
 }
 
+function* updateClient(action) {
+	const { id, firstName, lastName, state, phoneNumber, email, zip } = action.payload;
+	try {
+		yield axios.put(`/api/admin/clients/${id}`, {
+			firstName,
+			lastName,
+			state,
+			phoneNumber,
+			email,
+			zip,
+		});
+		yield put({ type: 'GET_ALL_CLIENTS' });
+	} catch (error) {
+		console.log('error in updateClients', error);
+	}
+}
+
 function* adminSaga() {
 	yield takeLatest('GET_AGENTS', getAgents);
 	yield takeLatest('GET_ALL_CLIENTS', getAllClients);
 	yield takeLatest('UPDATE_AGENT', updateAgent);
 	yield takeLatest('DELETE_AGENT', deleteAgent);
+	yield takeLatest('UPDATE_CLIENT', updateClient);
 }
 
 export default adminSaga;

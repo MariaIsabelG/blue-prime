@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-function AgentItem({ agent }) {
+function ClientItem({ client }) {
 	const [model, setModel] = useState(false);
-	const [firstName, setFirstName] = useState(agent.first_name);
-	const [lastName, setLastName] = useState(agent.last_name);
-	const [company, setCompany] = useState(agent.company);
-	const [phoneNumber, setPhoneNumber] = useState(agent.phone_number);
-	const [email, setEmail] = useState(agent.email);
+	const [firstName, setFirstName] = useState(client.first_name);
+	const [lastName, setLastName] = useState(client.last_name);
+	const [state, setState] = useState(client.state);
+	const [zip, setZip] = useState(client.zip_code);
+	const [phoneNumber, setPhoneNumber] = useState(client.phone_number);
+	const [email, setEmail] = useState(client.email);
 	const dispatch = useDispatch();
 
 	const openModel = () => {
@@ -21,43 +22,36 @@ function AgentItem({ agent }) {
 	};
 
 	const submitEdit = (e) => {
-		const id = agent.id;
+		const id = client.id;
 		e.preventDefault();
 		dispatch({
-			type: 'UPDATE_AGENT',
-			payload: { id, firstName, lastName, company, phoneNumber, email },
+			type: 'UPDATE_CLIENT',
+			payload: { id, firstName, lastName, state, zip, phoneNumber, email },
 		});
 		closeModel();
-	};
-
-	const handleDelete = () => {
-		const id = agent.id;
-		dispatch({ type: 'DELETE_AGENT', payload: id });
 	};
 
 	return (
 		<div>
 			<div className='block card w-46 mb-3 md:w-66 md:mr-5 bg-white border-2 text-neutral-focus text-neutral-content shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10'>
-				<div className='card-body items-center text-black-500 text-center'>
+				<div className='card-body items-center text-center'>
 					<ul>
-						<li className='text-black-500 text-xl'>
-							{agent?.first_name} {agent?.last_name}
+						<li className='text-xl'>
+							{client?.first_name} {client?.last_name}
 						</li>
-						<li>{agent?.company}</li>
-						<li>{agent?.phone_number}</li>
-						<li>{agent?.email}</li>
+						<li>{client?.state}</li>
+						<li>{client?.phone_number}</li>
+						<li>{client?.email}</li>
 					</ul>
 					<div className='card-actions justify-end'>
 						<button onClick={openModel} className='btn btn-ghost'>
 							Edit
 						</button>
-						<button onClick={handleDelete} className='btn btn-ghost'>
-							Delete
-						</button>
+						<button className='btn btn-ghost'>Delete</button>
 					</div>
 				</div>
 			</div>
-			{/* Popup Model For editing agent */}
+			{/* Popup Model For editing client */}
 			{model ? (
 				<div
 					id='authentication-modal'
@@ -122,22 +116,6 @@ function AgentItem({ agent }) {
 									</div>
 									<div>
 										<label
-											htmlFor='company'
-											className='block mb-1 text-sm font-medium text-gray-300'>
-											Company
-										</label>
-										<input
-											onChange={(e) => setCompany(e.target.value)}
-											value={company}
-											type='text'
-											id='company'
-											placeholder='Company'
-											className='bg-gray-600 border border-gray-500 text-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 placeholder-gray-400'
-											required=''
-										/>
-									</div>
-									<div>
-										<label
 											htmlFor='phone_number'
 											className='block mb-1 text-sm font-medium text-gray-300'>
 											Phone Number
@@ -166,6 +144,34 @@ function AgentItem({ agent }) {
 											required=''
 										/>
 									</div>
+									<div>
+										<label htmlFor='state' className='block mb-1 text-sm font-medium text-gray-300'>
+											State
+										</label>
+										<input
+											onChange={(e) => setState(e.target.value)}
+											value={state}
+											type='text'
+											id='state'
+											placeholder='state'
+											className='bg-gray-600 border border-gray-500 text-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 placeholder-gray-400'
+											required=''
+										/>
+									</div>
+									<div>
+										<label htmlFor='zip' className='block mb-1 text-sm font-medium text-gray-300'>
+											Zip Code
+										</label>
+										<input
+											onChange={(e) => setZip(e.target.value)}
+											value={zip}
+											type='text'
+											id='zip'
+											placeholder='Zip Code'
+											className='bg-gray-600 border border-gray-500 text-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 placeholder-gray-400'
+											required=''
+										/>
+									</div>
 									<button
 										onClick={submitEdit}
 										className='w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center focus:ring-blue-800'>
@@ -183,4 +189,4 @@ function AgentItem({ agent }) {
 	);
 }
 
-export default AgentItem;
+export default ClientItem;
