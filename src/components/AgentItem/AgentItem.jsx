@@ -38,7 +38,7 @@ function AgentItem({ agent }) {
 
 	return (
 		<div>
-			<div className='block card w-46 mb-3 md:w-66 md:mr-5 bg-white border-2 text-neutral-focus text-neutral-content shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10'>
+			<div className='block card w-46 mb-3 md:w-66 md:mr-5 bg-white border-2 text-neutral-focus text-neutral shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10'>
 				<div className='card-body items-center text-black-500 text-center'>
 					<ul>
 						<li className='text-black-500 text-xl'>

@@ -19,6 +19,15 @@ function* getAllClients() {
 	}
 }
 
+function* getNewLeads() {
+	try {
+		const response = yield axios.get(`/api/admin/leads`);
+		yield put({ type: 'SET_NEW_LEADS', payload: response.data });
+	} catch (error) {
+		console.log('error in getNewLeads', error);
+	}
+}
+
 function* updateAgent(action) {
 	const { id, firstName, lastName, company, phoneNumber, email } = action.payload;
 	try {
@@ -70,6 +79,15 @@ function* deleteClient(action) {
 	}
 }
 
+function* updateNewLead(action) {
+	try {
+		yield axios.put(`/api/admin/leads/${action.payload}`);
+		yield put({ type: 'GET_NEW_LEADS' });
+	} catch (error) {
+		console.log('error in updateNewLead', error);
+	}
+}
+
 function* adminSaga() {
 	yield takeLatest('GET_AGENTS', getAgents);
 	yield takeLatest('GET_ALL_CLIENTS', getAllClients);
@@ -77,6 +95,8 @@ function* adminSaga() {
 	yield takeLatest('DELETE_AGENT', deleteAgent);
 	yield takeLatest('UPDATE_CLIENT', updateClient);
 	yield takeLatest('DELETE_CLIENT', deleteClient);
+	yield takeLatest('GET_NEW_LEADS', getNewLeads);
+	yield takeLatest('LEAD_SENT', updateNewLead);
 }
 
 export default adminSaga;
