@@ -14,17 +14,8 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
-import CategoryOne from '../Categories/CategoryOne/CategoryOne';
-import CategoryTwo from '../Categories/CategoryTwo/CategoryTwo';
-import CategoryThree from '../Categories/CategoryThree/CategoryThree';
-import CategoryFour from '../Categories/CategoryFour/CategoryFour';
+import Article from '../Article/Article';
 
-import ArticleOne from '../Articles/ArticleOne/ArticleOne';
-import ArticleTwo from '../Articles/ArticleTwo/ArticleTwo';
-import ArticleThree from '../Articles/ArticleThree/ArticleThree';
-import ArticleFour from '../Articles/ArticleFour/ArticleFour';
-import ArticleFive from '../Articles/ArticleFive/ArticleFive';
-import ArticleSix from '../Articles/ArticleSix/ArticleSix';
 
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
@@ -41,160 +32,70 @@ import ClientInfo from '../ClientInfo/ClientInfo';
 import './App.css';
 
 function App() {
-	const dispatch = useDispatch();
 
-	const user = useSelector((store) => store.user);
+  const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch({ type: 'FETCH_USER' });
-	}, [dispatch]);
+  const user = useSelector(store => store.user);
 
-	return (
-		<Router>
-			<div>
-				<Nav />
-				<Switch>
-					{/* Agent Dashboard */}
-					<ProtectedRouteAgent exact path='/agent'>
-						<AgentDashboard />
-					</ProtectedRouteAgent>
+  useEffect(() => {
+    dispatch({ type: 'FETCH_USER' });
+  }, [dispatch]);
 
-					{/* Admin Dashboard */}
-					<ProtectedRouteAdmin exact path='/admin'>
-						<AdminDashboard />
-					</ProtectedRouteAdmin>
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
 
-					{/* Resource Landing Page */}
-					<Route exact path='/resources'>
-						<ResourcesPage />
-					</Route>
 
-          {/* Resource Landing Page */}
-					<Route exact path='/findPro'>
-						<FindPro />
-					</Route>
+        <Route exact path="/findPro">
+          <FindPro />
+        </Route>
 
-					{/* Categories */}
-					<Route exact path='/c1'>
-						<CategoryOne />
-					</Route>
+        <Route exact path="/canopy">
+          <Canopy />
+        </Route>
 
-					<Route exact path='/c2'>
-						<CategoryTwo />
-					</Route>
+          {/* Agent Dashboard */}
+          <ProtectedRouteAgent exact path="/agent">
+            <AgentDashboard />
+          </ProtectedRouteAgent>
 
-					<Route exact path='/c3'>
-						<CategoryThree />
-					</Route>
+          <ProtectedRouteAdmin exact path="/admin">
+            {/* <AdminDashboard /> */}
+          </ProtectedRouteAdmin>
 
-					<Route exact path='/c4'>
-						<CategoryFour />
-					</Route>
 
-					{/* Articles */}
+          <ProtectedRouteAgent exact path="/agent/leads">
+            <AgentLeads/>
+          </ProtectedRouteAgent>
 
-					<Route exact path='/a1'>
-						<ArticleOne />
-					</Route>
+          <ProtectedRouteAgent exact path="/agent/potentials">
+            <AgentPotentials/>
+          </ProtectedRouteAgent>
 
-					<Route exact path='/a2'>
-						<ArticleTwo />
-					</Route>
+          <ProtectedRouteAgent exact path="/agent/won">
+            <AgentWon/>
+          </ProtectedRouteAgent>
 
-					<Route exact path='/a3'>
-						<ArticleThree />
-					</Route>
+          <ProtectedRouteAgent exact path="/agent/lost">
+            <AgentLost/>
+          </ProtectedRouteAgent>
 
-					<Route exact path='/a4'>
-						<ArticleFour />
-					</Route>
+          <ProtectedRouteAgent exact path="/client/:id">
+            <ClientInfo/>
+          </ProtectedRouteAgent>
 
-					<Route exact path='/a5'>
-						<ArticleFive />
-					</Route>
+        {/* Resource Landing Page */}
+          <Route exact path="/resources">
+            <ResourcesPage />
+          </Route>
 
-					<Route exact path='/a6'>
-						<ArticleSix />
-					</Route>
+          {/* Articles */}
 
-					{/* Visiting localhost:3000 will redirect to localhost:3000/home */}
-					<Redirect exact from='/' to='/home' />
-
-					{/* Visiting localhost:3000/about will show the about page. */}
-					<Route
-						// shows AboutPage at all times (logged in or not)
-						exact
-						path='/about'>
-						<AboutPage />
-					</Route>
-
-					<ProtectedRouteAgent exact path='/agent/leads'>
-						<AgentLeads />
-					</ProtectedRouteAgent>
-
-					<ProtectedRouteAgent exact path='/agent/potentials'>
-						<AgentPotentials />
-					</ProtectedRouteAgent>
-
-					<ProtectedRouteAgent exact path='/agent/won'>
-						<AgentWon />
-					</ProtectedRouteAgent>
-
-					<ProtectedRouteAgent exact path='/agent/lost'>
-						<AgentLost />
-					</ProtectedRouteAgent>
-
-					<ProtectedRouteAgent exact path='/client/:id'>
-						<ClientInfo />
-					</ProtectedRouteAgent>
-
-					{/* Resource Landing Page */}
-					<Route exact path='/resources'>
-						<ResourcesPage />
-					</Route>
-
-					{/* Categories */}
-					<Route exact path='/c1'>
-						<CategoryOne />
-					</Route>
-
-					<Route exact path='/c2'>
-						<CategoryTwo />
-					</Route>
-
-					<Route exact path='/c3'>
-						<CategoryThree />
-					</Route>
-
-					<Route exact path='/c4'>
-						<CategoryFour />
-					</Route>
-
-					{/* Articles */}
-
-					<Route exact path='/a1'>
-						<ArticleOne />
-					</Route>
-
-					<Route exact path='/a2'>
-						<ArticleTwo />
-					</Route>
-
-					<Route exact path='/a3'>
-						<ArticleThree />
-					</Route>
-
-					<Route exact path='/a4'>
-						<ArticleFour />
-					</Route>
-
-					<Route exact path='/a5'>
-						<ArticleFive />
-					</Route>
-
-					<Route exact path='/a6'>
-						<ArticleSix />
-					</Route>
+          <Route exact path="/a1/:id">
+            <Article />
+          </Route>
 
 					{/* Visiting localhost:3000 will redirect to localhost:3000/home */}
 					<Redirect exact from='/' to='/home' />
