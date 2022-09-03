@@ -61,12 +61,22 @@ function* updateClient(action) {
 	}
 }
 
+function* deleteClient(action) {
+	try {
+		yield axios.delete(`/api/admin/clients/${action.payload}`);
+		yield put({ type: 'GET_ALL_CLIENTS' });
+	} catch (error) {
+		console.log('error in deletingClient', error);
+	}
+}
+
 function* adminSaga() {
 	yield takeLatest('GET_AGENTS', getAgents);
 	yield takeLatest('GET_ALL_CLIENTS', getAllClients);
 	yield takeLatest('UPDATE_AGENT', updateAgent);
 	yield takeLatest('DELETE_AGENT', deleteAgent);
 	yield takeLatest('UPDATE_CLIENT', updateClient);
+	yield takeLatest('DELETE_CLIENT', deleteClient);
 }
 
 export default adminSaga;
