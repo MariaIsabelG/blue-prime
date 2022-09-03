@@ -4,9 +4,7 @@ import { useHistory } from 'react-router-dom';
 import RegisterForm from '../RegisterForm/RegisterForm';
 
 function LoginPage() {
-  const history = useHistory();
-
-  
+	const history = useHistory();  
 
   return (
   
