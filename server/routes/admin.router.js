@@ -101,4 +101,36 @@ router.delete('/clients/:id', (req, res) => {
 	}
 });
 
+router.get('/leads', (req, res) => {
+	if (req.user) {
+		const queryText =
+			'SELECT client_user.id AS id, client.first_name AS client_firstname, client.last_name AS client_lastname, "user".first_name AS agent_firstname, "user".last_name AS agent_lastname, "user".email AS agent_email FROM client_user JOIN "user" ON "user".id = client_user.user_id JOIN client ON client.id = client_user.client_id  WHERE client_user."isSent" = false;';
+		pool
+			.query(queryText)
+			.then((result) => {
+				res.send(result.rows);
+			})
+			.catch((error) => {
+				console.log('ERROR GETTING IN /leads', error);
+				res.sendStatus(500);
+			});
+	}
+});
+
+router.put('/leads/:id', (req, res) => {
+	if (req.user) {
+		const id = req.params.id;
+		const queryText = 'UPDATE client_user SET "isSent" = true WHERE id =$1;';
+		pool
+			.query(queryText, [id])
+			.then((result) => {
+				res.send(result.rows);
+			})
+			.catch((error) => {
+				console.log('ERROR GETTING IN /leads', error);
+				res.sendStatus(500);
+			});
+	}
+});
+
 module.exports = router;

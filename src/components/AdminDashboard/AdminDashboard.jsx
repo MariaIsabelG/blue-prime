@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AgentItem from '../AgentItem/AgentItem';
 import ClientItem from '../ClientItem/ClientItem';
+import NewLeadItem from '../NewLeadItem/NewLeadItem';
 
 function AdminDashboard() {
 	const [openTab, setOpenTab] = useState(1);
@@ -9,10 +10,12 @@ function AdminDashboard() {
 	const dispatch = useDispatch();
 	const agentList = useSelector((state) => state.agentList);
 	const allClients = useSelector((state) => state.allClients);
+	const newLeads = useSelector((state) => state.newLeads);
 
 	useEffect(() => {
 		dispatch({ type: 'GET_AGENTS' });
 		dispatch({ type: 'GET_ALL_CLIENTS' });
+		dispatch({ type: 'GET_NEW_LEADS' });
 	}, []);
 
 	return (
@@ -109,7 +112,9 @@ function AdminDashboard() {
 									: 'hidden'
 							}
 							id='link3'>
-							<h1>Soon to be new leads</h1>
+							{newLeads.map((lead) => (
+								<NewLeadItem key={lead.id} lead={lead} />
+							))}
 						</div>
 					</div>
 				</div>
