@@ -10,7 +10,7 @@ function RegisterForm() {
   const [phonenumber, setPhonenumber] = useState('');
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
-  const [licensurestates, setLicensurestates] = useState([]);
+  const [stateList, setStateList] = useState([]);
 
 
   const dispatch = useDispatch();
@@ -22,11 +22,11 @@ function RegisterForm() {
     dispatch({ type: 'FETCH_STATES'});
   },[]);
 
+  const handleChecked = (event) => {
+    stateList.push(event.target.value)
+    console.log('This is checked', stateList )
+  };
   
-
-  
-  
-
   const registerUser = (event) => {
     event.preventDefault();
 
@@ -41,8 +41,10 @@ function RegisterForm() {
         phone_number: phonenumber,
         email: email,
         company: company,
+        state_list: stateList,
       },
     });
+
     setUsername('');
     setPassword('');
     setFirstname('');
@@ -147,15 +149,17 @@ function RegisterForm() {
             />
           </label>
         </div>
-        {/* <div>
+        <div>
           {states.map((state) => {
-                return ( <div key={state.id}><label htmlFor="state"  className='mx-1.5'>
-                          <input type="checkbox" value={state.id}/>
-                          {state.name}
-                          </label></div>
+                return (<div key={state.id} >
+                          <label htmlFor="state" className='mx-1.5'>
+                            <input type="checkbox" value={state.id} onClick={handleChecked}/>
+                            {state.name}
+                          </label>
+                        </div>
                       )})}
                   
-        </div> */}
+        </div>
         <div className="flex items-center justify-center mt-6">
           <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white mb-6" type="submit" name="submit" value="Register">Register</button> 
         </div>
