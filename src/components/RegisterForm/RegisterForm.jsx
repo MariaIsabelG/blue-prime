@@ -43,6 +43,13 @@ function RegisterForm() {
         company: company,
       },
     });
+    setUsername('');
+    setPassword('');
+    setFirstname('');
+    setLastname('');
+    setPhonenumber('');
+    setEmail('');
+    setCompany('');
 
   }; // end registerUser
 
