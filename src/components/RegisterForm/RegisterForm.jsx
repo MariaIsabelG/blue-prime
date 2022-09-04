@@ -36,6 +36,9 @@ function RegisterForm() {
         username: username,
         password: password,
         first_name: firstname,
+        last_name: lastname,
+        phone_number: phonenumber,
+        company: company,
       },
     });
 
@@ -125,7 +128,7 @@ function RegisterForm() {
             />
           </label>
         </div>
-        <div>
+        {/* <div>
           {states.map((state) => {
                 return ( <div key={state.id}><label htmlFor="state"  className='mx-1.5'>
                           <input type="checkbox" value={state.id}/>
@@ -133,7 +136,7 @@ function RegisterForm() {
                           </label></div>
                       )})}
                   
-        </div>
+        </div> */}
         <div className="flex items-center justify-center mt-6">
           <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white mb-6" type="submit" name="submit" value="Register">Register</button> 
         </div>
