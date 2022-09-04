@@ -7,7 +7,7 @@ function RegisterForm() {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const errors = useSelector((store) => store.errors);
-  const states = useSelector((store) => store.states);
+  const states = useSelector((store) => store.stateReducer);
   
   useEffect(() =>{
     
@@ -64,12 +64,12 @@ function RegisterForm() {
           </label>
         </div>
         <div>
-          {/* {states.map((state) => {
-                return ( <label>
+          {states.map((state) => {
+                return ( <div><label>
                           <input type="checkbox" value={state.id}/>
                           {state.name}
-                          </label>
-                      )})} */}
+                          </label></div>
+                      )})}
                   
         </div>
         <div className="flex items-center justify-center mt-6">
