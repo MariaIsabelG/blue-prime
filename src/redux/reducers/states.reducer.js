@@ -1,4 +1,5 @@
-const stateReducer = (state = [], action) => {
+let initialState = []
+const stateReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_STATES':
             return action.payload;

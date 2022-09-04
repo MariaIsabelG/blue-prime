@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import StateItem from '../StateItem/StateItem';
 
 function RegisterForm() {
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
   const errors = useSelector((store) => store.errors);
   const states = useSelector((store) => store.states);
-  const dispatch = useDispatch();
-
+  
   useEffect(() =>{
     
     dispatch({ type: 'FETCH_STATES'});
-    console.log(states);
-
-  },[],);
+  },[]);
 
   const registerUser = (event) => {
     event.preventDefault();
@@ -29,6 +27,7 @@ function RegisterForm() {
 
   }; // end registerUser
 
+  console.log('These are states in form:', states);
 
   return (
     <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">
@@ -64,11 +63,15 @@ function RegisterForm() {
             />
           </label>
         </div>
-        {/* <div>
-          {states.map((state) => {
-                return <StateItem state={state}/>
-                          })}
-        </div> */}
+        <div>
+          {/* {states.map((state) => {
+                return ( <label>
+                          <input type="checkbox" value={state.id}/>
+                          {state.name}
+                          </label>
+                      )})} */}
+                  
+        </div>
         <div className="flex items-center justify-center mt-6">
           <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white mb-6" type="submit" name="submit" value="Register">Register</button> 
         </div>
