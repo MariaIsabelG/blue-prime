@@ -9,6 +9,7 @@ function RegisterForm() {
   const [lastname, setLastname] = useState('');
   const [phonenumber, setPhonenumber] = useState('');
   const [company, setCompany] = useState('');
+  const [email, setEmail] = useState('');
   const [licensurestates, setLicensurestates] = useState([]);
 
 
@@ -38,13 +39,12 @@ function RegisterForm() {
         first_name: firstname,
         last_name: lastname,
         phone_number: phonenumber,
+        email: email,
         company: company,
       },
     });
 
   }; // end registerUser
-
-  console.log('These are states in form:', states);
 
   return (
     <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">
@@ -105,8 +105,20 @@ function RegisterForm() {
             </label>
           </div>
           <div className="px-6">
-            <label htmlFor="username">
+            <label htmlFor="email">
               Email:
+              <input
+                type="text"
+                name="email"
+                value={email}
+                required
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </label>
+          </div>
+          <div className="px-6">
+            <label htmlFor="username">
+              Username:
               <input
                 type="text"
                 name="username"
