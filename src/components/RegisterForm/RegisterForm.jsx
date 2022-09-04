@@ -38,7 +38,7 @@ function RegisterForm() {
             {errors.registrationMessage}
           </h3>
         )}
-        <div className="text-center font-bold sm:text-1xl p-6 lg:py-0 bg-[#d6e2ed] border rounded-b-xl  ">
+        <div className="text-left font-bold sm:text-1xl p-6 lg:py-0 bg-[#d6e2ed] border rounded-b-xl  ">
           <div className="mt-6 px-6">
             <label htmlFor="username">
               Username:
@@ -65,7 +65,7 @@ function RegisterForm() {
         </div>
         <div>
           {states.map((state) => {
-                return ( <div><label>
+                return ( <div><label className='mx-1.5'>
                           <input type="checkbox" value={state.id}/>
                           {state.name}
                           </label></div>
