@@ -10,13 +10,13 @@ function RegisterForm() {
   const [phonenumber, setPhonenumber] = useState('');
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
-  const [checked, setChecked] = useState(false);
-  const [stateList, setStateList] = useState([]);
+
 
 
   const dispatch = useDispatch();
   const errors = useSelector((store) => store.errors);
   const states = useSelector((store) => store.stateReducer);
+  const agentstates = useSelector((store) => store.agentstates);
   
   useEffect(() =>{
     
@@ -37,7 +37,7 @@ function RegisterForm() {
         phone_number: phonenumber,
         email: email,
         company: company,
-        state_list: stateList,
+        agent_states: agentstates,
       },
     });
 
@@ -60,8 +60,6 @@ function RegisterForm() {
     }
   }
   
-  console.log('This is my checkedbox', checked);
-  console.log('This are my states', stateList);
 
   return (
     <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">

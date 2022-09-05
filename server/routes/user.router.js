@@ -25,7 +25,7 @@ router.post('/register', async (req, res) => {
   const phonenumber = req.body.phone_number;
   const company = req.body.company;
   const email = req.body.email;
-  const statelist = Number(req.body.state_list);
+  const agentstates = Number(req.body.agent_states);
 
   const connection = await pool.connect();
 
@@ -36,20 +36,21 @@ router.post('/register', async (req, res) => {
     const result = await connection.query(queryText, [username, password, firstname, lastname, phonenumber, company, email])
     const agentId = result.rows[0].id;
 
-    
+    // for(let i = 0; i < agentstates.length; i++){
 
     const queryTextStates = `INSERT INTO "state_user" ("state_id","user_id") VALUES ($1, $2);`;
-    await connection.query(queryTextStates, [statelist, agentId]);
-    await connection.query('COMMIT');
+    await connection.query(queryTextStates, [agentstates[i], agentId]);
+    await connection.query('COMMIT')
       res.sendStatus(200);
   }catch(error){
     await connection.query('ROLLBACK');
     console.log('Error in registering user', error);  
-    res.sendStatus(500);
+    res.sendStatus(500)};
   }finally{
     connection.release();
   }
-});
+)}
+;
 
 // Handles login form authenticate/login POST
 // userStrategy.authenticate('local') is middleware that we run on this route
