@@ -80,7 +80,7 @@ function Nav() {
 								<li
 									onClick={() => history.push('/agent')}
 									className='cursor-pointer hover:text-white'>
-									Agent
+									Dashboard
 								</li>
 							) : (
 								''
