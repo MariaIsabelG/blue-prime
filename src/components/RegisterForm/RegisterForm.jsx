@@ -22,12 +22,6 @@ function RegisterForm() {
     
     dispatch({ type: 'FETCH_STATES'});
   },[]);
-
-  const handleChecked = (event) => {
-    if(stateList === true)
-    stateList.push(event.target.value)
-    console.log('This is checked', stateList )
-  };
   
   const registerUser = (event) => {
     event.preventDefault();
@@ -55,7 +49,21 @@ function RegisterForm() {
     setEmail('');
     setCompany('');
 
-  }; // end registerUser
+  };
+
+  const checkBoxes = (event) => {
+    // setChecked(event.target.checked);
+    // stateList.push(event.target.value)
+    
+    // if(checked === false){
+    //   for(let i = 0; i < stateList.length; i++){
+    //     stateList.pop(event.target.value)
+    //   }
+    // }
+  }
+  
+  console.log('This is my checkedbox', checked);
+  console.log('This are my states', stateList);
 
   return (
     <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">
@@ -153,12 +161,13 @@ function RegisterForm() {
         </div>
         <div>
           {states.map((state) => {
-                return (<div key={state.id} >
+                return (
+                        <div key={state.id} >
                           <label htmlFor="state" className='mx-1.5'>
-                            <input type="checkbox" value={state.id} onClick={handleChecked}/>
+                            <input type="checkbox" value={state.id} onChange={checkBoxes}/>
                             {state.name}
-                          </label>
-                        </div>
+                          </label> 
+                          </div>
                       )})}
                   
         </div>

@@ -36,11 +36,11 @@ router.post('/register', async (req, res) => {
     const result = await connection.query(queryText, [username, password, firstname, lastname, phonenumber, company, email])
     const agentId = result.rows[0].id;
 
-    // for(let i=0; i<statelist.legnth; i++){
+    
 
-      const queryTextStates = `INSERT INTO "state_user" ("state_id","user_id") VALUES ($1, $2);`;
-      await connection.query(queryTextStates, [statelist, agentId]);
-      await connection.query('COMMIT');
+    const queryTextStates = `INSERT INTO "state_user" ("state_id","user_id") VALUES ($1, $2);`;
+    await connection.query(queryTextStates, [statelist, agentId]);
+    await connection.query('COMMIT');
       res.sendStatus(200);
   }catch(error){
     await connection.query('ROLLBACK');
