@@ -5,6 +5,7 @@ import userSaga from './user.saga';
 import clientForm from './client.form';
 import clientSaga from './client.saga';
 import adminSaga from './admin.saga';
+import allStates from './states.saga';
 
 
 // rootSaga is the primary saga.
@@ -23,6 +24,7 @@ export default function* rootSaga() {
     clientForm(), //client interest form
 		clientSaga(),
 		adminSaga(),
+		allStates(),
 	]);
 
 }

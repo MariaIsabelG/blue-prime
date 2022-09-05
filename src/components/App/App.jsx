@@ -12,6 +12,7 @@ import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
+import RegisterPage from '../RegisterPage/RegisterPage';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import Article from '../Article/Article';
@@ -33,17 +34,23 @@ import './App.css';
 function App() {
 	const dispatch = useDispatch();
 
-	const user = useSelector((store) => store.user);
+  const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch({ type: 'FETCH_USER' });
-	}, [dispatch]);
+  const user = useSelector(store => store.user);
 
-	return (
-		<Router>
-			<div>
-				<Nav />
-				<Switch>
+  useEffect(() => {
+    dispatch({ type: 'FETCH_USER' });
+  }, [dispatch]);
+
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+
+        <Route exact path="/registerforbluevest2022">
+          <RegisterPage />
+        </Route>
 					<Route exact path='/findPro'>
 						<FindPro />
 					</Route>
