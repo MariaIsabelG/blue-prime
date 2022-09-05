@@ -10,6 +10,7 @@ function RegisterForm() {
   const [phonenumber, setPhonenumber] = useState('');
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
+  const [checked, setChecked] = useState(false);
   const [stateList, setStateList] = useState([]);
 
 
@@ -23,6 +24,7 @@ function RegisterForm() {
   },[]);
 
   const handleChecked = (event) => {
+    if(stateList === true)
     stateList.push(event.target.value)
     console.log('This is checked', stateList )
   };
