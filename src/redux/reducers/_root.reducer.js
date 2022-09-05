@@ -6,6 +6,7 @@ import article from './article.reducer';
 import agentList from './agents.reducer';
 import allClients from './allClients.reducer';
 import stateReducer from './states.reducer';
+import agentstates from './agentstates.reducer';
 
 
 // rootReducer is the primary reducer for our entire project
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
 	agentList,
 	allClients,
   stateReducer,
+  agentstates,
 
 });
 

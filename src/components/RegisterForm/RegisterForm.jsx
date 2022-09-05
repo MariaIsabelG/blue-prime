@@ -52,14 +52,12 @@ function RegisterForm() {
   };
 
   const checkBoxes = (event) => {
-    // setChecked(event.target.checked);
-    // stateList.push(event.target.value)
     
-    // if(checked === false){
-    //   for(let i = 0; i < stateList.length; i++){
-    //     stateList.pop(event.target.value)
-    //   }
-    // }
+    if (event.target.checked){
+      dispatch({ type: 'ADD_STATES', payload: event.target.value});
+    }else{
+      dispatch({ type: 'REMOVE_STATES', payload: event.target.value});
+    }
   }
   
   console.log('This is my checkedbox', checked);
