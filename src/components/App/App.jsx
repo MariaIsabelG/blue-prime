@@ -34,23 +34,20 @@ import './App.css';
 function App() {
 	const dispatch = useDispatch();
 
-  const dispatch = useDispatch();
+	const user = useSelector((store) => store.user);
 
-  const user = useSelector(store => store.user);
+	useEffect(() => {
+		dispatch({ type: 'FETCH_USER' });
+	}, [dispatch]);
 
-  useEffect(() => {
-    dispatch({ type: 'FETCH_USER' });
-  }, [dispatch]);
-
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-
-        <Route exact path="/registerforbluevest2022">
-          <RegisterPage />
-        </Route>
+	return (
+		<Router>
+			<div>
+				<Nav />
+				<Switch>
+					<Route exact path='/registerforbluevest2022'>
+						<RegisterPage />
+					</Route>
 					<Route exact path='/findPro'>
 						<FindPro />
 					</Route>
