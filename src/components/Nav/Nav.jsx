@@ -76,6 +76,15 @@ function Nav() {
 							) : (
 								''
 							)}
+							{user.id && user.access_level === 2 ? (
+								<li
+									onClick={() => history.push('/agent')}
+									className='cursor-pointer hover:text-white'>
+									Agent
+								</li>
+							) : (
+								''
+							)}
 						</ul>
 					</div>
 				</div>
