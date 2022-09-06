@@ -36,40 +36,6 @@ function ResourcesPage() {
 							</div>
 						)
 					})}
-
-
-					{/* 
-						<a
-							className='block transition mb-2 mr-4 p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200'
-							onClick={() => history.push('/a1')}>
-							<h6 className='mt-2 font-bold'>Article</h6>
-
-							<p className='hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block'>
-								Lorem ipsum dolor sit amet consectetur.
-							</p>
-						</a>
-
-						<a
-							className='block transition mb-2 mr-4 p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200'
-							onClick={() => history.push('/a1')}>
-							<h6 className='mt-2 font-bold'>Article</h6>
-
-							<p className='hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block'>
-								Lorem ipsum dolor sit amet consectetur.
-							</p>
-						</a>
-
-						<a
-							className='block transition mb-2 mr-4 p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200'
-							onClick={() => history.push('/c4')}>
-							<h6 className='mt-2 font-bold'>Category Four</h6>
-
-							<p className='hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block'>
-								Lorem ipsum dolor sit amet consectetur.
-							</p>
-						</a> 
-		</div>
-				</div >*/}
 				</section >
 
 				<div className='border-t-black border-t-[3px] border-b-black border-b-[2px] mt-10'>
