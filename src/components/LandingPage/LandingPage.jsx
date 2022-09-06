@@ -47,7 +47,7 @@ function LandingPage() {
 								</div>
 								<div
 									onClick={() => history.push('/findPro')}
-									className='inline-block rounded-md border border-transparent bg-blue-600 py-3 px-8 text-center font-medium text-white hover:bg-blue-700'>
+									className='flex items-center justify-center	inline-block border-2 rounded-lg bg-green-600 text-white hover:shadow-lg hover:bg-green-700 w-52 h-16 text-3xl'>
 									Find Your Pro
 								</div>
 							</div>
