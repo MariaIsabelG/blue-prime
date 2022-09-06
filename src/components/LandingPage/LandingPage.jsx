@@ -18,7 +18,7 @@ function LandingPage() {
 			<div className='w-full mt-10 sm:mt-0 md:mt-0 lg:mt-0 '>
 			<div className='sm:flex md:flex bg-white'>
 				<div className="sm:static md:static lg:pl-36 xl:mt-10">
-					<div className='px-10 text-4xl text-gray-900 sm:mt-24 md:mt-24 lg:mt-30 lg:text-7xl xl:mt-16 xl:7xl '>
+					<div className='px-10 text-4xl text-gray-900 sm:mt-24 md:mt-24 lg:mt-30 lg:text-7xl xl:mt-32 xl:7xl '>
 						<h1 className="font-bold">
 							Find Your Financial Professional
 						</h1>
@@ -41,7 +41,7 @@ function LandingPage() {
 					</div>
 					</div>
 				</div>
-				<div className='mt-0 sm:inline-block sm:w-6/12 md:w-6/12 md:inline-block lg:w-6/12 xl:w-7/12' aria-hidden='true'>
+				<div className='mt-0 sm:inline-block sm:w-6/12 md:w-6/12 inline-block lg:w-6/12 xl:w-7/12' aria-hidden='true'>
 					<img
 						src='images/piggy_bank.jpg'
 						alt=''
@@ -97,7 +97,7 @@ function LandingPage() {
 						{/* CATEGORY 1*/}
 						<div className='m-3 '>
 							<a
-								className='block p-8 transition bg-green-600 border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
+								className='block p-8 transition bg-yellow-500 border shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-black text-center'>Category 1</h3>
 							</a>
@@ -106,7 +106,7 @@ function LandingPage() {
 						{/* CATEGORY 2 */}
 						<div className='m-3'>
 							<a
-								className='block p-8 transition bg-orange-600 border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
+								className='block p-8 transition bg-yellow-500 border shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-black text-center'>Category 2</h3>
 							</a>
@@ -115,7 +115,7 @@ function LandingPage() {
 						{/* CATEGORY 3 */}
 						<div className='m-3'>
 							<a
-								className='block p-8 transition bg-purple-600 border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
+								className='block p-8 transition bg-yellow-500 border shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-black text-center'>Category 3</h3>
 							</a>
@@ -124,7 +124,7 @@ function LandingPage() {
 						{/* CATEGORY 4 */}
 						<div className='m-3'>
 							<a
-								className='block p-8 transition bg-yellow-600 border border-gray-800 shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
+								className='block p-8 transition bg-yellow-500 border shadow-xl rounded-xl hover:shadow-blue-200/10 hover:border-blue-100/10'
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-black text-center'>Category 4</h3>
 							</a>
