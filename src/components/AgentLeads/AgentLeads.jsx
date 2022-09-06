@@ -30,7 +30,7 @@ function AgentLeads() {
             <AgentDashboard />
             <section >
                 <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
-                    <div className='flex-col flex md:flex-row justify-space-between justify-center items-center mt-8'>
+                    <div className='flex-col flex-wrap flex md:flex-row justify-space-between justify-center items-center mt-8'>
 
                         {clientList.map(client => {
                             if (client.status === 1) {
