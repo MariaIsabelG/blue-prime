@@ -3,23 +3,25 @@ import React from 'react';
 function AboutPage() {
 	return (
 		<div className='w-screen '>
-			<div>
-				<h2 className='text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 '>
+			<div className='bg-[#d6e2ed] pt-6'>
+				<h2 className='text-3xl text-black text-center font-bold sm:text-1xl p-6'>
 					Why work with us?
 				</h2>
-			<div className='bg-[#d6e2ed]'>
-				<article className='space-y-4 text-black px-12'>
-					<p className='font-bold mt-5 lg:mt-5'>We only work with the best</p>
+			<div>
+				<article className='space-y-4 text-black px-32 pb-10'>
+					<p className='text-2xl mt-5 lg:mt-5'>We only work with the best</p>
 					<p className=''>All financial professionals on our platform go through a rigorous vetting process. Insurance Professionals are able to provide more than 95% of the products in the market, and our investment professionals are all fiduciaries, meaning they're legally bound to act in your best interest. We partner with both local and nationwide firms.</p>
-					<p className='font-bold mt-5 lg:mt-5'>We are here for you</p>
+					<p className='text-2xl mt-5 lg:mt-5'>We are here for you</p>
 					<p>We provide a convenient, and easy way to find financial professionals in your area. Equipping you with the information and resources to decide which professional is right for your financial situation.</p>
-					<p className='font-bold mt-5 lg:mt-5'>No Hidden Fees. No Obligations</p>
+					<p className='text-2xl mt-5 lg:mt-5'>No Hidden Fees. No Obligations</p>
 					<p>Our services are 100% free and it only takes a few minutes to get started. No worries - you are not obligated to work with any of the financial professionals you get matched with.</p>
+					<div className='flex items-center justify-center pt-2 '>
 					<button
 						type='button'
-						className='border-2 rounded-xl bg-blue-600 text-white hover:shadow-lg w-32 h-12'>
+						className='border-2 rounded-lg bg-green-600 text-white hover:shadow-lg hover:bg-green-700 w-52 h-16 text-3xl'>
 						Find my Pro!
 					</button>
+					</div>
 				</article>
 			</div>	
 			</div>
@@ -57,7 +59,7 @@ function AboutPage() {
 					</div>
 				</div>
 			</div>
-			<div className='text-center bg-stone-100'>
+			<div className='text-center bg-stone-100 pb-6'>
 				<p>Icons by <a href="https://icons8.com">Icons8</a></p>
 			</div>
 		</div>
