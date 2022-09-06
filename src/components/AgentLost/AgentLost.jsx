@@ -108,7 +108,7 @@ function AgentLost() {
 
                                                 <div className="inline-block justify-center items-center">
 
-                                                <select defaultValue={1} onChange={handleStatusChange} id="status" 
+                                                <select defaultValue={4} onChange={handleStatusChange} id="status" 
                                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                         <option key={1} value="1" >Lead</option>
                                                         <option key={2} value="2" >Potential</option>
@@ -117,14 +117,14 @@ function AgentLost() {
                                                 </select>
                                                 <button 
                                                     className='mt-2 ml-4 rounded-md border border-transparent bg-blue-600 py-2 px-3 text-center font-medium text-white hover:bg-blue-700'
-                                                    onClick={() => handleStatusUpdate(newStatus, client.client_id)}>
+                                                    onClick={() => handleStatusUpdate(newStatus, client.id)}>
                                                     Update
                                                 </button>
 
                                                 <div className='flex-col flex md:flex-row justify-space-between justify-center items-center mt-4'>
                                                     <button 
                                                         className='justify-center block rounded-md border border-transparent bg-red-600 py-3 px-8 text-center font-medium text-white hover:bg-red-700'
-                                                        onClick={() => handleDelete(client.client_id)}
+                                                        onClick={() => handleDelete(client.id)}
                                                             >Delete
                                                     </button>
                                                 </div>

@@ -63,7 +63,7 @@ function AgentLeads() {
                                                 </select>
                                                 <button 
                                                     className='mt-2 ml-4 rounded-md border border-transparent bg-blue-600 py-2 px-3 text-center font-medium text-white hover:bg-blue-700'
-                                                    onClick={() => handleStatusUpdate(newStatus, client.client_id)}>
+                                                    onClick={() => handleStatusUpdate(newStatus, client.id)}>
                                                     Update
                                                 </button>
                                                 </div>
