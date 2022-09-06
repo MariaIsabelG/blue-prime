@@ -17,11 +17,14 @@ function ResourcesPage() {
 	return (
 		<div className='mt-10'>
 
-    <div className='border-t-black border-t-[3px] border-b-black border-b-[2px] mt-10'>
-					<h1 className='text-center text-2xl pt-1 pb-1'>Finance</h1>
-				</div>
+			<div className='flex flex-wrap justify-center'>
+				<div className='bg-gradient-to-l from-orange-200 mr-2 w-40 '></div>
+				<div className='text-2xl pt-0 pb-0'>Finance</div>
+				<div className='bg-gradient-to-r from-orange-200 ml-2 w-40'></div>
+			</div>
+
 			<div>
-				<section className='flex flex-wrap flex-col md:flex-row justify-center gap-4'>
+				<section className='flex flex-wrap flex-col md:flex-row justify-center gap-6'>
 
 					{financial.map((finance, id) => {
 						return (
@@ -30,7 +33,7 @@ function ResourcesPage() {
 									className='block transition mb-2 mr-4 p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200'
 									onClick={() => handleClick(finance)}>
 									<h6 className='mt-2 font-bold'>{finance.title}</h6>
-									<img className=" md:h-48 md:w-48 lg:h-52" src={finance.image} />
+									<img className=" h-36 w-36 md:h-48 md:w-48 lg:h-52" src={finance.image} />
 
 								</div>
 							</div>
@@ -38,28 +41,30 @@ function ResourcesPage() {
 					})}
 				</section >
 
-				<div className='border-t-black border-t-[3px] border-b-black border-b-[2px] mt-10'>
-					<h1 className='text-center text-2xl pt-1 pb-1' >Savings Tips & Tricks</h1>
+				<div className='flex flex-wrap justify-center mt-10'>
+					<div className='bg-gradient-to-l from-orange-200 mr-2 w-40 '></div>
+					<div className='text-2xl pt-0 pb-0'>Finance</div>
+					<div className='bg-gradient-to-r from-orange-200 ml-2 w-40'></div>
 				</div>
 
 			</div>
-			<div className=' mt-10 md:'>				
-			<section className='flex flex-wrap flex-col md:flex-row justify-center gap-4 mt-10'>
-				{savings.map((save, id) => {
-					return (
-						<div key={id} className=''>
-							<div
-								className='block transition mb-2 mr-4 p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200'
-								onClick={() => handleClick(save)}>
-								<h6 className='mt-2 font-bold'>{save.title}</h6>
-								<img className=" md:h-48 md:w-48 lg:h-52 " src={save.image} />
+			<div className=' mt-10 md:'>
+				<section className='flex flex-wrap flex-col md:flex-row justify-center gap-6 mt-10'>
+					{savings.map((save, id) => {
+						return (
+							<div key={id} className=''>
+								<div
+									className='block transition mb-2 mr-4 p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200'
+									onClick={() => handleClick(save)}>
+									<h6 className='mt-2 font-bold'>{save.title}</h6>
+									<img className=" h-36 w-36 md:h-48 md:w-48 lg:h-52 " src={save.image} />
 
+								</div>
 							</div>
-						</div>
-					)
-				})}
+						)
+					})}
 
-			</section>
+				</section>
 			</div>
 		</div >
 	);
