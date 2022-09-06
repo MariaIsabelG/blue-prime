@@ -57,11 +57,16 @@ router.post('/', async (req, res) => {
 
         const agentArray = agentResult.rows;
 
+        const adminId = 1;
+        if (agentArray.length < 1){
+            connection.query(clientAgent, [clientId, adminId ])
+        } else {
         for (let i = 0; i < agentArray.length; i++){
             console.log('loop console.log:', agentArray[i]);
             connection.query(clientAgent, [clientId, agentArray[i].id])
             connection.query(updateAgent, [agentArray[i].id])
         }
+    }
         connection.query('COMMIT');
 		res.sendStatus(200);
 
