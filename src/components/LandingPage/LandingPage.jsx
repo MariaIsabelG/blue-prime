@@ -22,7 +22,7 @@ function LandingPage() {
 							<h1 className='font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
 								Find Your Financial Professional
 							</h1>
-							<p className='mt-4 text-xl text-gray-500'>A little bit about Blue Vest.</p>
+							<p className='mt-4 text-xl text-gray-500'>Where your time and and insurance needs are valued</p>
 							<p className='mt-4 text-xl text-gray-500'>
 								Answer a few short quick questions and get connected with us!
 							</p>
