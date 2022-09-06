@@ -22,7 +22,7 @@ function AboutPage() {
 			</div>
 			<div>
 				<div className='flex items-center justify-center mb-4'>
-					<h3 className='font-bold text-2xl text-white bg-green-400 mt-5 lg:mt-5 border border-2 border-white rounded-full w-12'>3</h3>
+				<img src="images/communicationicon.png" className='font-bold text-2xl text-white = border border-2 border-white  w-16'/>	
 				</div>
 				<p>
 					Your agents will reach out to you within X business days with options to save you money
@@ -43,7 +43,11 @@ function AboutPage() {
 						Find my Pro!
 					</button>
 				</article>
+				
 			</div>
+			<div>
+					<p>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+				</div>
 		</div>
 	);
 }
