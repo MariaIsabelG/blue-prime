@@ -34,15 +34,15 @@ function FindPro() {
     }
 
     const addClient = () => {
-        if(firstName === ""|| lastName === ""|| phoneNumber === ""||email === ""||zipCode === ""||state === ""||comments === ""){
+        if (firstName === "" || lastName === "" || phoneNumber === "" || email === "" || zipCode === "" || state === "" || comments === "") {
             alert('missing values')
         } else {
-        //send client information to database
-        dispatch({ type: 'POST_CLIENT', payload: { firstName, lastName, phoneNumber, email, zipCode, state, comments } })
-        //clear inputs field
-        clearInputs();
-        //change view and populate canopy
-        history.push('/canopy')
+            //send client information to database
+            dispatch({ type: 'POST_CLIENT', payload: { firstName, lastName, phoneNumber, email, zipCode, state, comments } })
+            //clear inputs field
+            clearInputs();
+            //change view and populate canopy
+            history.push('/canopy')
         }
     }
 
@@ -88,7 +88,7 @@ function FindPro() {
                                     <input
                                         className="border rounded-sm hover:bg-blue-200 border-slate-400 bg-slate-100 px-1 shadow-sm"
                                         type="text" value={phoneNumber} onChange={(event) => setPhoneNumber(event.target.value)} />
-                                                                            <p className='invisible peer-invalid:visible text-red-700 font-thin text-xs'>Please enter your zip code</p>
+                                    <p className='invisible peer-invalid:visible text-red-700 font-thin text-xs'>Please enter your zip code</p>
 
                                 </div>
                             </div>
