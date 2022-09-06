@@ -85,7 +85,7 @@ function LandingPage() {
 				</div>
 			</div>
 			{/* RESOURCES SECTION */}
-			<section className='text-black bg-stone-100'>
+			<section className='text-black bg-white'>
 				<div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
 					<div className='max-w-lg mx-auto text-center'>
 						<h2 className='text-3xl font-bold sm:text-4xl'>Learn More</h2>
