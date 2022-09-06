@@ -3,8 +3,28 @@ import React from 'react';
 function AboutPage() {
 	return (
 		<div className='w-screen '>
+			<div>
+				<h2 className='text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 '>
+					Why work with us?
+				</h2>
+			<div className='bg-[#d6e2ed]'>
+				<article className='space-y-4 text-black px-12'>
+					<p className='font-bold mt-5 lg:mt-5'>We only work with the best</p>
+					<p className=''>All financial professionals on our platform go through a rigorous vetting process. Insurance Professionals are able to provide more than 95% of the products in the market, and our investment professionals are all fiduciaries, meaning they're legally bound to act in your best interest. We partner with both local and nationwide firms.</p>
+					<p className='font-bold mt-5 lg:mt-5'>We are here for you</p>
+					<p>We provide a convenient, and easy way to find financial professionals in your area. Equipping you with the information and resources to decide which professional is right for your financial situation.</p>
+					<p className='font-bold mt-5 lg:mt-5'>No Hidden Fees. No Obligations</p>
+					<p>Our services are 100% free and it only takes a few minutes to get started. No worries - you are not obligated to work with any of the financial professionals you get matched with.</p>
+					<button
+						type='button'
+						className='border-2 rounded-xl bg-blue-600 text-white hover:shadow-lg w-32 h-12'>
+						Find my Pro!
+					</button>
+				</article>
+			</div>	
+			</div>
 			<div className='pb-12 pt-10 bg-stone-100'>
-				<h2 className='text-left text-3xl text-black font-bold sm:text-1xl ml-32 mb-6 '>
+				<h2 className='text-center text-3xl text-black font-bold sm:text-1xl mb-6 '>
 					Our Process
 				</h2>
 				<div className='border rounded-md border mx-32 mb-4 bg-orange-200 border-2 border-gray-400'>
@@ -37,29 +57,9 @@ function AboutPage() {
 					</div>
 				</div>
 			</div>
-			<div>
-			<h2 className='text-2xl text-white font-bold sm:text-1xl p-6 bg-blue-600 '>
-				Why work with us?
-			</h2>
-			<div className='lg:py-0 bg-[#d6e2ed] border rounded-b-xl xl:mx-36 mb-10'>
-				<article className='space-y-4 text-black mb-5 px-12'>
-					<p className='font-bold mt-5 lg:mt-5'>We only work with the best</p>
-					<p className=''>All financial professionals on our platform go through a rigorous vetting process. Insurance Professionals are able to provide more than 95% of the products in the market, and our investment professionals are all fiduciaries, meaning they're legally bound to act in your best interest. We partner with both local and nationwide firms.</p>
-					<p className='font-bold mt-5 lg:mt-5'>We are here for you</p>
-					<p>We provide a convenient, and easy way to find financial professionals in your area. Equipping you with the information and resources to decide which professional is right for your financial situation.</p>
-					<p className='font-bold mt-5 lg:mt-5'>No Hidden Fees. No Obligations</p>
-					<p>Our services are 100% free and it only takes a few minutes to get started. No worries - you are not obligated to work with any of the financial professionals you get matched with.</p>
-					<button
-						type='button'
-						className='border-2 rounded-xl bg-blue-600 text-white hover:shadow-lg w-32 h-12'>
-						Find my Pro!
-					</button>
-				</article>
-			</div>	
+			<div className='text-center bg-stone-100'>
+				<p>Icons by <a href="https://icons8.com">Icons8</a></p>
 			</div>
-			<div>
-					<p>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-				</div>
 		</div>
 	);
 }
