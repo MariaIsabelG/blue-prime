@@ -79,7 +79,7 @@ function FindPro() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row md:gap-2 items-center justify-center pt-10">
+                        <div className="flex flex-col lg:flex-row md:gap-2  md:pt-5 items-center justify-center pt-10">
                             <div>
                                 <label className="px-1 after:content-['*'] after:ml-0.5 after:text-red-500">E-mail</label>
                                 <div>
