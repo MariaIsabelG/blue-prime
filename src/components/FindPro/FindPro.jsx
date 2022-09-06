@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function FindPro() {
+
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -194,15 +194,9 @@ function FindPro() {
                 </div>
             </div>
 
-
-
-
-
-
-
-
         </div>
     )
+
 }
 
 export default FindPro;

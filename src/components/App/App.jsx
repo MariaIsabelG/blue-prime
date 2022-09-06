@@ -12,10 +12,10 @@ import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
+import RegisterPage from '../RegisterPage/RegisterPage';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import Article from '../Article/Article';
-
 
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
@@ -32,70 +32,69 @@ import ClientInfo from '../ClientInfo/ClientInfo';
 import './App.css';
 
 function App() {
+	const dispatch = useDispatch();
 
-  const dispatch = useDispatch();
+	const user = useSelector((store) => store.user);
 
-  const user = useSelector(store => store.user);
+	useEffect(() => {
+		dispatch({ type: 'FETCH_USER' });
+	}, [dispatch]);
 
-  useEffect(() => {
-    dispatch({ type: 'FETCH_USER' });
-  }, [dispatch]);
+	return (
+		<Router>
+			<div>
+				<Nav />
+				<Switch>
+					<Route exact path='/registerforbluevest2022'>
+						<RegisterPage />
+					</Route>
+					<Route exact path='/findPro'>
+						<FindPro />
+					</Route>
 
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
+					<Route exact path='/canopy'>
+						<Canopy />
+					</Route>
 
+					{/* Agent Dashboard */}
+					<ProtectedRouteAgent exact path='/agent'>
+						<AgentDashboard />
+					</ProtectedRouteAgent>
 
-        <Route exact path="/findPro">
-          <FindPro />
-        </Route>
+					<ProtectedRouteAdmin exact path='/admin'>
+						<AdminDashboard />
+					</ProtectedRouteAdmin>
 
-        <Route exact path="/canopy">
-          <Canopy />
-        </Route>
+					<ProtectedRouteAgent exact path='/agent/leads'>
+						<AgentLeads />
+					</ProtectedRouteAgent>
 
-          {/* Agent Dashboard */}
-          <ProtectedRouteAgent exact path="/agent">
-            <AgentDashboard />
-          </ProtectedRouteAgent>
+					<ProtectedRouteAgent exact path='/agent/potentials'>
+						<AgentPotentials />
+					</ProtectedRouteAgent>
 
-          <ProtectedRouteAdmin exact path="/admin">
-            {/* <AdminDashboard /> */}
-          </ProtectedRouteAdmin>
+					<ProtectedRouteAgent exact path='/agent/won'>
+						<AgentWon />
+					</ProtectedRouteAgent>
 
+					<ProtectedRouteAgent exact path='/agent/lost'>
+						<AgentLost />
+					</ProtectedRouteAgent>
 
-          <ProtectedRouteAgent exact path="/agent/leads">
-            <AgentLeads/>
-          </ProtectedRouteAgent>
+					<ProtectedRouteAgent exact path='/client/:id'>
+						<ClientInfo />
+					</ProtectedRouteAgent>
 
-          <ProtectedRouteAgent exact path="/agent/potentials">
-            <AgentPotentials/>
-          </ProtectedRouteAgent>
+					{/* Resource Landing Page */}
+					<Route exact path='/resources'>
+						<ResourcesPage />
+					</Route>
 
-          <ProtectedRouteAgent exact path="/agent/won">
-            <AgentWon/>
-          </ProtectedRouteAgent>
+					{/* Articles */}
 
-          <ProtectedRouteAgent exact path="/agent/lost">
-            <AgentLost/>
-          </ProtectedRouteAgent>
-
-          <ProtectedRouteAgent exact path="/client/:id">
-            <ClientInfo/>
-          </ProtectedRouteAgent>
-
-        {/* Resource Landing Page */}
-          <Route exact path="/resources">
-            <ResourcesPage />
-          </Route>
-
-          {/* Articles */}
-
-          <Route exact path="/a1/:id">
-            <Article />
-          </Route>
+					<Route exact path='/a1/:id'>
+						<Article />
+					</Route>
 
 					{/* Visiting localhost:3000 will redirect to localhost:3000/home */}
 					<Redirect exact from='/' to='/home' />
@@ -118,7 +117,7 @@ function App() {
 						{user.id ? (
 							// If the user is already logged in,
 							// redirect to the /user page
-							<Redirect to='/user' />
+							<Redirect to='/agent' />
 						) : (
 							// Otherwise, show the login page
 							<LoginPage />
