@@ -15,46 +15,31 @@ function LandingPage() {
 
 	return (
 		<div>
-			<div className='overflow-hidden bg-white'>
-				<div className='pt-16 pb-20 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48'>
-					<div className=' mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8'>
-						<div className='sm:max-w-lg'>
-							<h1 className='font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
-								Find Your Financial Professional
-							</h1>
-							<p className='mt-4 text-xl text-gray-500'>Where your time and and insurance needs are valued</p>
-							<p className='mt-4 text-xl text-gray-500'>
-								Answer a few short quick questions and get connected with us!
-							</p>
-						</div>
-						<div>
-							<div className='mt-10'>
-								{/* Decorative image grid */}
-								<div
-									aria-hidden='true'
-									className='pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-5xl lg:mt-20 sm: mb-5'>
-									<div className='md:absolute md:transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8'>
-										<div className='flex items-center space-x-6 lg:space-x-8'>
-											<div className=' grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8'>
-												<img
-													src='images/piggy_bank.jpg'
-													alt=''
-													className='h-full w-full object-cover object-center'
-												/>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div
-									onClick={() => history.push('/findPro')}
-									className='flex items-center justify-center	inline-block border-2 rounded-lg bg-green-600 text-white hover:shadow-lg hover:bg-green-700 w-52 h-16 text-3xl'>
-									Find Your Pro
-								</div>
-							</div>
-						</div>
+			<div className='w-full mt-10 sm:mt-0 md:mt-0 lg:mt-0 '>
+			<div className='sm:flex md:flex'>
+				<div className="sm:static md:static lg:pl-36 xl:mt-20">
+					<div className='px-10 sm:mt-24 md:mt-24 lg:mt-30 text-4xl lg:text-7xl xl:7xl text-gray-900'>
+						<h1 className="font-bold">
+							Find Your Financial Professional
+						</h1>
+						<p className='mt-4 text-xl text-gray-500'>Where your time and and insurance needs are valued</p>
+						<p className='mt-4 text-xl text-gray-500'>
+							Answer a few short quick questions and get connected with us!
+						</p>
+					</div>
+					<div onClick={() => history.push('/findPro')} className='flex items-center justify-center inline-block border-2 rounded-lg bg-green-600 text-white hover:shadow-lg hover:bg-green-700 w-52 h-16 text-3xl mb-10 mt-8 ml-10'>
+						Find Your Pro
 					</div>
 				</div>
+				<div className='mt-0 sm:inline-block sm:w-6/12 md:w-6/12 md:inline-block lg:w-6/12 xl:w-6/12 ' aria-hidden='true'>
+					<img
+						src='images/piggy_bank.jpg'
+						alt=''
+						className='h-full w-full object-cover object-center'
+					/>
+				</div>
 			</div>
+				</div>
 			{/* RESOURCES SECTION */}
 			<section className='text-white bg-blue-900'>
 				<div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
