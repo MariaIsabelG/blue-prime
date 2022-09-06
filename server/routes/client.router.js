@@ -69,7 +69,7 @@ router.post('/', async (req, res) => {
 //GET clients for a specific agent
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
-	let queryText = `    SELECT "client"."id", "client"."first_name", "client"."state", "client"."last_name", "client"."email", "client"."phone_number", "client"."comments", to_char("client_user"."matched_date", 'Mon DD, YYYY') AS "matched_date", "client_user"."status" FROM "client" 
+	let queryText = `    SELECT "client"."id", "client"."first_name", "client"."state", "client"."zip_code", "client"."last_name", "client"."email", "client"."phone_number", "client"."comments", to_char("client_user"."matched_date", 'Mon DD, YYYY') AS "matched_date", "client_user"."status" FROM "client" 
     JOIN "client_user" ON "client"."id" = "client_user"."client_id"
     WHERE "client_user"."user_id" = ${id};`;
 	pool
