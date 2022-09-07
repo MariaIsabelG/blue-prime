@@ -1,9 +1,10 @@
 import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 
 function Canopy() {
 
-
+const history = useHistory();
     return (
         <>  
             <div className="text-center">
@@ -13,6 +14,7 @@ function Canopy() {
 
                 <button 
                     className='mt-2 mb-2 rounded-md border border-transparent bg-orange-400 py-2 px-3 text-center font-medium text-white hover:bg-orange-700'
+                    onClick={() => history.push('/confirmation')}
                 >
                     I do not wish to use Canopy
                 </button>
