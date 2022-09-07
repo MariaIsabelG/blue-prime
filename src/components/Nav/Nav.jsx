@@ -27,7 +27,7 @@ function Nav() {
 					</div>
 					<div className='flex md:order-2 mt-4'>
 						<button
-							onClick={() => history.push('/login')}
+							onClick={() => history.push('/jointeam')}
 							type='button'
 							className='hidden h-12 w-36 md:flex border border-black hover:bg-blue-700 text-white bg-inherit font-small rounded-lg text-sm px-6 py-3.5 text-center md:mr-2'>
 							Join Our Team

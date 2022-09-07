@@ -52,6 +52,9 @@ function Footer() {
 					</a>
 				</div>
 			</div>
+			<div className='text-center bg-stone-100'>
+				<p>Icons by <a href="https://icons8.com">Icons8</a></p>
+			</div>
 			<div>
 				<p>Copyright © 2022 - All rights reserved by BlueVest Inc.</p>
 			</div>

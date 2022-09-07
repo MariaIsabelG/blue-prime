@@ -1,30 +1,24 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-
 import { useDispatch, useSelector } from 'react-redux';
-
-import Nav from '../Nav/Nav';
-import Footer from '../Footer/Footer';
 
 import ProtectedRouteAdmin from '../ProtectedRoute/ProtectedRouteAdmin';
 import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 
+import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import JoinTeam from '../JoinOurTeam/JoinTeam';
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
 import Article from '../Article/Article';
-
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
 import ClientConfirmation from '../ClientConfirmation/ClientConfirmation';
-
 import AgentDashboard from '../AgentDashboard/AgentDashboard';
-
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
-
 import AgentLeads from '../AgentLeads/AgentLeads';
 import AgentPotentials from '../Agent Potentials/AgentPotentials';
 import AgentWon from '../AgentWon/AgentWon';
@@ -52,6 +46,10 @@ function App() {
 					</Route>
 					<Route exact path='/findPro'>
 						<FindPro />
+					</Route>
+
+					<Route exact path='/jointeam'>
+						<JoinTeam />
 					</Route>
 
 					<Route exact path='/canopy'>
