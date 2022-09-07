@@ -136,6 +136,7 @@ router.delete('/:id', (req, res) => {
 		.query(queryText, [req.params.id])
 		.then(() => {
 			res.sendStatus(201);
+            console.log('deleted id', req.params.id);
 		})
 		.catch((error) => {
 			console.log('error deleting client', error);
