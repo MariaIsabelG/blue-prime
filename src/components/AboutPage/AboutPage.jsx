@@ -34,29 +34,29 @@ function AboutPage() {
 				<h2 className='text-center text-3xl text-black font-bold sm:text-1xl mb-6 '>
 					Our Process
 				</h2>
-				<div className='border rounded-md border mx-32 mb-4 bg-orange-200 border-2 border-gray-400'>
-					<div className='mb-4 mt-4 inline-block'>
+				<div className="border rounded-md mx-4 lg:mx-32 mb-4 pb-4 bg-orange-200 border-2 border-gray-400">
+					<div className='mb-4 mt-4 flex items-center justify-center'>
 						<img src="images/formicon.png" className='font-bold text-2xl text-white w-16 ml-6 mr-6 '/>
 					</div>
-					<div className='inline-block text-2xl xl:text-xl'>
+					<div className='inline-block px-6 text-xl flex items-center justify-center'>
 						<p >
 							You complete our quick form and give us information about your current insurance plan
 						</p>
 					</div>
 				</div>
-				<div className='border rounded-md mx-32 mb-4 bg-orange-200 border-2 border-gray-400'>
-					<div className='mb-4 mt-4 inline-block'>
+				<div className='border rounded-md mx-4 lg:mx-32 mb-4 pb-4 bg-orange-200 border-2 border-gray-400'>
+					<div className='mb-4 mt-4 flex items-center justify-center'>
 						<img src="images/connecticon.png" className='font-bold text-2xl text-white w-16 ml-6 mr-6 '/>
 					</div>
-					<div className='inline-block text-2xl xl:text-xl'>
+					<div className='iinline-block px-6 text-xl flex items-center justify-center'>
 						<p>We use that information to match you with the financial pros that are right for you</p>
 					</div>
 				</div>
-				<div className='border rounded-md mx-32 mb-4 bg-orange-200 border-2 border-gray-400'>
-					<div className='mb-4 mt-4 inline-block'>
+				<div className='border rounded-md mx-4 lg:mx-32 mb-4 pb-4 bg-orange-200 border-2 border-gray-400'>
+					<div className='mb-4 mt-4 flex items-center justify-center'>
 						<img src="images/communicationicon.png" className='font-bold text-2xl text-white w-16 ml-6 mr-6 '/>	
 					</div>
-					<div className='inline-block text-2xl xl:text-xl'>
+					<div className='inline-block px-6 text-xl flex items-center justify-center'>
 						<p>
 							Your agents will reach out to you within X business days with options to save you money
 							and better your financial wellness
