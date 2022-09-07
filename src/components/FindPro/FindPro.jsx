@@ -10,11 +10,12 @@ function FindPro() {
 
                 <div className="w-1/2">
 
-                    <h1 className="text-xl lg:text-3xl font-bold py-6 tracking-wide">The Process</h1>
-                    <div className="leading-loose list-decimal text-sm lg:text-xl w-64 lg:w-5/6">
-                        <li className="py-2 ">Provide basic information to help us match you with a Professional</li>
-                        <li className="py-2">Import your current insurance information through Canopy so our Professional can compare and give best pricing</li>
-                        <li className="py-2"><span className="font-semibold">OR</span> submit your basic information and one of our Professional will contact you shortly</li>
+                    <h1 className="text-xl lg:text-2xl font-bold py-6 tracking-wide">Our Process</h1>
+                    <div className="leading-loose text-sm lg:text-xl w-64 lg:w-5/6">
+                        <li className="py-2 text-lg">Provide your basic information to help us match you with a professional</li>
+                        <li className="py-2 text-base list-none italic">Simplify the process by importing your current insurance information through Canopy. Our professionals can get straight to work using this information to compare rates and give you the best pricing</li>
+                        <h3 className="font-semibold">- OR -</h3>
+                        <li className="py-2 text-lg"> submit your basic information and one of our professionals will contact you to gather further details</li>
                     </div>
 
                 </div>
