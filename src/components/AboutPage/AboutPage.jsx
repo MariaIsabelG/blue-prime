@@ -1,6 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 function AboutPage() {
+
+	const history = useHistory();
+	
 	return (
 		<div className='w-screen '>
 			<div className='bg-[#d6e2ed] pt-6'>
@@ -18,7 +22,8 @@ function AboutPage() {
 					<div className='flex items-center justify-center pt-2 '>
 					<button
 						type='button'
-						className='border-2 rounded-lg bg-green-600 text-white hover:shadow-lg hover:bg-green-700 w-52 h-16 text-3xl'>
+						onClick={() => history.push('/findPro')}
+						className='border-2 rounded-lg bg-green-600 text-white font-bold hover:shadow-lg hover:bg-green-700 w-52 h-16 text-2xl'>
 						Find my Pro!
 					</button>
 					</div>
@@ -58,9 +63,6 @@ function AboutPage() {
 						</p>
 					</div>
 				</div>
-			</div>
-			<div className='text-center bg-stone-100 pb-6'>
-				<p>Icons by <a href="https://icons8.com">Icons8</a></p>
 			</div>
 		</div>
 	);
