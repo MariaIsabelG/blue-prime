@@ -3,6 +3,7 @@ import './LandingPage.css';
 import TopComponent from './TopComponent.jsx';
 import Process from './Process.jsx';
 import ResourcesBtns from './ResourcesBtns';
+import Agents from './Agents';
 
 function LandingPage() {
 
@@ -11,6 +12,7 @@ function LandingPage() {
 			<TopComponent />
 			<Process/>
 			<ResourcesBtns/>
+			<Agents/>
 		</div>
 	)
 };

@@ -16,17 +16,17 @@ function TopComponent(){
 							<li className='mt-4 text-xl text-gray-500'>We provide a convenient way to find financial professionals in your area.</li>
 							<li className='mt-4 text-xl text-gray-500'> Answer a few short quick questions and get connected with us!</li>
 						</div>
-						<div className="flex mt-10">
+						<div className="flex mt-8">
 							<div className="static">
-							<div onClick={() => history.push('/findPro')} className='flex items-center justify-center inline-block border-2 rounded-lg bg-green-500 text-white hover:shadow-lg hover:bg-green-700 mb-10 mt-8 ml-5 mr-5 text-lg w-32 h-12 xl:text-2xl xl:w-44'>
+							<div onClick={() => history.push('/findPro')} className='flex items-center justify-center inline-block border-2 rounded-lg bg-green-500 text-white font-bold p-1 hover:shadow-lg hover:bg-green-700 mb-10 mt-8 ml-2 mr-3 text-lg h-12 w-36 sm:h-16 sm:w-36 md:w-40 lg:w-44 xl:w-48 xl:text-2xl'>
 								Find Your Pro
 							</div>
 							</div>
 						
-						<div onClick={() => history.push('/about')} className='flex items-center justify-center inline-block border-2 rounded-lg bg-orange-400 px-2 text-white hover:shadow-lg hover:bg-orange-700 mb-10 mt-8 mr-5 text-md w-28 h-12 xl:text-2xl xl:w-36'>
+						<div onClick={() => history.push('/about')} className='flex items-center justify-center inline-block border-2 rounded-lg bg-orange-400 px-2 text-white text-center font-bold hover:shadow-lg hover:bg-orange-700 mb-10 mt-8 mr-3 text-md h-12 sm:h-16 sm:w-36 md:w-40 lg:w-44 xl:w-44 xl:text-2xl'>
 							About us!
 						</div>
-						<div onClick={() => history.push('/resources')} className='flex items-center justify-center inline-block border-2 rounded-lg bg-blue-400 px-2 text-white hover:shadow-lg hover:bg-blue-600 mb-10 mt-8 mr-5 text-lg w-32 h-12 xl:text-2xl xl:w-40 ' >
+						<div onClick={() => history.push('/resources')} className='flex items-center justify-center inline-block border-2 rounded-lg bg-blue-400 px-2 text-white font-bold hover:shadow-lg hover:bg-blue-600 mb-10 mt-8 mr-2 text-lg h-12 sm:h-16 sm:w-36 md:w-40 lg:w-44 xl:w-48 xl:text-2xl' >
 							Resources 
 						</div>
 						</div>
