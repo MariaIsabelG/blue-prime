@@ -13,11 +13,11 @@ function ResourcesBtns(){
 						<p className='mt-4 text-gray-600'>Checkout Our Free Learning Resources</p>
 					</div>
 
-					<div className='flex-col flex md:flex-row justify-space-between justify-center items-center mt-8'>
+					<div className='flex-col flex flex-row sm:flex-row md:flex-row justify-space-between justify-center items-center mt-8 '>
 						{/* CATEGORY 1*/}
-						<div className='m-3 '>
+						<div className='m-3'>
 							<a
-								className='block p-6 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400'
+								className='block p-1 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400 sm:p-1 '
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-white text-center '>Home</h3>
 							</a>
@@ -26,7 +26,7 @@ function ResourcesBtns(){
 						{/* CATEGORY 2 */}
 						<div className='m-3'>
 							<a
-								className='block p-6 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400'
+								className='block p-1 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400 sm:p-1 '
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-white text-center'>Renters</h3>
 							</a>
@@ -35,7 +35,7 @@ function ResourcesBtns(){
 						{/* CATEGORY 3 */}
 						<div className='m-3'>
 							<a
-								className='block p-6 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400'
+								className='block p-1 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400 sm:p-1'
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-white text-center'>Auto</h3>
 							</a>
@@ -44,7 +44,7 @@ function ResourcesBtns(){
 						{/* CATEGORY 4 */}
 						<div className='m-3'>
 							<a
-								className='block p-6 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400'
+								className='block p-1 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400 sm:p-1'
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-white text-center'>Disability</h3>
 							</a>
@@ -52,7 +52,7 @@ function ResourcesBtns(){
 						{/* CATEGORY 5 */}
 						<div className='m-3'>
 							<a
-								className='block p-6 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400'
+								className='block p-1 transition border shadow-xl rounded-xl bg-blue-600 hover:bg-blue-400 sm:p-1'
 								href='/'>
 								<h3 className='m-4 text-xl font-bold text-white text-center'>Life</h3>
 							</a>
