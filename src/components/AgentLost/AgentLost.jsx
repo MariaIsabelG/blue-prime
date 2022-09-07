@@ -84,14 +84,14 @@ function AgentLost() {
             <AgentDashboard />
             <section >
                 <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
-                    <div className='flex-col flex md:flex-row justify-space-between justify-center items-center mt-8'>
+                    <div className='flex-col flex-wrap flex md:flex-row justify-space-between justify-center items-center mt-8'>
 
                         {clientList.map(client => {
                             if (client.status === 4) {
                                 return (
                                     <div key={client.id}>
                                         <div 
-                                            className="p-8 m-9 transition border border-gray-200 shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10"
+                                            className="w-64 md:w-80 h-auto md:h-96 p-8 m-9 transition border border-gray-200 shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10"
                                             // onClick={() => handleClientClick(client.id)}
                                         >
                                             <h5 className="mb-4 text-xl text-center font-bold">{client.first_name} {client.last_name}</h5>
@@ -99,6 +99,7 @@ function AgentLost() {
                                             <p>{client.email}</p>
                                             <p>{client.phone_number}</p>
                                             <p>{client.state} {client.zip_code}</p>
+                                            <p className="w-full">{client.comments}</p>
 
                                             <div className="mt-6">
                                                 <label for="status" class="block text-sm font-medium text-gray-900 dark:text-gray-400">
@@ -107,7 +108,7 @@ function AgentLost() {
 
                                                 <div className="inline-block justify-center items-center">
 
-                                                <select defaultValue={1} onChange={handleStatusChange} id="status" 
+                                                <select defaultValue={4} onChange={handleStatusChange} id="status" 
                                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                         <option key={1} value="1" >Lead</option>
                                                         <option key={2} value="2" >Potential</option>
@@ -115,15 +116,15 @@ function AgentLost() {
                                                         <option key={4} value="4" >Lost</option>
                                                 </select>
                                                 <button 
-                                                    className='mt-2 ml-4 rounded-md border border-transparent bg-blue-600 py-2 px-4 text-center font-medium text-white hover:bg-blue-700'
-                                                    onClick={() => handleStatusUpdate(newStatus, client.client_id)}>
+                                                    className='mt-2 ml-4 rounded-md border border-transparent bg-blue-600 py-2 px-3 text-center font-medium text-white hover:bg-blue-700'
+                                                    onClick={() => handleStatusUpdate(newStatus, client.id)}>
                                                     Update
                                                 </button>
 
                                                 <div className='flex-col flex md:flex-row justify-space-between justify-center items-center mt-4'>
                                                     <button 
                                                         className='justify-center block rounded-md border border-transparent bg-red-600 py-3 px-8 text-center font-medium text-white hover:bg-red-700'
-                                                        onClick={() => handleDelete(client.client_id)}
+                                                        onClick={() => handleDelete(client.id)}
                                                             >Delete
                                                     </button>
                                                 </div>
