@@ -14,15 +14,15 @@ function ArticleOne() {
         <>
 
 
-            <div className="flex flex-wrap items-center justify-center">
-                <div className='mb-10 mt-10'>
+            <div className="">
+                <div className='mb-10 mt-10 flex flex-col items-center justify-center'>
                     <div>
-                        <h1>{articles.title}</h1>
+                        <span className="text-2xl font-bold">{articles.title}</span>
                     </div>
                     <div className='mb-10 mt-10'>
-                        <img className=" h-48 w-48" src={articles.image} />
+                        <img className=" h-48 w-48 " src={articles.image} />
                     </div>
-                    <div>
+                    <div className="ml-20 mr-20">
                         {articles.content}
                     </div>
                 </div>
