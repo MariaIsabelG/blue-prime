@@ -64,13 +64,13 @@ function FindProForm() {
     return (
         <div className=" ">
 
-            <div className="w-80 lg:w-auto">
+            <div className="w-80 m-20 lg:w-auto">
                 <div className="lg:text-2xl text-white text-center font-bold text-1xl p-6 bg-blue-600 border rounded-t-xl">
                     ENTER INFORMATION
                 </div>
 
                 <div
-                    className="lg:py-0 bg-[#D6E2ED] border rounded-b-xl">
+                    className="p-10 lg:py-0 bg-[#D6E2ED] border rounded-b-xl">
 
                     <div className="lg:gap-2 lg:pt-5 items-center justify-center ">
                         <div className="flex flex-col lg:flex-row lg:gap-2 items-center justify-center pt-10">
