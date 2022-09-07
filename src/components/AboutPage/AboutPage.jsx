@@ -7,12 +7,12 @@ function AboutPage() {
 	
 	return (
 		<div className='w-screen '>
-			<div className='bg-[#d6e2ed] pt-6'>
+			<div className='bg-stone-100 pt-6'>
 				<h2 className='text-3xl text-black text-center font-bold sm:text-1xl p-6'>
 					Why work with us?
 				</h2>
 			<div>
-				<article className='space-y-4 text-black px-32 pb-10'>
+				<article className='space-y-4 text-black  pb-10 px-16 sm:px-20 md:px-28 lg:px-32'>
 					<p className='text-2xl mt-5 lg:mt-5'>We only work with the best</p>
 					<p className=''>All financial professionals on our platform go through a rigorous vetting process. Insurance Professionals are able to provide more than 95% of the products in the market, and our investment professionals are all fiduciaries, meaning they're legally bound to act in your best interest. We partner with both local and nationwide firms.</p>
 					<p className='text-2xl mt-5 lg:mt-5'>We are here for you</p>
@@ -23,14 +23,14 @@ function AboutPage() {
 					<button
 						type='button'
 						onClick={() => history.push('/findPro')}
-						className='border-2 rounded-lg bg-green-600 text-white font-bold hover:shadow-lg hover:bg-green-700 w-52 h-16 text-2xl'>
+						className='border-2 rounded-lg bg-green-500 text-white font-bold hover:shadow-lg hover:bg-green-700 w-52 h-16 text-2xl'>
 						Find my Pro!
 					</button>
 					</div>
 				</article>
 			</div>	
 			</div>
-			<div className='pb-12 pt-10 bg-stone-100'>
+			<div className='pb-12 pt-10 bg-white'>
 				<h2 className='text-center text-3xl text-black font-bold sm:text-1xl mb-6 '>
 					Our Process
 				</h2>
