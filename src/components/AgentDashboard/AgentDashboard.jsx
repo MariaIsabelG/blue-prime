@@ -21,10 +21,10 @@ function AgentDashboard() {
 
 return(
     <div>
-        <h1>Hi {agent.first_name}!</h1>
+        <h1 className="p-10 text-xl  font-bold">Hi {agent.first_name}!</h1>
 
 
-        <ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
+        <ul class=" text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
             <li class="w-full">
                 <a onClick={() => history.push('/agent/leads')} className="inline-block p-4 w-full bg-gray-100 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" 
                 aria-current="page">Leads</a>

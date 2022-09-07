@@ -19,6 +19,8 @@ import Article from '../Article/Article';
 
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
+import ClientConfirmation from '../ClientConfirmation/ClientConfirmation';
+
 import AgentDashboard from '../AgentDashboard/AgentDashboard';
 
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
@@ -54,6 +56,10 @@ function App() {
 
 					<Route exact path='/canopy'>
 						<Canopy />
+					</Route>
+
+          <Route exact path='/confirmation'>
+						<ClientConfirmation />
 					</Route>
 
 					{/* Agent Dashboard */}
