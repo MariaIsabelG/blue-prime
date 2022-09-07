@@ -6,7 +6,7 @@ let financial = [
         "id": 1,
         "title": "coins",
         "image": 'images/coins.png',
-        "content": "hey hey hey"
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Curabitur id felis metus.Vestibulum et pulvinar tortor.Morbi pharetra lacusut ex molestie blandit.Etiam et turpis sit amet risus mollisinterdum.Suspendisse et justo vitae metus bibendum fringilla sed"
     },
     {
         "id": 2,

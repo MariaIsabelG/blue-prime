@@ -37,10 +37,10 @@ function LoginForm() {
         </div>
         <div className="text-center font-bold sm:text-1xl p-6 lg:py-0 bg-[#d6e2ed] border rounded-b-xl  ">
           <div className="mt-6 px-6">
-            <label htmlFor="username">
+            <label htmlFor="username" >
               Username:
               <input
-                className="border rounded-sm border-slate-400 bg-slate-100 px-1"
+                className="border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
                 type="text"
                 name="username"
                 required
@@ -53,7 +53,7 @@ function LoginForm() {
           <label htmlFor="password">
             Password:
             <input
-              className="border rounded-sm border-slate-400 bg-slate-100 px-1"
+              className="border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
               type="password"
               name="password"
               required

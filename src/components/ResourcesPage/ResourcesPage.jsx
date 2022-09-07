@@ -18,9 +18,9 @@ function ResourcesPage() {
 		<div className='mt-10'>
 
 			<div className='flex flex-wrap justify-center'>
-				<div className='bg-gradient-to-l from-orange-200 mr-2 w-40 '></div>
+				<div className='bg-gradient-to-l from-orange-300 mr-2 w-5/12 h-4 mt-2.5'></div>
 				<div className='text-2xl pt-0 pb-0'>Finance</div>
-				<div className='bg-gradient-to-r from-orange-200 ml-2 w-40'></div>
+				<div className='bg-gradient-to-r from-orange-300 ml-2 w-5/12 h-4 mt-2.5'></div>
 			</div>
 
 			<div>
@@ -42,9 +42,9 @@ function ResourcesPage() {
 				</section >
 
 				<div className='flex flex-wrap justify-center mt-10'>
-					<div className='bg-gradient-to-l from-orange-200 mr-2 w-40 '></div>
+					<div className='bg-gradient-to-l from-orange-300 mr-2 w-5/12 h-4 mt-2.5'></div>
 					<div className='text-2xl pt-0 pb-0'>Finance</div>
-					<div className='bg-gradient-to-r from-orange-200 ml-2 w-40'></div>
+					<div className='bg-gradient-to-r from-orange-300 ml-2 w-5/12 h-4 mt-2.5'></div>
 				</div>
 
 			</div>
