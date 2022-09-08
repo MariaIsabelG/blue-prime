@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
         FROM state_user 
         JOIN "user" ON "user".id = state_user.user_id 
         JOIN state ON state.id = state_user.state_id 
-        WHERE state.id = $1 
+        WHERE state.name = $1 
         ORDER BY "user".last_lead 
         DESC LIMIT 3;`;
 
@@ -151,7 +151,7 @@ router.delete('/:id', (req, res) => {
 		.query(queryText, [req.params.id])
 		.then(() => {
 			res.sendStatus(201);
-            console.log('deleted id', req.params.id);
+			console.log('deleted id', req.params.id);
 		})
 		.catch((error) => {
 			console.log('error deleting client', error);
