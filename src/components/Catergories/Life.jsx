@@ -18,7 +18,7 @@ function CategoryFive() {
                                 onClick={() => history.push('/a5')}
                             >
 
-                                <h6 className="mt-2 font-bold">Article One</h6>
+                                <h6 className="mt-2 font-bold">Types of Life Insurance</h6>
 
                                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                                     Lorem ipsum dolor sit amet consectetur.

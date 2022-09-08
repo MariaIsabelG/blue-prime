@@ -18,7 +18,7 @@ function CategoryOne() {
                                 onClick={() => history.push('/a1')}
                             >
 
-                                <h6 className="mt-2 font-bold">Article One</h6>
+                                <h6 className="mt-2 font-bold">How to shop Homeowners Insurance in 2022</h6>
 
                                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                                     Lorem ipsum dolor sit amet consectetur.

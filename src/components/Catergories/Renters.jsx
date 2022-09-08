@@ -18,7 +18,7 @@ function CategoryFour() {
                                 onClick={() => history.push('/a4')}
                             >
 
-                                <h6 className="mt-2 font-bold">Article One</h6>
+                                <h6 className="mt-2 font-bold">What does Renters Insurance cover</h6>
 
                                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                                     Lorem ipsum dolor sit amet consectetur.

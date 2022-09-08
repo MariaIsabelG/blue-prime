@@ -18,7 +18,7 @@ function CategoryThree() {
                                 onClick={() => history.push('/a3')}
                             >
 
-                                <h6 className="mt-2 font-bold">Article One</h6>
+                                <h6 className="mt-2 font-bold">Guide to Long-Term Disability Insurance</h6>
 
                                 <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
                                     Lorem ipsum dolor sit amet consectetur.
