@@ -21,7 +21,7 @@ function AgentDashboard() {
 
 return(
     <div>
-        <h1 className="p-10 text-xl  font-bold">Hi {agent.first_name}!</h1>
+        {/* <h1 className="p-10 text-xl  font-bold">Hi {agent.first_name}!</h1> */}
 
 
         <ul class=" text-sm font-medium text-center text-gray-500 rounded-lg divide-x divide-gray-200 shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
