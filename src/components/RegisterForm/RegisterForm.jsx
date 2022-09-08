@@ -12,6 +12,7 @@ function RegisterForm() {
   const [email, setEmail] = useState('');
   const [search, setSearch] = useState('');
   const [hidden, setHidden] = useState(true);
+  const [selectedstates, setSearchStates] = useState([])
 
   const dispatch = useDispatch();
   const errors = useSelector((store) => store.errors);
@@ -54,6 +55,12 @@ function RegisterForm() {
 const handleToggle = () => {
 
   setHidden(!hidden); 
+};
+
+const handleStates = () => {
+
+  dispatch({ type: 'ADD_STATES', payload: selectedstates });
+
 };
   
 
@@ -158,7 +165,7 @@ const handleToggle = () => {
               <div>
                 <input type="text" value={search} placeholder='Search State' onChange={(event) => setSearch(event.target.value)} className="px-2"/>
                 
-                    {states.filter((state) => {
+                    {states.filter((state => {
                       if (search === '') {
                         return ;
                       } else if (
@@ -166,21 +173,25 @@ const handleToggle = () => {
                       ) {
                         return state.name;
                       }
-                    })
+                    }))
                     .map((state) => (
-                      <div className="bg-gray-100 px-2 border">{state.name}</div>
+                      
+                        <div value={state.id} className="bg-gray-100 px-2 border" onClick={handleStates}>{state.name}</div>
                     ))
                     }
                 
-              
-              
               </div>
-        
-              </div>
-              
-                }
-          
-                  
+            </div>
+              }         
+        </div>
+        <div className="text-center">
+          <a>SELECTED STATES:</a>
+          {selectedstates.map((selected => {
+            return (<div>
+                      <a>❌</a><a>{selected.name}</a>
+                    </div>
+                    )}))
+          }
         </div>
         <div className="flex items-center justify-center mt-6">
           <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white mb-6" type="submit" name="submit" value="Register">Register</button> 
