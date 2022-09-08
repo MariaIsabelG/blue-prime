@@ -120,16 +120,17 @@ function AgentLost() {
                                                     onClick={() => handleStatusUpdate(newStatus, client.id)}>
                                                     Update
                                                 </button>
+                                                </div>
 
-                                                <div className='flex-col flex md:flex-row justify-space-between justify-center items-center mt-4'>
+
+                                                <div className='flex justify-center items-center mt-4'>
                                                     <button 
-                                                        className='justify-center block rounded-md border border-transparent bg-red-600 py-3 px-8 text-center font-medium text-white hover:bg-red-700'
+                                                        className='justify-center rounded-md border border-transparent bg-red-600 py-2 px-6 text-center font-medium text-white hover:bg-red-700'
                                                         onClick={() => handleDelete(client.id)}
                                                             >Delete
                                                     </button>
                                                 </div>
 
-                                                </div>
                                                 </div>
                                             </div>
                                             </div>
