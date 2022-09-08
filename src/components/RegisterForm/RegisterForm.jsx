@@ -12,7 +12,7 @@ function RegisterForm() {
   const [email, setEmail] = useState('');
   const [search, setSearch] = useState('');
   const [hidden, setHidden] = useState(true);
-  const [selectedstate, setSelectedstate] = useState({});
+  const [selectedstates, setSelectedstates] = useState([]);
  
 
   const dispatch = useDispatch();
@@ -52,6 +52,8 @@ function RegisterForm() {
     setEmail('');
     setCompany('');
 
+    dispatch({type: 'CLEAR_STATES'});
+
   };
 
 const handleToggle = () => {
@@ -59,16 +61,21 @@ const handleToggle = () => {
   setHidden(!hidden); 
 };
 
-const handleStates = (event) => {
+const handleStates = (state) => {
 
-  setSelectedstate(event.target.value)
-  dispatch({ type: 'ADD_STATES', payload: selectedstate });
-  console.log("This is selectedstate:", selectedstate);
+  console.log( "this is target value:", state );
+  dispatch({ type: 'ADD_STATES', payload: state });
+  console.log("This is selectedstate:", agentstates);
+};
+
+const removeState = (agentstate) => {
+
+    dispatch({ type: 'REMOVE_STATES', payload: agentstate });
 };
   
 
   return (
-    <div className="max-w-screen-md px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">
+    <div className="max-w-screen-md h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">
       <form onSubmit={registerUser}>
         <h3 className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl w-">Register</h3>
         {errors.registrationMessage && (
@@ -163,8 +170,8 @@ const handleStates = (event) => {
         </div>
         <div  className="flex items-center justify-center absolute">
         {hidden ?
-            <div><button onClick={handleToggle}>Select Your State</button></div>:
-            <div><button onClick={handleToggle}>Select Your State</button>
+            <div><button type="button" onClick={handleToggle}>Select Your State</button></div>:
+            <div><button type="button" onClick={handleToggle}>Select Your State</button>
               <div>
                 <input type="text" value={search} placeholder='Search State' onChange={(event) => setSearch(event.target.value)} className="px-2"/>
                 
@@ -179,7 +186,7 @@ const handleStates = (event) => {
                     }))
                     .map((state) => (
                       <div className="bg-gray-100 px-2 border">
-                        <button value={state} onClick={handleStates}>{state.name}</button>
+                        <button type="button" onClick={() => handleStates(state)}>{state.name}</button>
                       </div>
                     ))
                     }
@@ -192,7 +199,7 @@ const handleStates = (event) => {
           <a>SELECTED STATES:</a>
           {agentstates.map((agentstate => {
             return (<div>
-                      <a>❌</a><a>{agentstate.name}</a>
+                      <button className="border bg-stone-100" type="button" onClick={() => removeState(agentstate)}>❌</button><a className='px-2'>{agentstate.name}</a>
                     </div>
                     )}))
           }
