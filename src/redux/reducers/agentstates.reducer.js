@@ -6,7 +6,10 @@ const agentstates = (state = [], action) => {
             
         case 'REMOVE_STATES':
             return state.filter(state => state !== action.payload);
-
+        
+        case 'CLEAR_STATES':
+            return []
+            
         default:
             return state;
     }
