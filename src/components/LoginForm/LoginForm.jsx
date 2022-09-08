@@ -25,19 +25,19 @@ function LoginForm() {
   }; // end login
 
   return (
-    <div className="w-sreen h-full px-4 mx-auto sm:px-6 lg:px-8 sm:py-0 ">
+    <div className="w-96 h-full px-4 mx-auto mt-16 sm:px-6 lg:px-8 sm:py-0 ">
       <form  onSubmit={login}>
-        <div className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl ">
-          <h3>Welcome back!</h3>
+        <div className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-stone-100 border rounded-t-xl  ">
+          <img src="images/blueVestLogo.png" />
           {errors.loginMessage && (
           <h3 className="alert" role="alert">
             {errors.loginMessage}
           </h3>
           )}
         </div>
-        <div className="text-center font-bold sm:text-1xl p-6 lg:py-0 bg-[#d6e2ed] border rounded-b-xl  ">
+        <div className="text-center font-bold sm:text-1xl p-6 lg:py-0 bg-blue-600 border rounded-b-xl  ">
           <div className="mt-6 px-6">
-            <label htmlFor="username" >
+            <label htmlFor="username" className='text-white' >
               Username:
               <input
                 className="border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
@@ -50,7 +50,7 @@ function LoginForm() {
           </label>
         </div>
         <div className="px-6">
-          <label htmlFor="password">
+          <label htmlFor="password" className='text-white'>
             Password:
             <input
               className="border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
@@ -63,7 +63,7 @@ function LoginForm() {
           </label>
         </div>
         <div className="flex items-center justify-center mt-6 ">
-          <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white mb-6" type="submit" name="submit" value="Log In">Login</button>
+          <button className="border rounded-md bg-stone-100 py-1 px-2 text-black mb-6" type="submit" name="submit" value="Log In">Login</button>
         </div>
         </div>
       </form>
