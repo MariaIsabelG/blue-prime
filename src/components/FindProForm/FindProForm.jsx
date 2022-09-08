@@ -62,9 +62,9 @@ function FindProForm() {
 
 
     return (
-        <div className=" ">
+        <div className="flex justify-center items-center ">
 
-            <div className="w-80 m-20 lg:w-2/3">
+            <div className="w-80 lg:w-2/3">
                 <div className="lg:text-2xl text-white text-center font-bold text-1xl p-6 bg-blue-600 border rounded-t-xl">
                     ENTER INFORMATION
                 </div>
