@@ -12,7 +12,8 @@ function RegisterForm() {
   const [email, setEmail] = useState('');
   const [search, setSearch] = useState('');
   const [hidden, setHidden] = useState(true);
-  const [selectedstates, setSearchStates] = useState([])
+  const [selectedstate, setSelectedstate] = useState({});
+ 
 
   const dispatch = useDispatch();
   const errors = useSelector((store) => store.errors);
@@ -22,6 +23,7 @@ function RegisterForm() {
   useEffect(() =>{
     
     dispatch({ type: 'FETCH_STATES'});
+    
   },[]);
   
   const registerUser = (event) => {
@@ -57,10 +59,11 @@ const handleToggle = () => {
   setHidden(!hidden); 
 };
 
-const handleStates = () => {
+const handleStates = (event) => {
 
-  dispatch({ type: 'ADD_STATES', payload: selectedstates });
-
+  setSelectedstate(event.target.value)
+  dispatch({ type: 'ADD_STATES', payload: selectedstate });
+  console.log("This is selectedstate:", selectedstate);
 };
   
 
@@ -175,8 +178,9 @@ const handleStates = () => {
                       }
                     }))
                     .map((state) => (
-                      
-                        <div value={state.id} className="bg-gray-100 px-2 border" onClick={handleStates}>{state.name}</div>
+                      <div className="bg-gray-100 px-2 border">
+                        <button value={state} onClick={handleStates}>{state.name}</button>
+                      </div>
                     ))
                     }
                 
@@ -186,9 +190,9 @@ const handleStates = () => {
         </div>
         <div className="text-center">
           <a>SELECTED STATES:</a>
-          {selectedstates.map((selected => {
+          {agentstates.map((agentstate => {
             return (<div>
-                      <a>❌</a><a>{selected.name}</a>
+                      <a>❌</a><a>{agentstate.name}</a>
                     </div>
                     )}))
           }
