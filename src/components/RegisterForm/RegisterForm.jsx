@@ -75,19 +75,26 @@ const removeState = (agentstate) => {
   
 
   return (
-    <div className="max-w-screen-md h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0">
-      <form onSubmit={registerUser}>
-        <h3 className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-t-xl w-">Register</h3>
+    <div className="max-w-screen-md h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 flex items-center justify-center">
+      <form className="mt-20 border bg-stone-100 w-8/12 " onSubmit={registerUser}>
+        <div className="flex items-center justify-center my-5 ">
+          <img src="images/blueVestLogo.png" className='w-2/12'/>
+        </div>
+        <div className="items-center justify-center ">
+          <h3 className="text-2xl text-black text-center font-bold sm:text-1xl px-6 mb-5 ">Welcome to the BlueVest team!</h3>
+        </div>
+        
         {errors.registrationMessage && (
           <h3 className="alert" role="alert">
             {errors.registrationMessage}
           </h3>
         )}
-        <div className="text-left font-bold sm:text-1xl p-6 lg:py-0 bg-[#d6e2ed] border rounded-b-xl  ">
+        <div className="text-left font-bold sm:text-1xl p-6 lg:py-0 bg-blue-600 border rounded-b-xl ">
         <div className="mt-6 px-6">
-            <label htmlFor="firstname">
+            <label htmlFor="firstname" className="text-white">
               First Name:
               <input
+                className='border rounded-sm hover:bg-white border-slate-400 bg-slate-100 text-black px-1 shadow-sm'
                 type="text"
                 name="firstname"
                 value={firstname}
@@ -97,9 +104,10 @@ const removeState = (agentstate) => {
             </label>
           </div>
           <div className="px-6">
-            <label htmlFor="lastname">
+            <label htmlFor="lastname" className="text-white">
               Last Name:
               <input
+                className='text-black border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
                 type="text"
                 name="lastname"
                 value={lastname}
@@ -109,9 +117,10 @@ const removeState = (agentstate) => {
             </label>
           </div>
           <div className="px-6">
-            <label htmlFor="phonenumber">
+            <label htmlFor="phonenumber" className="text-white">
               Phone Number:
               <input
+                className='text-black border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
                 type="text"
                 name="phonenumber"
                 value={phonenumber}
@@ -121,9 +130,10 @@ const removeState = (agentstate) => {
             </label>
           </div>
           <div className="px-6">
-            <label htmlFor="company">
+            <label htmlFor="company" className="text-white">
               Company:
               <input
+                className='text-black border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
                 type="text"
                 name="company"
                 value={company}
@@ -133,9 +143,10 @@ const removeState = (agentstate) => {
             </label>
           </div>
           <div className="px-6">
-            <label htmlFor="email">
+            <label htmlFor="email" className="text-white">
               Email:
               <input
+                className='text-black border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
                 type="text"
                 name="email"
                 value={email}
@@ -145,9 +156,10 @@ const removeState = (agentstate) => {
             </label>
           </div>
           <div className="px-6">
-            <label htmlFor="username">
+            <label htmlFor="username" className="text-white">
               Username:
               <input
+                className='text-black border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
                 type="text"
                 name="username"
                 value={username}
@@ -157,9 +169,10 @@ const removeState = (agentstate) => {
             </label>
           </div>
         <div className="px-6">
-          <label htmlFor="password">
+          <label htmlFor="password" className="text-white">
             Password:
             <input
+              className='text-black border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
               type="password"
               name="password"
               value={password}
@@ -169,11 +182,9 @@ const removeState = (agentstate) => {
           </label>
         </div>
         <div  className="flex items-center justify-center absolute">
-        {hidden ?
-            <div><button type="button" onClick={handleToggle}>Select Your State</button></div>:
-            <div><button type="button" onClick={handleToggle}>Select Your State</button>
+            <div className="text-white mt-5"><button type="button" onClick={handleToggle}>Select States of Licensure</button>
               <div>
-                <input type="text" value={search} placeholder='Search State' onChange={(event) => setSearch(event.target.value)} className="px-2"/>
+                <input type="text" value={search} placeholder='Search State' onChange={(event) => setSearch(event.target.value)} className="px-2 text-black"/>
                 
                     {states.filter((state => {
                       if (search === '') {
@@ -185,21 +196,20 @@ const removeState = (agentstate) => {
                       }
                     }))
                     .map((state) => (
-                      <div className="bg-gray-100 px-2 border">
-                        <button type="button" onClick={() => handleStates(state)}>{state.name}</button>
+                      <div className="bg-gray-100 px-2 border text-black">
+                        <a type="button" onClick={() => handleStates(state)}>{state.name}</a>
                       </div>
                     ))
                     }
                 
               </div>
-            </div>
-              }         
+            </div>        
         </div>
-        <div className="text-center">
-          <a>SELECTED STATES:</a>
+        <div className="text-right text-white mt-5">
+          <a>Selected States:</a>
           {agentstates.map((agentstate => {
             return (<div>
-                      <button className="border bg-stone-100" type="button" onClick={() => removeState(agentstate)}>❌</button><a className='px-2'>{agentstate.name}</a>
+                      <a className='px-2'>{agentstate.name}</a><button className="m-1 p-1 rounded-sm bg-stone-300 " type="button" onClick={() => removeState(agentstate)}>❌</button>
                     </div>
                     )}))
           }
