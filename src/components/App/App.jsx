@@ -15,7 +15,18 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import ResourcesPage from '../ResourcesPage/ResourcesPage';
-import Article from '../Article/Article';
+import ArticleOne from '../Articles/ArticleOne';
+import ArticleTwo from '../Articles/ArticleTwo';
+import ArticleThree from '../Articles/ArticleThree';
+import ArticleFour from '../Articles/ArticleFour';
+import ArticleFive from '../Articles/ArticleFive';
+
+import CategoryNav from '../CategoryNav/CategoryNav';
+import CategoryOne from '../Catergories/Home';
+import CategoryTwo from '../Catergories/Auto';
+import CategoryThree from '../Catergories/Disability';
+import CategoryFour from '../Catergories/Renters';
+import CategoryFive from '../Catergories/Life';
 
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
@@ -47,6 +58,62 @@ function App() {
 			<div>
 				<Nav />
 				<Switch>
+
+
+					{/* Articles */}
+
+					<Route exact path="/a1">
+						<CategoryNav />
+						<ArticleOne />
+					</Route>
+
+					<Route exact path="/a2">
+						<CategoryNav />
+						<ArticleTwo />
+					</Route>
+
+					<Route exact path="/a3">
+						<CategoryNav />
+						<ArticleThree />
+					</Route>
+
+					<Route exact path="/a4">
+						<CategoryNav />
+						<ArticleFour />
+					</Route>
+
+					<Route exact path="/a5">
+						<CategoryNav />
+						<ArticleFive />
+					</Route>
+					{/* Categories */}
+					<Route exact path="/c1">
+						<CategoryNav />
+						<CategoryOne />
+					</Route>
+
+					<Route exact path="/c2">
+						<CategoryNav />
+						<CategoryTwo />
+					</Route>
+
+					<Route exact path="/c3">
+						<CategoryNav />
+						<CategoryThree />
+					</Route>
+
+					<Route exact path="/c4">
+						<CategoryNav />
+						<CategoryFour />					
+					</Route>
+
+					<Route exact path="/c5">
+						<CategoryNav />
+						<CategoryFive />
+					</Route>
+
+
+
 					<Route exact path='/registerforbluevest2022'>
 						<RegisterPage />
 					</Route>
@@ -58,7 +125,7 @@ function App() {
 						<Canopy />
 					</Route>
 
-          <Route exact path='/confirmation'>
+					<Route exact path='/confirmation'>
 						<ClientConfirmation />
 					</Route>
 
@@ -93,14 +160,10 @@ function App() {
 
 					{/* Resource Landing Page */}
 					<Route exact path='/resources'>
+						<CategoryNav />
 						<ResourcesPage />
 					</Route>
 
-					{/* Articles */}
-
-					<Route exact path='/a1/:id'>
-						<Article />
-					</Route>
 
 					{/* Visiting localhost:3000 will redirect to localhost:3000/home */}
 					<Redirect exact from='/' to='/home' />
