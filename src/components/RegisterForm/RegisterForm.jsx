@@ -10,8 +10,8 @@ function RegisterForm() {
   const [phonenumber, setPhonenumber] = useState('');
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
-
-
+  const [search, setSearch] = useState('');
+  const [hidden, setHidden] = useState(true);
 
   const dispatch = useDispatch();
   const errors = useSelector((store) => store.errors);
@@ -51,14 +51,10 @@ function RegisterForm() {
 
   };
 
-  const checkBoxes = (event) => {
-    
-    if (event.target.checked){
-      dispatch({ type: 'ADD_STATES', payload: event.target.value});
-    }else{
-      dispatch({ type: 'REMOVE_STATES', payload: event.target.value});
-    }
-  }
+const handleToggle = () => {
+
+  setHidden(!hidden); 
+};
   
 
   return (
@@ -155,16 +151,35 @@ function RegisterForm() {
             />
           </label>
         </div>
-        <div>
-          {states.map((state) => {
-                return (
-                        <div key={state.id} >
-                          <label htmlFor="state" className='mx-1.5'>
-                            <input type="checkbox" value={state.id} onChange={checkBoxes}/>
-                            {state.name}
-                          </label> 
-                          </div>
-                      )})}
+        <div  className="flex items-center justify-center absolute">
+        {hidden ?
+            <div><button onClick={handleToggle}>Select Your State</button></div>:
+            <div><button onClick={handleToggle}>Select Your State</button>
+              <div>
+                <input type="text" value={search} placeholder='Search State' onChange={(event) => setSearch(event.target.value)} className="px-2"/>
+                
+                    {states.filter((state) => {
+                      if (search === '') {
+                        return ;
+                      } else if (
+                        state.name.toLowerCase().includes(search.toLowerCase())
+                      ) {
+                        return state.name;
+                      }
+                    })
+                    .map((state) => (
+                      <div className="bg-gray-100 px-2 border">{state.name}</div>
+                    ))
+                    }
+                
+              
+              
+              </div>
+        
+              </div>
+              
+                }
+          
                   
         </div>
         <div className="flex items-center justify-center mt-6">
