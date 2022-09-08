@@ -14,15 +14,14 @@ function CategoryTwo() {
                     >
                         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                             <a
-                                className="block p-4 border border-gray-100 shadow-sm rounded-xl focus:outline-none focus:ring hover:border-gray-200 hover:ring-1 hover:ring-gray-200"
+                                className="block p-4  focus:outline-none focus:ring hover:border-slate-100 hover:ring-1 hover:ring-gray-200"
                                 onClick={() => history.push('/a2')}
                             >
 
                                 <h6 className="mt-2 font-bold">Auto Insurance</h6>
+                                <img src="images/insurancepolicy.png" className="w-96"/>
 
-                                <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                </p>
+                                
                             </a>
 
                             </div>

@@ -5,7 +5,7 @@ function ArticleTwo() {
     return (
         <div>
             <div className="h-full mt-20 mr-20 ml-20">
-                <h1 className=" text-2xl lg:text-4xl font-bold capitalize">Auto:</h1>
+                <h1 className=" text-2xl lg:text-4xl font-bold capitalize">Auto Insurance</h1>
                 <div className="text-lg lg:text-xl">
                     <section className="mt-10 flex flex-col lg:text-lg">
                         <article>

@@ -19,10 +19,9 @@ function CategoryFive() {
                             >
 
                                 <h6 className="mt-2 font-bold">Types of Life Insurance</h6>
+                                <img src="images/beach.png" className="w-96"/>
 
-                                <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                </p>
+                            
                             </a>
 
                         </div>

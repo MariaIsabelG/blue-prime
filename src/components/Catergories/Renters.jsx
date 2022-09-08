@@ -19,10 +19,8 @@ function CategoryFour() {
                             >
 
                                 <h6 className="mt-2 font-bold">What does Renters Insurance cover</h6>
+                                <img src="images/homes.png" className="w-96"/>
 
-                                <p className="hidden sm:mt-1 sm:text-sm sm:text-gray-600 sm:block">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                </p>
                             </a>
 
                             </div>
