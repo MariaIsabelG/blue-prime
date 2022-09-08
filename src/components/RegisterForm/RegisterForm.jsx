@@ -63,9 +63,8 @@ const handleToggle = () => {
 
 const handleStates = (state) => {
 
-  console.log( "this is target value:", state );
   dispatch({ type: 'ADD_STATES', payload: state });
-  console.log("This is selectedstate:", agentstates);
+  setSearch('');
 };
 
 const removeState = (agentstate) => {
@@ -76,7 +75,7 @@ const removeState = (agentstate) => {
 
   return (
     <div className="max-w-screen-md h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 flex items-center justify-center">
-      <form className="mt-20 border bg-stone-100 w-8/12 " onSubmit={registerUser}>
+      <form className=" md:mt-20 border bg-stone-100 md:w-8/12 " onSubmit={registerUser}>
         <div className="flex items-center justify-center my-5 ">
           <img src="images/blueVestLogo.png" className='w-2/12'/>
         </div>
@@ -182,9 +181,9 @@ const removeState = (agentstate) => {
           </label>
         </div>
         <div  className="flex items-center justify-center absolute">
-            <div className="text-white mt-5"><button type="button" onClick={handleToggle}>Select States of Licensure</button>
+            <div className="text-white mt-5"><button type="button">Select States of Licensure</button>
               <div>
-                <input type="text" value={search} placeholder='Search State' onChange={(event) => setSearch(event.target.value)} className="px-2 text-black"/>
+                <input type="text" value={search} placeholder='Search State' onChange={(event) => setSearch(event.target.value)} className="px-2 text-black "/>
                 
                     {states.filter((state => {
                       if (search === '') {
@@ -196,9 +195,9 @@ const removeState = (agentstate) => {
                       }
                     }))
                     .map((state) => (
-                      <div className="bg-gray-100 px-2 border text-black">
-                        <a type="button" onClick={() => handleStates(state)}>{state.name}</a>
-                      </div>
+                      <ul>
+                        <li className="bg-gray-100 hover:bg-gray-300 px-2 border text-black" type="button" onClick={() => handleStates(state)}>{state.name}</li>
+                      </ul>
                     ))
                     }
                 
@@ -208,19 +207,19 @@ const removeState = (agentstate) => {
         <div className="text-right text-white mt-5">
           <a>Selected States:</a>
           {agentstates.map((agentstate => {
-            return (<div>
-                      <a className='px-2'>{agentstate.name}</a><button className="m-1 p-1 rounded-sm bg-stone-300 " type="button" onClick={() => removeState(agentstate)}>❌</button>
+            return (<div className='mt-1'>
+                      <a className='rounded-l-sm px-2 text-black bg-stone-100'>{agentstate.name}</a><button className=" rounded-sm bg-stone-100" type="button" onClick={() => removeState(agentstate)}>✖️</button>
                     </div>
                     )}))
           }
         </div>
         <div className="flex items-center justify-center mt-6">
-          <button className="border rounded-sm bg-blue-600 py-1 px-2 text-white mb-6" type="submit" name="submit" value="Register">Register</button> 
+          <button className="border rounded-sm bg-green-400 hover:bg-green-700 py-1 px-2 text-white my-6" type="submit" name="submit" value="Register">Register</button> 
         </div>
         </div>
       </form>
     </div>
-  );
-}
+  )
+};
 
 export default RegisterForm;
