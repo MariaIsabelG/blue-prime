@@ -88,9 +88,9 @@ const removeState = (agentstate) => {
             {errors.registrationMessage}
           </h3>
         )}
-        <div className="text-left font-bold sm:text-1xl p-6 lg:py-0 bg-blue-600 border rounded-b-xl ">
+        <div className="text-left sm:text-1xl p-6 lg:py-0 bg-blue-600 border rounded-b-xl ">
         <div className="mt-6 px-6">
-            <label htmlFor="firstname" className="text-white">
+            <label htmlFor="firstname" className="text-stone-100">
               First Name:
               <input
                 className='border rounded-sm hover:bg-white border-slate-400 bg-slate-100 text-black px-1 shadow-sm'
@@ -214,7 +214,7 @@ const removeState = (agentstate) => {
           }
         </div>
         <div className="flex items-center justify-center mt-6">
-          <button className="border rounded-sm bg-green-400 hover:bg-green-700 py-1 px-2 text-white my-6" type="submit" name="submit" value="Register">Register</button> 
+          <button className="w-32 h-12 font-bold border rounded-lg bg-green-500 hover:bg-green-700 py-1 px-2 text-white text-xl my-6" type="submit" name="submit" value="Register">Register</button> 
         </div>
         </div>
       </form>
