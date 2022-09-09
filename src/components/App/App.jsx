@@ -20,12 +20,6 @@ import ArticleThree from '../Articles/ArticleThree';
 import ArticleFour from '../Articles/ArticleFour';
 import ArticleFive from '../Articles/ArticleFive';
 
-import CategoryNav from '../CategoryNav/CategoryNav';
-import CategoryOne from '../Catergories/Home';
-import CategoryTwo from '../Catergories/Auto';
-import CategoryThree from '../Catergories/Disability';
-import CategoryFour from '../Catergories/Renters';
-import CategoryFive from '../Catergories/Life';
 
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
@@ -59,54 +53,25 @@ function App() {
 					{/* Articles */}
 
 					<Route exact path="/a1">
-						<CategoryNav />
 						<ArticleOne />
 					</Route>
 
 					<Route exact path="/a2">
-						<CategoryNav />
 						<ArticleTwo />
 					</Route>
 
 					<Route exact path="/a3">
-						<CategoryNav />
 						<ArticleThree />
 					</Route>
 
 					<Route exact path="/a4">
-						<CategoryNav />
 						<ArticleFour />
 					</Route>
 
 					<Route exact path="/a5">
-						<CategoryNav />
 						<ArticleFive />
 					</Route>
-					{/* Categories */}
-					<Route exact path="/c1">
-						<CategoryNav />
-						<CategoryOne />
-					</Route>
 
-					<Route exact path="/c2">
-						<CategoryNav />
-						<CategoryTwo />
-					</Route>
-
-					<Route exact path="/c3">
-						<CategoryNav />
-						<CategoryThree />
-					</Route>
-
-					<Route exact path="/c4">
-						<CategoryNav />
-						<CategoryFour />					
-					</Route>
-
-					<Route exact path="/c5">
-						<CategoryNav />
-						<CategoryFive />
-					</Route>
 
 
 
@@ -160,7 +125,6 @@ function App() {
 
 					{/* Resource Landing Page */}
 					<Route exact path='/resources'>
-						<CategoryNav />
 						<ResourcesPage />
 					</Route>
 
