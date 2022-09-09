@@ -41,8 +41,8 @@ function FindProForm() {
             dispatch({ type: 'POST_CLIENT', payload: { firstName, lastName, phoneNumber, email, zipCode, state, comments } })
             //clear inputs field
             clearInputs();
-            //change view and populate canopy
-            history.push('/resources')
+            //send to confimation page
+            history.push('/confirmation')
         }
 
     }
