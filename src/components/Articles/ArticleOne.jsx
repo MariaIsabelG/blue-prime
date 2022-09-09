@@ -46,14 +46,14 @@ function ArticleOne() {
                                     provide their own replacement cost estimate using online estimation tools,
                                     but for a more precise calculation, consider hiring a professional appraiser.
                                 </li>
-                                <li className="mt-4">
-                                    <span className="font-bold">The total value of your personal belongings:</span> You’ll want
+                                <li className="mt-2">
+                                    <span className="font-semibold">The total value of your personal belongings:</span> You’ll want
                                     enough personal property coverage to cover the value of all of your stuff,
                                     like appliances, furniture, and electronics.
 
                                 </li>
-                                <li className="mt-4 mb-4">
-                                    <span className="font-bold">The total value of all of your assets:</span> You should have enough personal
+                                <li className="mt-2 mb-4">
+                                    <span className="font-semibold">The total value of all of your assets:</span> You should have enough personal
                                     liability coverage to cover your entire net worth in case you’re sued.
 
                                 </li>
@@ -68,41 +68,41 @@ function ArticleOne() {
                     <br></br>
                     <section className="">
                         <article>
-                            2. Get familiar with home insurance policy terms:
+                            <span className="font-semibold">2.</span> Get familiar with home insurance policy terms:
                             There are six types of coverages that are in every standard homeowners insurance policy.
                             Understanding how you’re protected by each of the coverage types in a standard policy will be
                             useful when comparing policies.
 
                             <ul className="list-disc ml-10">
-                                <li><span className="font-bold">Dwelling:</span> Covers physical damage to the structure of your home and any
+                                <li className="mt-4"><span className="font-semibold">Dwelling:</span> Covers physical damage to the structure of your home and any
                                     attached structures, like a garage or porch</li>
 
-                                <li><span className="font-bold">Other structures:</span> Covers physical damage to structures on your property
+                                <li className="mt-2"><span className="font-semibold">Other structures:</span> Covers physical damage to structures on your property
                                     that aren’t attached to the home itself, like a detached garage, guest house,
                                     or fencing around your property</li>
-                                <li><span className="font-bold">Personal property:</span> Covers damage or theft of personal belongings that
+                                <li className="mt-2"><span className="font-semibold">Personal property:</span> Covers damage or theft of personal belongings that
                                     you own, including furniture, clothes, jewelry, and electronics</li>
-                                <li><span className="font-bold">Additional living expenses (ALE):</span> If your home is severely damaged or
+                                <li className="mt-2"><span className="font-semibold">Additional living expenses (ALE):</span> If your home is severely damaged or
                                     destroyed by a covered loss, ALE can cover the cost of temporary lodging
                                     and relocation expenses while your house is being repaired or rebuilt</li>
-                                <li><span className="font-bold">Personal liability:</span> Covers you and your assets from expensive lawsuits if
+                                <li className="mt-2"><span className="font-semibold">Personal liability:</span> Covers you and your assets from expensive lawsuits if
                                     you’re ever held liable for someone else’s injury or property damage
                                 </li>
 
-                                <li><span className="font-bold">Medical payments:</span> Covers guests’ medical expenses if they’re injured on
+                                <li className="mt-4"><span className="font-semibold">Medical payments:</span> Covers guests’ medical expenses if they’re injured on
                                     your property</li>
                             </ul>
-                            <p>You’ll also have to choose between three levels of coverage:</p>
+                            <p className="mt-8">You’ll also have to choose between three levels of coverage:</p>
 
                             <ul className="list-disc ml-10">
-                                <li><span className="font-bold">Actual cash value:</span> The cheapest option, actual cash value reimburses you
+                                <li className="mt-4"><span className="font-semibold">Actual cash value:</span> The cheapest option, actual cash value reimburses you
                                     for the value of your property minus the cost of depreciation, or wear and
                                     tear. This leaves you paying more out of pocket when you file a claim.</li>
-                                <li><span className="font-bold">Replacement cost value:</span>  Most insurers allow you to upgrade to
+                                <li className="mt-2"><span className="font-semibold">Replacement cost value:</span>  Most insurers allow you to upgrade to
                                     replacement cost value coverage, which reimburses you for the value of
                                     your property at today’s prices. This provides larger reimbursements
                                     when you file a claim.</li>
-                                <li><span className="font-bold">Extended replacement cost value:</span> Another optional upgrade, extended
+                                <li className="mt-2"><span className="font-semibold">Extended replacement cost value:</span> Another optional upgrade, extended
                                     replacement cost value coverage reimburses you for the cost to rebuild
                                     your home — even if it’s more than your policy limit. This protects you
                                     from construction material and labor costs that tend to skyrocket after a
@@ -114,17 +114,17 @@ function ArticleOne() {
                     <br></br>
                     <section className="">
                         <article>
-                            <p>3. Gather information about the home:
+                            <p><span className="font-semibold">3.</span> Gather information about the home:
                                 To get an accurate quote estimate, you’ll need to give the insurer information about yourself and
                                 the type of property you’re insuring.</p> <br></br>
                             <p>Here’s some of what you’ll need to provide when you shop homeowners insurance policies.</p>
                             <ul className="list-disc ml-10">
-                                <li>Your home’s square footage and roof type (like hip or gable)</li>
-                                <li>The heating type of your home’s appliances (gas or electric)</li>
-                                <li>The renovation history of your home</li>
-                                <li>Whether you have any pets, trampolines, or a pool</li>
-                                <li>Whether it's your primary or second home</li>
-                                <li>Whether you rent it out in the short or long term</li>
+                                <li className="mt-4">Your home’s square footage and roof type (like hip or gable)</li>
+                                <li className="mt-2">The heating type of your home’s appliances (gas or electric)</li>
+                                <li className="mt-2">The renovation history of your home</li>
+                                <li className="mt-2">Whether you have any pets, trampolines, or a pool</li>
+                                <li className="mt-2">Whether it's your primary or second home</li>
+                                <li className="mt-2">Whether you rent it out in the short or long term</li>
                             </ul>
                             <br></br>
                             <p>The more details you give about your home, the more accurate your quote will be. If you’re
@@ -136,7 +136,7 @@ function ArticleOne() {
                     <br></br>
                     <section>
                         <article>
-                            <p>4. Compare different home insurance quotes:
+                            <p><span className="font-semibold">4</span>. Compare different home insurance quotes:
                                 The easiest way to buy homeowners insurance is through a marketplace like BlueVest Pro,
                                 where you can compare quotes across multiple companies in your area. Once you apply, a
                                 licensed expert will reach out with policy recommendations that match your coverage needs and
@@ -157,7 +157,7 @@ function ArticleOne() {
                     <br></br>
                     <section>
                         <article>
-                            <p>5. Choose the policy that’s right for you.
+                            <p><span className="font-semibold">5.</span> Choose the policy that’s right for you.
                                 Once you’ve compared quotes, it’s time to select a policy and customize it to suit your coverage
                                 needs.</p>
                             <br></br>
@@ -167,18 +167,18 @@ function ArticleOne() {
                                 zone.</p>
                             <br></br>
                             <p>There are also several optional home insurance endorsements that can be added to your policy
-                                for an additional cost.
+                                for an additional cost. </p>
                                 <br></br>
-                                <span className="font-bold">Some of the most common endorsements are:</span></p>
+                                <p className="font-bold">Some of the most common endorsements are:</p>
                             <ul className="list-disc ml-10">
-                                <li>Water backup coverage</li>
-                                <li>Appliance breakdown coverage</li>
-                                <li>Service line coverage</li>
-                                <li>Scheduled personal property coverage</li>
-                                <li>Extended replacement cost</li>
-                                <li>Guaranteed replacement cost</li>
-                                <li>Flood coverage</li>
-                                <li>Earthquake coverage</li>
+                                <li className="mt-4">Water backup coverage</li>
+                                <li className="mt-2">Appliance breakdown coverage</li>
+                                <li className="mt-2">Service line coverage</li>
+                                <li className="mt-2">Scheduled personal property coverage</li>
+                                <li className="mt-2">Extended replacement cost</li>
+                                <li className="mt-2">Guaranteed replacement cost</li>
+                                <li className="mt-2">Flood coverage</li>
+                                <li className="mt-2">Earthquake coverage</li>
                             </ul>
 
                         </article>
