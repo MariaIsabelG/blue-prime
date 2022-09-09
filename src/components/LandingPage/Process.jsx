@@ -24,7 +24,7 @@ function Process(){
 					</div>
 				<div className='inline-block text-white text-lg px-5 flex items-center justify-center text-center pb-4 sm:px-5 md:text-xl md:px-10 lg:text-2xl lg:px-10 xl:text-2xl xl:px-10'>
 					<p>
-						Your agents will reach out to you within X business days with options to save you money
+						Your agents will reach out to you within 2 business days with options to save you money
 						and better your financial wellness
 					</p>
 				</div>
