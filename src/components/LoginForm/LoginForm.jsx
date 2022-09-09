@@ -25,22 +25,27 @@ function LoginForm() {
   }; // end login
 
   return (
-    <div className="w-96 h-full px-4 mx-auto mt-16 sm:px-6 lg:px-8 sm:py-0 ">
-      <form  onSubmit={login}>
-        <div className="text-2xl text-white text-center font-bold sm:text-1xl p-6 bg-stone-100 border rounded-t-xl  ">
-          <img src="images/blueVestLogo.png" />
+    <div className="w-96 h-full px-4 mx-auto mt-12 sm:px-6 lg:px-8 sm:py-0 ">
+      <form  className="border bg-stone-100" onSubmit={login}>
+        <div className="flex items-center justify-center my-5 ">
+          <img src="images/blueVestLogo.png" className='w-4/12'/>
+        </div>
+        <div className="items-center justify-center ">
+          <h3 className="text-2xl text-black text-center font-bold sm:text-1xl px-6 mb-5 ">Welcome Back!</h3>
+          </div>
+          
           {errors.loginMessage && (
           <h3 className="alert" role="alert">
             {errors.loginMessage}
           </h3>
           )}
-        </div>
+
         <div className="text-center font-bold sm:text-1xl p-6 lg:py-0 bg-blue-600 border rounded-b-xl  ">
           <div className="mt-6 px-6">
             <label htmlFor="username" className='text-white' >
               Username:
               <input
-                className="border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
+                className="text-black border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
                 type="text"
                 name="username"
                 required
@@ -53,7 +58,7 @@ function LoginForm() {
           <label htmlFor="password" className='text-white'>
             Password:
             <input
-              className="border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
+              className="text-black border rounded-sm border-slate-400 bg-slate-100 px-1 hover:bg-white"
               type="password"
               name="password"
               required

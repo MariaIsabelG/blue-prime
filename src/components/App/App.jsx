@@ -48,8 +48,6 @@ function App() {
 			<div>
 				<Nav />
 				<Switch>
-
-
 					{/* Articles */}
 
 					<Route exact path="/a1">
@@ -72,12 +70,10 @@ function App() {
 						<ArticleFive />
 					</Route>
 
-
-
-
 					<Route exact path='/registerforbluevest2022'>
 						<RegisterPage />
 					</Route>
+
 					<Route exact path='/findPro'>
 						<FindPro />
 					</Route>
@@ -128,7 +124,6 @@ function App() {
 						<ResourcesPage />
 					</Route>
 
-
 					{/* Visiting localhost:3000 will redirect to localhost:3000/home */}
 					<Redirect exact from='/' to='/home' />
 
@@ -155,10 +150,6 @@ function App() {
 							// Otherwise, show the login page
 							<LoginPage />
 						)}
-					</Route>
-
-					<Route exact path='/home'>
-						<LandingPage />
 					</Route>
 
 					<Route exact path='/home'>

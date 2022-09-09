@@ -44,7 +44,7 @@ router.post('/register', async (req, res) => {
 		const queryTextStates = `INSERT INTO "state_user" ("state_id","user_id") VALUES ($1, $2);`;
 
 		for (let i = 0; i < agentstates.length; i++) {
-			connection.query(queryTextStates, [agentstates[i], agentId]);
+			connection.query(queryTextStates, [agentstates[i].id, agentId]);
 		}
 		connection.query('COMMIT');
 		res.sendStatus(200);
