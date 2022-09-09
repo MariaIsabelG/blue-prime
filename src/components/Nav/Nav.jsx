@@ -19,9 +19,9 @@ function Nav() {
 		<div>
 			<nav className='h-20 bg-blue-600 px-2 w-full z-20 top-0 left-0 border-b border-gray-200'>
 				<div className='justify-between flex ml lg:ml-4'>
-					<div onClick={() => history.push('/home')} className='flex cursor-pointer mt-4 py-2.5'>
+					<div onClick={() => history.push('/home')} className='flex cursor-pointer mt-4 pl-2 py-2.5'>
 						<img src='images/blueVestLogo.png' className='mr-3 h-6 h-9' />
-						<span className='text-xl font-semibold whitespace-nowrap'>BlueVest</span>
+						<span className='text-xl text-white font-semibold whitespace-nowrap'>BlueVest</span>
 					</div>
 					<div className='flex md:order-2 mt-4'>
 						<button
