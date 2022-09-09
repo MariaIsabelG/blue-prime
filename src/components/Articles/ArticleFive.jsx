@@ -1,22 +1,30 @@
+import { useHistory } from "react-router-dom";
 
 
 
 function ArticleFive() {
 
+    const history = useHistory();
+
     return (
 
         <div>
-            <div className="h-full mt-20 mr-20 ml-20">
-                <h1 className=" text-2xl lg:text-4xl font-bold capitalize">Types of Life Insurance</h1>
-                <div className="text-lg lg:text-xl">
-                    <section className="mt-10 flex flex-col lg:text-lg">
+            <div className="mt-5 lg:mt-5 ml-5">
+                <button
+                    onClick={() => history.push('/resources')}
+                    className="text-xs lg:text-lg hover:bg-gray-50 hover:rounded-sm">...Back to Resources</button>
+            </div>
+            <div className="mt-10 lg:mt-20 lg:mr-40 lg:ml-40">
+                <h1 className=" text-2xl lg:text-5xl text-center font-bold capitalize">Types of Life Insurance</h1>
+                <div className="text-sm lg:text-md ml-10 mr-10">
+                    <section className="mt-10 flex flex-col">
                         <article>
-                            <p>
+                            <p className="leading-relaxed">
                                 Term and whole are the two main types of life insurance, but there are a few other
                                 options to consider before buying a policy.
                             </p>
                             <br />
-                            <ol className="list-decimal ml-10">
+                            <ol className="list-decimal ml-10 leading-relaxed">
                                 <li>Term Life Insurance</li>
                                 <li>Whole Life Insurance</li>
                                 <li>Universal Life Insurance</li>
@@ -25,7 +33,7 @@ function ArticleFive() {
                                 <li>What type of life insurance is best for you?</li>
                             </ol>
                             <br />
-                            <p>Shopping for life insurance can seem overwhelming, but deciding which type
+                            <p className="leading-relaxed">Shopping for life insurance can seem overwhelming, but deciding which type
                                 of policy you need is actually simple. There are only two main policy
                                 categories to choose from: <span className="font-bold">term life insurance </span>and <span className="font-bold">permanent life insurance.</span>
                                 Term life insurance (the most popular type of life insurance)
@@ -42,14 +50,14 @@ function ArticleFive() {
                         <article>
                             <h2 className="text-xl lg:text-2xl font-bold">Term life insurance</h2>
                             <br />
-                            <p>Term life insurance lasts for a set number of years before it expires. You
+                            <p className="leading-relaxed">Term life insurance lasts for a set number of years before it expires. You
                                 pay premiums toward the policy, and if you die during the term, the
                                 insurance company pays a set amount of money, known as the death
                                 benefit, to your designated beneficiary. The death benefit can be paid out as
                                 a lump sum or an annuity. Most people choose to receive the death benefit
                                 as a lump sum to avoid taxes.</p>
                             <br />
-                            <ul className="list-disc ml-10">
+                            <ul className="list-disc ml-10 leading-relaxed">
                                 <li><span className="font-bold">Pro: </span>affordability. Term life insurance policies are less
                                     expensive than other types of life insurance policies and
                                     generally have lower premium costs.</li>
@@ -70,12 +78,12 @@ function ArticleFive() {
                             <h2 className="text-xl lg:text-2xl font-bold">Whole life insurance</h2>
 
                             <br />
-                            <p>Whole life insurance is the most popular type of permanent life insurance. It
+                            <p className="leading-relaxed">Whole life insurance is the most popular type of permanent life insurance. It
                                 also pays out a death benefit, but unlike term life, most policies have a cash
                                 value, an investment-like, tax-deferred savings account, included in the
                                 policy.</p>
                             <br />
-                            <ul className="list-disc ml-10">
+                            <ul className="list-disc ml-10 leading-relaxed">
                                 <li><span className="font-bold">Pro:</span> cash value & lifelong coverage. The cash value
                                     component can cover endowments or estate plans. And
                                     since this coverage lasts for your entire life, it can help
@@ -99,7 +107,7 @@ function ArticleFive() {
                         <article>
                             <h2 className="text-xl lg:text-2xl font-bold">Universal life insurance</h2>
                             <br />
-                            <p>There are three types of universal life insurance (UL): indexed universal
+                            <p className="leading-relaxed">There are three types of universal life insurance (UL): indexed universal
                                 life insurance (IUL), guaranteed universal life insurance (GUL), and variable
                                 universal life insurance (VUL). All have a cash value, just like a whole life
                                 insurance policy. Your premiums go toward both the cash value and the
@@ -112,12 +120,12 @@ function ArticleFive() {
                             </p>
                             <br />
                             <h3 className="underline capitalize">Indexed universal life insurance</h3>
-                            <p>Indexed universal life insurance (IUL) is the most popular type of UL. The
+                            <p className="leading-relaxed">Indexed universal life insurance (IUL) is the most popular type of UL. The
                                 cash value account has a minimum (and maximum) guaranteed interest rate
                                 based on a stock market index (like the S&P 500), chosen by the insurer.
                             </p>
                             <br />
-                            <ul className="list-disc ml-10">
+                            <ul className="list-disc ml-10 leading-relaxed">
                                 <li><span className="font-bold">Pro:</span>  cash value gains. There’s potential for bigger gains
                                     in the cash value account compared to other permanent life
                                     insurance policies, depending on stock market
@@ -133,14 +141,14 @@ function ArticleFive() {
                             <br />
                             <h3 className="underline capitalize">Guaranteed universal life insurance</h3>
 
-                            <p >Guaranteed universal life insurance (GUL) is universal life insurance without
+                            <p className="leading-relaxed">Guaranteed universal life insurance (GUL) is universal life insurance without
                                 the market risk. Your premiums stay the same regardless of how market
                                 indexes perform, as your plan’s interest rates are baked into the premiums
                                 when you sign up for the policy. This type of life insurance has a “no-lapse”
                                 guarantee, meaning that as long as you pay your premiums, you’ll have
                                 coverage.</p>
                             <br />
-                            <ul className="list-disc ml-10">
+                            <ul className="list-disc ml-10 leading-relaxed">
                                 <li><span className="font-bold">Pro: </span> stability. Guaranteed universal life insurance
                                     provides lifelong coverage without the market fluctuations
                                     of indexed or variable policies.</li>
@@ -154,14 +162,14 @@ function ArticleFive() {
                                     life insurance policy where the term lasts the rest of your
                                     life.</li>
                             </ul>
-<br />
+                            <br />
                             <h3 className="underline capitalize">Variable universal life insurance</h3>
-                            <p>Variable universal life insurance (VUL) has a variable interest rate set by the
+                            <p className="leading-relaxed">Variable universal life insurance (VUL) has a variable interest rate set by the
                                 life insurance company. Cash value is invested in mutual funds that can
                                 increase or decrease. It shares elements from universal and variable life
                                 insurance policies.</p>
                             <br />
-                            <ul className="list-disc ml-10">
+                            <ul className="list-disc ml-10 leading-relaxed">
                                 <li><span className="font-bold">Pro:</span>  cash value gains. There’s a potential to see bigger
                                     gains in the cash value account compared to other
                                     permanent life insurance policies, depending on your
@@ -184,10 +192,11 @@ function ArticleFive() {
                         <article>
                             <h2 className="text-xl lg:text-2xl font-bold">Group life insurance policies</h2>
                             <br />
-                            <p>Group life insurance is an employee benefit provided by some employers
+                            <p className="leading-relaxed">Group life insurance is an employee benefit provided by some employers
                                 that is a type of term life insurance called annual renewable term. It isn’t
                                 technically a type of life insurance, but it’s important to know how it's
                                 different from privately purchased life insurance.
+                                <br />
                                 Most people think their employer-sponsored life insurance is enough
                                 coverage when in most cases it isn’t. Make no mistake: If your employer is
                                 offering life insurance at no extra cost to you, it’s a great benefit. By all
@@ -196,7 +205,7 @@ function ArticleFive() {
                             <br />
                             <h2 className="text-xl lg:text-2xl font-bold">What type of life insurance is best for you?</h2>
                             <br />
-                            <p>Term life insurance policies are usually the best solution for people who need
+                            <p className="leading-relaxed">Term life insurance policies are usually the best solution for people who need
                                 affordable life insurance for a specific period in their life. Permanent life
                                 insurance policies, including whole life insurance, are best for people who
                                 can pay more and want life insurance that will never expire.
@@ -205,7 +214,7 @@ function ArticleFive() {
                                 health and elderly consumers who don’t want to burden their families with
                                 burial costs.</p>
                             <br />
-                            <p>You should always speak to a licensed independent broker, like BlueVest, or
+                            <p className="leading-relaxed">You should always speak to a licensed independent broker, like BlueVest, or
                                 a financial advisor to determine the best insurance company and policy for
                                 you. They can help you weigh the pros and cons of each type of coverage
                                 and buy the right type of insurance for your needs.</p>

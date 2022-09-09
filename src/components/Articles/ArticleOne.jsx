@@ -1,9 +1,17 @@
+import { useHistory } from "react-router-dom";
 
 
 function ArticleOne() {
 
+    const history = useHistory();
+    
     return (
         <div>
+            <div className="mt-5 lg:mt-5 ml-5">
+                <button
+                    onClick={() => history.push('/resources')}
+                    className="text-xs lg:text-lg hover:bg-gray-50 hover:rounded-sm">...Back to Resources</button>
+            </div>
             <div className="h-full mt-20 mr-20 ml-20">
                 <h1 className=" text-2xl lg:text-4xl font-bold capitalize">How to shop homeowners insurance in 2022</h1>
                 <div className="text-lg lg:text-xl">
