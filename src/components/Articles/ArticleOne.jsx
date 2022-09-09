@@ -3,13 +3,14 @@
 function ArticleOne() {
 
     return (
-        <div>
-            <div className="h-full mt-20 mr-20 ml-20">
-                <h1 className=" text-2xl lg:text-4xl font-bold capitalize">How to shop homeowners insurance in 2022</h1>
+        <div className="">
+            <div className="text-md h-full mt-20 mr-20 ml-20">
+                <h1 className=" text-2xl lg:text-4xl font-bold capitalize text-center">How to shop homeowners insurance in 2022</h1>
                 <div className="text-lg lg:text-xl">
-                    <section className="mt-10 flex flex-col lg:text-lg">
-                        <h3>How to buy homeowners insurance in 5 easy steps:</h3>
-                        <article className="list-decimal leading-relaxed ml-5 mt-3">
+                    <section className="mt-10 flex flex-col lg:text-xl">
+                        <h3 className="font-semibold text-center">How to buy homeowners insurance in 5 easy steps:</h3>
+                        <div className=" flex justify-center italic">
+                        <article className="list-decimal leading-relaxed ml-5 mt-3 ">
                             {/* <ol > */}
                             <li>Learn about how much Coverage you need</li>
                             <li>Get familiar with home insurance policy terms</li>
@@ -18,9 +19,10 @@ function ArticleOne() {
                             <li>Choose the policy that's right for you</li>
                             {/* </ol> */}
                         </article>
+                        </div>
                         <br></br>
                         <article >
-                            <p>The best way to shop for homeowners insurance is to compare quotes from at least three insurance
+                            <p className="indent-5 md:indent-10 font-medium"> The best way to shop for homeowners insurance is to compare quotes from at least three insurance
                                 companies so that you're not missing out on better or more affordable coverage in your area. With
                                 BlueVest Pro, you can compare and buy home insurance in a matter of minutes. Just answer a few brief
                                 questions about your house, and we'll provide you with several policy options at a price point that suits
@@ -31,25 +33,26 @@ function ArticleOne() {
                     <br></br>
                     <section className="">
                         <article>
-                            1. Learn about how much coverage you need.
+                            <div>
+                        <span className="font-semibold">1.</span> Learn about how much coverage you need.
                             When you get home insurance quotes, the coverage amounts listed are often estimates — not an
                             exact calculation of how much coverage you’ll need. To make sure you’re being quoted for the
                             right amount of coverage, consider getting a more accurate estimate of the following:
                             <ul className="list-disc ml-10">
-                                <li>
-                                    <span className="font-bold">The replacement cost of your home:</span> The amount of insurance on your
+                                <li className="mt-4">
+                                    <span className="font-semibold">The replacement cost of your home:</span> The amount of insurance on your
                                     house should be equal to its replacement cost — the amount it would cost
                                     to rebuild the home from the ground up after a disaster. Insurers often
                                     provide their own replacement cost estimate using online estimation tools,
                                     but for a more precise calculation, consider hiring a professional appraiser.
                                 </li>
-                                <li>
+                                <li className="mt-4">
                                     <span className="font-bold">The total value of your personal belongings:</span> You’ll want
                                     enough personal property coverage to cover the value of all of your stuff,
                                     like appliances, furniture, and electronics.
 
                                 </li>
-                                <li>
+                                <li className="mt-4 mb-4">
                                     <span className="font-bold">The total value of all of your assets:</span> You should have enough personal
                                     liability coverage to cover your entire net worth in case you’re sued.
 
@@ -59,6 +62,7 @@ function ArticleOne() {
                             risks (wildfires, hurricanes, tornadoes) where you live. If you live in a high-risk coastal area or
                             region that experiences frequent wildfires, your coverage needs will be different than if you lived
                             somewhere with a more mild climate.
+                            </div>
                         </article>
                     </section>
                     <br></br>
