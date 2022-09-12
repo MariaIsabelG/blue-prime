@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function RegisterForm() {
 
@@ -14,12 +15,12 @@ function RegisterForm() {
   const [hidden, setHidden] = useState(true);
   const [selectedstates, setSelectedstates] = useState([]);
  
-
+  const history = useHistory();
   const dispatch = useDispatch();
   const errors = useSelector((store) => store.errors);
   const states = useSelector((store) => store.stateReducer);
   const agentstates = useSelector((store) => store.agentstates);
-  
+
   useEffect(() =>{
     
     dispatch({ type: 'FETCH_STATES'});
@@ -72,12 +73,27 @@ const removeState = (agentstate) => {
     dispatch({ type: 'REMOVE_STATES', payload: agentstate });
 };
   
+const fillDetails = () => {
+  setUsername('miley');
+  setPassword('1234');
+  setFirstname('Miley');
+  setLastname('Vang');
+  setPhonenumber('712-543-8899');
+  setEmail('miley@gmail.com');
+  setCompany('State Farm');
+}
+
 
   return (
     <div className="max-w-screen-md h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 flex items-center justify-center">
       <form className=" md:mt-20 border bg-stone-100 md:w-8/12 " onSubmit={registerUser}>
         <div className="flex items-center justify-center my-5 ">
-          <img src="images/blueVestLogo.png" className='w-2/12'/>
+          <img 
+            src="images/blueVestLogo.png" 
+            className='w-2/12'
+          // REMOVE AFTER PRESENTATION
+            onClick={fillDetails}
+          />
         </div>
         <div className="items-center justify-center ">
           <h3 className="text-2xl text-black text-center font-bold sm:text-1xl px-6 mb-5 ">Welcome to the BlueVest team!</h3>
@@ -214,7 +230,15 @@ const removeState = (agentstate) => {
           }
         </div>
         <div className="flex items-center justify-center mt-6">
-          <button className="w-32 h-12 font-bold border rounded-lg bg-green-500 hover:bg-green-700 py-1 px-2 text-white text-xl my-6" type="submit" name="submit" value="Register">Register</button> 
+          <button 
+            className="w-32 h-12 font-bold border rounded-lg bg-green-500 hover:bg-green-700 py-1 px-2 text-white text-xl my-6" 
+            type="submit" 
+            name="submit" 
+            value="Register"
+            onClick={() => history.push('/login')}
+          >
+            Register
+          </button> 
         </div>
         </div>
       </form>
