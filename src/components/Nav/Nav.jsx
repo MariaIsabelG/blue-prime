@@ -19,36 +19,36 @@ function Nav() {
 		<div>
 			<nav className='h-20 bg-blue-600 px-2 w-full z-20 top-0 left-0 border-b border-gray-200'>
 				<div className='justify-between flex ml lg:ml-4'>
-					<div onClick={() => history.push('/home')} className='flex cursor-pointer mt-4 py-2.5'>
+					<div onClick={() => history.push('/home')} className='flex cursor-pointer mt-4 pl-2 py-2.5'>
 						<img src='images/blueVestLogo.png' className='mr-3 h-6 h-9' />
-						<span className='text-xl font-semibold whitespace-nowrap'>BlueVest</span>
+						<span className='text-3xl text-white font-semibold whitespace-nowrap'>BlueVest</span>
 					</div>
 					<div className='flex md:order-2 mt-4'>
 						<button
-							onClick={() => history.push('/jointeam')}
-							type='button'
-							className='hidden h-12 w-32 lg:w-36 md:flex border border-black hover:bg-blue-700 text-white bg-inherit font-small rounded-lg text-sm px-3 lg:px-5 py-3.5 text-center md:mr-2'>
-							Join Our Team
-						</button>
-						<button
 							onClick={() => history.push('/findPro')}
 							type='button'
-							className='hidden h-12 w-32 lg:w-36 md:flex border border-black text-white bg-slate-500 hover:bg-slate-600 font-small rounded-lg text-sm px-4 lg:px-6 py-3.5 text-center md:mr-2'>
+							className='hidden h-10 w-28 md:flex border-2 border-stone-300 text-white font-bold bg-green-500 hover:bg-green-700 font-small rounded-lg flex items-center justify-center md:mr-3 md:text-sm md:w-32 lg:w-36 lg:text-md'>
 							Find Your Pro
+						</button>
+						<button
+							onClick={() => history.push('/jointeam')}
+							type='button'
+							className='hidden h-10 w-28 md:flex border-2 border-stone-300 text-white font-bold bg-blue-500 hover:bg-blue-700 font-small rounded-lg flex items-center justify-center md:mr-3 md:text-sm md:w-32 lg:w-36 lg:text-md'>
+							Join Our Team
 						</button>
 						{user.id ? (
 							<button
 								onClick={() => dispatch({ type: 'LOGOUT' })}
 								type='button'
-								className='hidden h-12 w-26 md:flex text-white bg-inherit hover:bg-blue-700 font-small rounded-lg text-sm px-6 py-1 text-center'>
+								className='hidden h-10 w-20 md:flex border-2 border-stone-300 text-white font-bold bg-red-500 hover:bg-red-400 font-small rounded-lg flex items-center justify-center md:mr-3 md:text-sm md:w-24 lg:w-24 lg:text-md'>
 								Log Out
 							</button>
 						) : (
 							<button
 								onClick={() => history.push('/login')}
 								type='button'
-								className='hidden h-12 w-26 md:flex text-white bg-inherit hover:bg-blue-700 font-small rounded-lg text-sm px-6 py-1 text-center'>
-								Log In
+								className='hidden h-10 w-20 md:flex border-2 border-stone-300 text-white font-bold bg-blue-500 hover:bg-blue-700 font-small rounded-lg flex items-center justify-center md:mr-3 md:text-sm md:w-28 lg:w-28 lg:text-md'>
+								Pro Log In
 							</button>
 						)}
 						<div onClick={handleNav} className='block mt-3 md:hidden'>
@@ -60,26 +60,26 @@ function Nav() {
 							<button
 								onClick={() => history.push('/home')}
 								type='button'
-								className='hidden h-20 w-16 lg:w-24 md:flex text-white hover:bg-blue-800 font-small rounded text-sm px-4 lg:px-8 py-7 text-center'>
+								className='hidden h-20 w-16 lg:w-24 md:flex text-white hover:bg-blue-800 text-lg py-7 flex items-center justify-center'>
 								Home
 							</button>
 							<button
 								onClick={() => history.push('/resources')}
 								type='button'
-								className='hidden h-20 w-16 lg:w-24 md:flex text-white hover:bg-blue-800 font-small rounded text-sm lg:px-4 py-7 text-center'>
+								className='hidden h-20 w-16 lg:w-32 md:flex text-white hover:bg-blue-800 text-lg px-4 lg:px-8 py-7 flex items-center justify-center'>
 								Resources
 							</button>
 							<button
 								onClick={() => history.push('/about')}
 								type='button'
-								className='hidden h-20 w-16 lg:w-24 md:flex text-white hover:bg-blue-800 font-small rounded text-sm px-2 lg:px-6 py-7 text-center'>
+								className='hidden h-20 w-16 lg:w-28 md:flex text-white hover:bg-blue-800 text-lg py-7 flex items-center justify-center'>
 								About Us
 							</button>
 							{user.id && user.access_level === 1 ? (
 								<button
 									onClick={() => history.push('/admin')}
 									type='button'
-									className='hidden h-20 w-16 lg:w-24 md:flex text-white hover:bg-blue-800 font-small rounded text-sm px-3 lg:px-6 py-7 text-center'>
+									className='hidden h-20 w-16 lg:w-24 md:flex text-white hover:bg-blue-800 text-lg py-7 flex items-center justify-center'>
 									Admin
 								</button>
 							) : (
@@ -89,7 +89,7 @@ function Nav() {
 								<button
 									onClick={() => history.push('/agent')}
 									type='button'
-									className='hidden h-20 w-16 lg:w-24 md:flex text-white hover:bg-blue-800 font-small rounded text-sm px-3 lg:px-6 py-7 text-center'>
+									className='hidden h-20 w-16 lg:w-32 md:flex text-white hover:bg-blue-800 text-lg py-7 flex items-center justify-center'>
 									Dashboard
 								</button>
 							) : (

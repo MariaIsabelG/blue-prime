@@ -28,7 +28,7 @@ function AgentLeads() {
     return(
         <>
             <AgentDashboard />
-            <section >
+            <section className="bg-stone-100" >
             {/* <h1 className="text-center">LEADS</h1> */}
 
                 <div className='max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8'>
@@ -38,7 +38,7 @@ function AgentLeads() {
                                 return (
                                     <div key={client.id}>
                                         <div 
-                                            className="w-64 md:w-80 h-auto md:h-96 p-8 m-9 transition border border-gray-200 shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10"
+                                            className="w-64 md:w-80 h-auto md:h-96 p-8 m-9 bg-white transition border border-gray-200 shadow-xl rounded-xl hover:shadow-blue-600/10 hover:border-blue-800/10"
                                             // onClick={() => handleClientClick(client.id)}
                                         >
                                             <h5 className=" mb-4 text-xl text-center font-bold">{client.first_name} {client.last_name}</h5>

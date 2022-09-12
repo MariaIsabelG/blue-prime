@@ -41,8 +41,8 @@ function FindProForm() {
             dispatch({ type: 'POST_CLIENT', payload: { firstName, lastName, phoneNumber, email, zipCode, state, comments } })
             //clear inputs field
             clearInputs();
-            //change view and populate canopy
-            history.push('/resources')
+            //send to confimation page
+            history.push('/confirmation')
         }
 
     }
@@ -60,12 +60,26 @@ function FindProForm() {
         }
     }
 
+    const fillDetails = () => {
+        setFirstName('Maria Isabel');
+        setLastName('Gonzalez');
+        setPhoneNumber('774-772-4473');
+        setEmail('mariaisabel@gmail.com');
+        setState('Minnesota');
+        setZipCode('55444');
+        setComments('I"m looking for a better home insurance rate');
+    }
+
 
     return (
         <div className="flex justify-center items-center ">
 
             <div className="w-80 lg:w-2/3">
-                <div className="lg:text-2xl text-white text-center font-bold text-1xl p-6 bg-blue-600 border rounded-t-xl">
+                <div 
+                    className="lg:text-2xl text-white text-center font-bold text-1xl p-6 bg-blue-600 border rounded-t-xl"
+                // DELETE AFTER PRESENTATION
+                    onClick={fillDetails}
+                >
                     ENTER INFORMATION
                 </div>
 

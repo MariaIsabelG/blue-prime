@@ -32,7 +32,7 @@ function AdminDashboard() {
 									'text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal ' +
 									(openTab === 1
 										? 'text-white bg-' + color + '-600'
-										: 'text-' + color + '-600 bg-white')
+										: 'text-' + color + '-600 bg-')
 								}
 								onClick={(e) => {
 									e.preventDefault();
