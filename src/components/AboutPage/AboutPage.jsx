@@ -14,11 +14,11 @@ function AboutPage() {
 			<div>
 				<article className='space-y-4 text-black  pb-10 px-16 sm:px-20 md:px-28 lg:px-32'>
 					<p className='text-2xl mt-5 lg:mt-5'>We only work with the best</p>
-					<p className=''>All financial professionals on our platform go through a rigorous vetting process. Insurance Professionals are able to provide more than 95% of the products in the market, and our investment professionals are all fiduciaries, meaning they're legally bound to act in your best interest. We partner with both local and nationwide firms.</p>
+					<p className=''>All Financial Professionals on our platform go through a rigorous vetting process. Insurance professionals are able to provide more than 95% of the products in the market, and our investment professionals are all fiduciaries; they're legally bound to act in your best interest. We partner with both local and nationwide firms.</p>
 					<p className='text-2xl mt-5 lg:mt-5'>We are here for you</p>
-					<p>We provide a convenient, and easy way to find financial professionals in your area. Equipping you with the information and resources to decide which professional is right for your financial situation.</p>
+					<p>We provide a convenient, and easy way to find Financial Professionals in your area. Equipping you with the information and resources to decide which Financial Professional is right for your financial situation.</p>
 					<p className='text-2xl mt-5 lg:mt-5'>No Hidden Fees. No Obligations</p>
-					<p>Our services are 100% free and it only takes a few minutes to get started. No worries - you are not obligated to work with any of the financial professionals you get matched with.</p>
+					<p>Our services are 100% free and it only takes a few minutes to get started. No worries - you are not obligated to work with any of the Financial Professionals you get matched with.</p>
 					<div className='flex items-center justify-center pt-2 '>
 					<button
 						type='button'
@@ -49,17 +49,17 @@ function AboutPage() {
 						<img src="images/connecticon.png" className='font-bold text-2xl text-white w-16 ml-6 mr-6 '/>
 					</div>
 					<div className='iinline-block px-6 text-xl flex items-center justify-center'>
-						<p>We use that information to match you with the financial pros that are right for you</p>
+						<p>We use that information to match you with the Financial Pros that are right for you</p>
 					</div>
 				</div>
 				<div className='border rounded-md mx-4 lg:mx-32 mb-4 pb-4 bg-orange-200 border-2 border-gray-400'>
 					<div className='mb-4 mt-4 flex items-center justify-center'>
 						<img src="images/communicationicon.png" className='font-bold text-2xl text-white w-16 ml-6 mr-6 '/>	
 					</div>
-					<div className='inline-block px-6 text-xl flex items-center justify-center'>
+					<div className='inline-block px-6 text-xl flex items-center justify-center text-center'>
 						<p>
-							Your agents will reach out to you within X business days with options to save you money
-							and better your financial wellness
+							Your Financial Pro will reach out to you within 2 business days with options to save you money
+							and improve your financial wellness
 						</p>
 					</div>
 				</div>

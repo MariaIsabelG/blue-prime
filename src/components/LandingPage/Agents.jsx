@@ -5,9 +5,9 @@ function Agents() {
 
 	return (
 		<div className='text-center px-20 sm:px-20 sm:pt-10 sm:pb-10 md:pt-10 md:pb-10 lg:pt-8 lg:pb-2 pb-10 pt-10 bg-orange-200 mb-2'>
-			<h3 className='text-3xl font-bold sm:text-4xl mb-8'>Are you an agent?</h3>
+			<h3 className='text-3xl font-bold sm:text-4xl mb-8'>Are you a Financial Professional?</h3>
 			<p className='text-center text-black mb-1 text-lg'>
-				Our program matches Financial Professionals with clients across the mid-west.
+				Join BlueVest and become a BlueVest Pro! Our program matches Financial Professionals with clients across the mid-west.
 			</p>
 			<div className='flex items-center justify-center mb-8'>
 				<img src='images/handshake.png' />
