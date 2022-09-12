@@ -30,9 +30,7 @@ function AdminDashboard() {
 							<a
 								className={
 									'text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal ' +
-									(openTab === 1
-										? 'text-white bg-' + color + '-600'
-										: 'text-' + color + '-600 bg-')
+									(openTab === 1 ? 'text-white bg-' + color + '-600' : 'text-' + color + '-600 bg-')
 								}
 								onClick={(e) => {
 									e.preventDefault();
@@ -83,7 +81,7 @@ function AdminDashboard() {
 					</ul>
 				</div>
 			</div>
-			<div className='relative min-w-0 break-words w-full mb-6 shadow-lg rounded'>
+			<div className='min-w-0 break-words w-full mb-6 shadow-lg rounded'>
 				<div className='px-4 py-5'>
 					<div className='h-full tab-content tab-space'>
 						<div
