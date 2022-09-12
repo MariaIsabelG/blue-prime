@@ -39,7 +39,7 @@ function AdminDashboard() {
 								data-toggle='tab'
 								href='#link1'
 								role='tablist'>
-								Agents
+								Pros
 							</a>
 						</li>
 						<li className='-mb-px mr-2 last:mr-0 flex-auto text-center'>

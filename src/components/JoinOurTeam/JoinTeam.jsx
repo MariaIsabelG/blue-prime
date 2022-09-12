@@ -5,12 +5,12 @@ function JoinTeam() {
 				<h3 className='text-3xl text-black text-center font-bold sm:text-1xl p-6'>
 					Why work with us?{' '}
 				</h3>
-				<li className='text-center text-black mb-1'>We're your strategic growth partner</li>
+				<li className='text-center text-black mb-1'>We're your strategic growth partner.</li>
 				<li className='text-center text-black mb-1'>
-					Financial professionals spend a bulk of their time prospecting.
+					Financial Professionals spend a bulk of their time prospecting.
 				</li>
 				<li className='text-center text-black mb-1'>
-					By working with us, you'll spend less time marketing yourself, and more time advising your
+					By working with us you'll spend less time marketing yourself and more time advising your
 					clients.
 				</li>
 				<h3 className='text-xl text-center text-black mt-6 mb-6 mx-6 lg:mb-6'>
@@ -59,8 +59,8 @@ function JoinTeam() {
 						</div>
 						<div className='flex items-center justify-center '>
 							<a href='https://calendly.com/mitchell-muller/30min?month=2022-09'>
-								<button className='text-lg text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 border rounded-xl'>
-									Schedule an Intro Meeting!
+								<button className='text-lg text-white text-center font-bold sm:text-1xl p-6 bg-blue-600 hover:bg-blue-700 border rounded-xl'>
+									Schedule an intro with BlueVest!
 								</button>
 							</a>
 						</div>
