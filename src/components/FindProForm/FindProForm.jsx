@@ -88,26 +88,29 @@ function FindProForm() {
 	};
 
 	return (
-		<div className='flex justify-center items-center '>
-			<div className='w-80 lg:w-2/3'>
-				<div
-					className='lg:text-2xl text-white text-center font-bold text-1xl p-6 bg-blue-600 border rounded-t-xl'
-					// DELETE AFTER PRESENTATION
-					onClick={fillDetails}>
-					ENTER INFORMATION
+			<div>
+				<div className='flex items-center justify-center bg-stone-100'>
+					<img src="images/blueVestLogo.png "
+						className='bg-stone-100 w-32 py-10 '
+						// DELETE AFTER PRESENTATION
+						onClick={fillDetails}/>
 				</div>
+				
 
-				<div className='p-10 lg:py-0 bg-[#D6E2ED] border rounded-b-xl'>
-					<div className='lg:gap-2 lg:pt-5 items-center justify-left '>
+				<div className='p-10 lg:py-0 border bg-blue-100'>
+					<div className='pt-10'>
+						<p className="text-xl text-center font-bold">Enter Your Information</p>
+					</div>
+					<div className='lg:gap-2 items-center justify-left font-bold'>
 						<div className=' flex flex-col flex-wrap  lg:flex-row lg:gap-2 items-center justify-center pt-10'>
-							{/* <div className="row-span-2"> */}
+							
 							{/* FIRST NAME INPUT */}
-							<div className='md:inline-flex justify-center items-center md:space-x-10'>
+							<div className='md:inline-flex justify-center items-center md:space-x-10 '>
 								<div>
 									<label className="px-1 after:content-['*'] after:ml-0.5  after:text-red-500 text-sm lg:text-lg">
 										First Name
 									</label>
-									<div className=''>
+									<div>
 										<input
 											required
 											className='peer border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
@@ -161,10 +164,6 @@ function FindProForm() {
 									</div>
 								</div>
 
-								{/* </div> */}
-
-								{/* <div className="flex flex-col lg:flex-row md:gap-2  lg:pt-5 items-center justify-center pl-5"> */}
-
 								{/* EMAIL INPUT */}
 								<div className=''>
 									<label className="px-1 after:content-['*'] after:ml-0.5 after:text-red-500 text-sm lg:text-lg">
@@ -185,7 +184,7 @@ function FindProForm() {
 								</div>
 							</div>
 
-							<div className='md:inline-flex justify-center items-center md:space-x-10'>
+							<div className='md:inline-flex justify-center items-center md:space-x-12'>
 								{/* ZIP CODE INPUT */}
 								<div className=''>
 									<label className="px-1 after:content-['*'] after:ml-0.5 after:text-red-500 text-sm lg:text-lg">
@@ -251,24 +250,24 @@ function FindProForm() {
 							</div>
 						</div>
 					</div>
-					<div className='text-xl mb-6 text-center pt-7'>
+					<div className='mb-10 text-center pt-14'>
 						<button
-							className='w-48 py-1 px-2 border border-transparent rounded-sm shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+							className='w-48 h-12 py-1 px-2 mb-5 border border-transparent rounded-md shadow-sm text-md font-bold text-white bg-blue-600 hover:bg-blue-700'
 							onClick={canopyClient}>
 							Import Insurance
 						</button>
 
 						<div className='flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5'>
-							<p className='text-center font-semibold mx-4 mb-0'>Or</p>
+							<p className='text-center font-semibold mx-4'>Or</p>
 						</div>
 						<button
-							className='w-48 py-1 px-2 border border-transparent rounded-sm shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+							className='w-60 h-12 py-1 px-2 mt-5 border border-transparent rounded-md shadow-sm text-md font-bold text-white bg-blue-600 hover:bg-blue-700'
 							onClick={basicClient}>
 							Submit Basic Information
 						</button>
 					</div>
 				</div>
-			</div>
+			
 		</div>
 	);
 }
