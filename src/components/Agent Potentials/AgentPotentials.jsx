@@ -70,7 +70,7 @@ function AgentPotentials() {
 											<div className='mt-6'>
 												<label
 													for='status'
-													class='block text-sm font-medium text-gray-900 dark:text-gray-400'>
+													className='block text-sm font-medium text-gray-900 dark:text-gray-400'>
 													Update Status
 												</label>
 
@@ -79,7 +79,7 @@ function AgentPotentials() {
 														defaultValue={2}
 														onChange={handleStatusChange}
 														id='status'
-														class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
+														className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'>
 														<option key={1} value='1'>
 															Lead
 														</option>

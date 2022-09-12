@@ -179,14 +179,18 @@ function Nav() {
 					className='p-4 border-b border-gray-600 text-white'>
 					Find Your Pro
 				</li>
-				<li
-					onClick={() => {
-						history.push('/login');
-						handleNav();
-					}}
-					className='p-4 border-b border-gray-600 text-white'>
-					Pro Log In
-				</li>
+				{!user.id ? (
+					<li
+						onClick={() => {
+							history.push('/login');
+							handleNav();
+						}}
+						className='p-4 border-b border-gray-600 text-white'>
+						Pro Log In
+					</li>
+				) : (
+					''
+				)}
 				{user.id ? (
 					<li
 						onClick={() => {
