@@ -20,7 +20,7 @@ function RegisterForm() {
   const errors = useSelector((store) => store.errors);
   const states = useSelector((store) => store.stateReducer);
   const agentstates = useSelector((store) => store.agentstates);
-  
+
   useEffect(() =>{
     
     dispatch({ type: 'FETCH_STATES'});
@@ -82,6 +82,7 @@ const fillDetails = () => {
   setEmail('miley@gmail.com');
   setCompany('State Farm');
 }
+
 
   return (
     <div className="max-w-screen-md h-full px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-0 flex items-center justify-center">
@@ -234,7 +235,7 @@ const fillDetails = () => {
             type="submit" 
             name="submit" 
             value="Register"
-            onClick={() => history.push('/agent')}
+            onClick={() => history.push('/login')}
           >
             Register
           </button> 
