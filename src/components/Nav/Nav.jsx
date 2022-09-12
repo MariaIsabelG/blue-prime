@@ -19,7 +19,9 @@ function Nav() {
 		<div>
 			<nav className='h-20 bg-blue-600 px-2 w-full z-20 top-0 left-0 border-b border-gray-200'>
 				<div className='justify-between flex ml lg:ml-4'>
-					<div onClick={() => history.push('/home')} className='flex cursor-pointer mt-4 pl-2 py-2.5'>
+					<div
+						onClick={() => history.push('/home')}
+						className='flex cursor-pointer mt-4 pl-2 py-2.5'>
 						<img src='images/blueVestLogo.png' className='mr-3 h-6 h-9' />
 						<span className='text-3xl text-white font-semibold whitespace-nowrap'>BlueVest</span>
 					</div>
@@ -102,8 +104,8 @@ function Nav() {
 			<ul
 				className={
 					nav
-						? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
-						: 'top-0 h-full ease-in-out duration-500 fixed left-[-100%]'
+						? 'fixed left-0 top-0 w-[60%] z-40 h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
+						: 'top-0 h-full z-40 ease-in-out duration-500 fixed left-[-100%]'
 				}>
 				<h1
 					onClick={() => {
@@ -163,11 +165,11 @@ function Nav() {
 				)}
 				<li
 					onClick={() => {
-						history.push('/login');
+						history.push('/jointeam');
 						handleNav();
 					}}
 					className='p-4 border-b border-gray-600 text-white'>
-					I'm An Agent
+					Join Our Team
 				</li>
 				<li
 					onClick={() => {
@@ -177,6 +179,18 @@ function Nav() {
 					className='p-4 border-b border-gray-600 text-white'>
 					Find Your Pro
 				</li>
+				{!user.id ? (
+					<li
+						onClick={() => {
+							history.push('/login');
+							handleNav();
+						}}
+						className='p-4 border-b border-gray-600 text-white'>
+						Pro Log In
+					</li>
+				) : (
+					''
+				)}
 				{user.id ? (
 					<li
 						onClick={() => {
