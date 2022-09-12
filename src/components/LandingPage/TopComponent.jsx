@@ -12,7 +12,7 @@ function TopComponent(){
 							<h1 className="font-bold">
 								Find Your Financial Professional
 							</h1>
-							<li className='mt-10 text-xl text-gray-500'>Where your time and and insurance needs are valued.</li>
+							<li className='mt-10 text-xl text-gray-500'>Where your time and insurance needs are valued.</li>
 							<li className='mt-4 text-xl text-gray-500'>We provide a convenient way to find financial professionals in your area.</li>
 							<li className='mt-4 text-xl text-gray-500'> Answer a few short quick questions and get connected with us!</li>
 						</div>
