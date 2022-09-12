@@ -44,7 +44,7 @@ function ArticleOne() {
                     <br />
                     <section className="">
                         <article>
-
+<div>
                             <p> <span className="font-bold">1. Learn about how much coverage you need.</span>
                                 <br />
                                 <br />
