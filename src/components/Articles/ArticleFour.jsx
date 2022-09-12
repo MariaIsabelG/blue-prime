@@ -10,10 +10,10 @@ function ArticleFour() {
 
     return (
         <div>
-            <div className="mt-5 lg:mt-5 ml-5">
+            <div className="fixed lg:ml-10 ml-3">
                 <button
                     onClick={() => history.push('/resources')}
-                    className="text-xs lg:text-lg hover:bg-gray-50 hover:rounded-sm">...Back to Resources</button>
+                    className="text-md lg:text-4xl hover:bg-gray-50 hover:rounded-sm">🔙</button>
             </div>
             <div className="mt-10 lg:mt-20 lg:mr-40 lg:ml-40">
                 <h1 className=" text-2xl lg:text-4xl  text-center font-bold capitalize">What does renters insurance cover?</h1>
@@ -26,11 +26,11 @@ function ArticleFour() {
                                 them, and temporary living expenses if your rental home is currently uninhabitable.
                             </p>
                             <br />
-                            <ol className="list-decimal leading-relaxed ml-10">
-                                <li>What does renters insurance cover?</li>
-                                <li>What does renters insurance not cover?</li>
-                                <li>What to do before buying renters insurance</li>
-                            </ol>
+                            <div className="flex flex-col items-center justify-center leading-relaxed ml-10">
+                                <div>What does renters insurance cover?</div>
+                                <div>What does renters insurance not cover?</div>
+                                <div>What to do before buying renters insurance</div>
+                            </div>
                             <br />
                             <p className='leading-relaxed'>Renters insurance is financial protection for a tenant and their personal belongings.
                                 There are three categories of coverage that make up a renters insurance
@@ -38,6 +38,7 @@ function ArticleFour() {
                                 coverage. Renters insurance is a relatively cheap insurance product, costing an
                                 average of $15 a month. And although it’s cheap, renters insurance can offer
                                 thousands of dollars in protection.</p>
+                            <br />
                             <p className='leading-relaxed'>
                                 Renting is on the rise, but according to the Insurance Information Institute only 37%
                                 of renters have renters insurance. It’s a common myth that landlords will insure
@@ -71,33 +72,33 @@ function ArticleFour() {
                                 for the loss of property (up to your policy’s coverage limit) if destroyed,
                                 damaged, lost or stolen in any one of the following 16 different events:</p>
                             <br />
-                            <ul className="list-disc ml-10 leading-relaxed">
-                                <li>Fire and lightning</li>
-                                <li>Windstorm and hail</li>
-                                <li>Explosions</li>
-                                <li>Riots</li>
-                                <li>Damage by aircraft</li>
-                                <li>Damage by vehicle (not your own)</li>
-                                <li>Smoke damage</li>
-                                <li>Vandalism</li>
-                                <li>Theft</li>
-                                <li>Volcanic eruption</li>
+                            <ul className=" ml-10 leading-relaxed columns-2 ">
+                                <li>🔥 Fire and lightning</li>
+                                <li>💨 Windstorm and hail</li>
+                                <li>💣 Explosions</li>
+                                <li>❤️‍🔥 Riots</li>
+                                <li>✈️ Damage by aircraft</li>
+                                <li>🚘 Damage by vehicle (not your own)</li>
+                                <li>🌫 Smoke damage</li>
+                                <li>🎨 Vandalism</li>
+                                <li>🥷🏻 Theft</li>
+                                <li>🌋 Volcanic eruption</li>
                                 <li>Falling objects</li>
-                                <li>Weight of snow, ice, sleet</li>
-                                <li>Damage from steam-heating/water-heating
-                                    appliances/systems</li>
-                                <li>Leakage or overflow of water or steam</li>
-                                <li>Freezing of plumbing, heating, air conditioning</li>
-                                <li>Short-circuit damage caused by electrical appliances</li>
+                                <li>🌨 Weight of snow, ice, sleet</li>
+                                <li>💦 Damage from steam-heating/water-heating appliances/systems</li>
+                                <li>💦 Leakage or overflow of water or steam</li>
+                                <li>🪠 Freezing of plumbing, heating, air conditioning</li>
+                                <li>⚡︎ Short-circuit damage caused by electrical appliances</li>
                             </ul>
                             <br />
                             <p className='leading-relaxed'>Renters insurance can also cover property when it’s not even in your home,
                                 like if your laptop is stolen while you’re on vacation; since it’s considered. </p>
                         </article>
-
+                        <br />
                         <article>
-                            <h2>Personal liability coverage and medical
+                            <h2 className="text-xl lg:text-2xl font-bold">Personal liability coverage and medical
                                 expenses</h2>
+                            <br />
                             <p className='leading-relaxed'>
 
                                 A renters insurance insurance policy will also cover costs you may be legally
@@ -109,7 +110,6 @@ function ArticleFour() {
                             <p className='leading-relaxed'>
                                 If that person decides to sue you for their injuries, your liability coverage will
                                 pay for some legal expenses that you accrue from the lawsuit.</p>
-                            <br />
                             <p className='leading-relaxed'>
                                 A renters policy can protect property damage to others that you’re deemed
                                 liable for. If a broken pipe in your apartment flooded your neighbor’s
@@ -179,50 +179,93 @@ function ArticleFour() {
                                 or the value of your possessions exceeds your policy’s limits. Renters
                                 insurance doesn’t cover your belongings under the following conditions:</p>
                             <br />
-                            <ul className="list-disc ml-10 leading-relaxed">
-                                <li><span className="font-bold">Natural disasters: </span>Damages caused
-                                    by flooding, earthquakes, and even sinkholes aren’t
-                                    covered under renters insurance policies. (Though,
-                                    surprisingly, volcanic eruptions and windstorms are
-                                    covered.) If you live in a flood zone, near a fault line, or in a
-                                    region prone to major storms, consider buying additional,
-                                    separate coverage.</li>
-                                <li><span className="font-bold">Property damage caused by pests: </span>They’re pesky and
-                                    seemingly immune to many forms of extermination, but
-                                    damages to your property caused by rodents, bugs, pests
-                                    and other sorts of vermin aren’t covered under renters
-                                    insurance.</li>
-                                <li><span className="font-bold">Items of high value: </span>Expensive valuables may not be fully
-                                    covered under your renters insurance policy, like antiques,
-                                    fine art, jewelry, vintage family heirlooms, a rare autograph
-                                    collection, premium appliances, etc. An insurance company
-                                    may limit the amount of coverage they provide since the
-                                    value of said items may exceed what they can afford to pay
-                                    out — coverage sublimits are usually $2,500 for electronic
-                                    items and $1,500 for jewelry. To include pricier items in
-                                    your policy, you may need to purchase additional coverage,
-                                    called endorsements, for individual items, or standalone
-                                    policies, like jewelry insurance.</li>
-                                <li><span className="font-bold">Damages from terrorism or nuclear war: </span>Before 9/11,
-                                    standard renters insurance policies tended to include
-                                    protection against terrorism at no cost. But today, you’d
-                                    need to pay an extra cost to receive coverage, and even
-                                    then, it would only cover damages in your apartment, not
-                                    to the rest of the building, unless your landlord or property
-                                    owner paid for separate terrorism coverage.</li>
-                                <li><span className="font-bold">Other exceptions: </span>While renters insurance may cover
-                                    losses to items stolen from your car, it won’t cover your
-                                    vehicle; that’s what your auto insurance is for. And while it
-                                    may protect items you’ve borrowed from someone else if
-                                    they become damaged in your apartment, your policy won’t
-                                    automatically cover the property of a roommate. They’d
-                                    need to buy their own renters insurance to cover their
-                                    property. Alternatively, roommates can purchase a joint
-                                    renters insurance policy. If you choose to do this, however,
-                                    remember that the payout in the event of a claim will be
-                                    split between you both. Renters insurance also won't cover
-                                    a lost security deposit.</li>
-                            </ul>
+                            <br />
+                            <div className=" leading-relaxed">
+                                <div className='flex flex-col lg:flex-row gap-6'>
+                                    <div className=" w-40 h-40 md:w-1/3 lg:h-40 ">
+                                        <img className="w-full h-full" src='https://images.unsplash.com/photo-1544257750-572358f5da22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2115&q=80'></img>
+                                    </div>
+                                    <div className="w-full md:w-2/3 lg:h-32 ">
+                                        <p className="w-full h-full">
+                                            <span className="font-bold">Natural disasters: </span>Damages caused
+                                            by flooding, earthquakes, and even sinkholes aren’t
+                                            covered under renters insurance policies. (Though,
+                                            surprisingly, volcanic eruptions and windstorms are
+                                            covered.) If you live in a flood zone, near a fault line, or in a
+                                            region prone to major storms, consider buying additional,
+                                            separate coverage.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <br />
+                                <div className='flex flex-col lg:flex-row gap-6'>
+                                    <div className=" w-40 h-40 md:w-1/3 lg:h-40 ">
+                                        <img className="w-full h-full" src="https://img.freepik.com/premium-photo/person-white-protective-suit-mask-gloves-with-balloon-disinfection-kitchen_151013-27645.jpg?w=2000" />
+                                    </div>
+                                    <div className="w-full md:w-2/3 lg:h-32 ">
+                                        <p className="w-full h-full">
+                                            <span className="font-bold">Property damage caused by pests: </span>They’re pesky and
+                                            seemingly immune to many forms of extermination, but
+                                            damages to your property caused by rodents, bugs, pests
+                                            and other sorts of vermin aren’t covered under renters
+                                            insurance.</p>
+                                    </div>
+                                </div>
+                                <br />
+                                <div className=' flex flex-col lg:flex-row gap-6'>
+                                    <div className="w-full md:w-2/3 lg:h-32 ">
+                                        <p className="w-full h-full"><span className="font-bold">Items of high value: </span>Expensive valuables may not be fully
+                                            covered under your renters insurance policy, like antiques,
+                                            fine art, jewelry, vintage family heirlooms, a rare autograph
+                                            collection, premium appliances, etc. An insurance company
+                                            may limit the amount of coverage they provide since the
+                                            value of said items may exceed what they can afford to pay
+                                            out — coverage sublimits are usually $2,500 for electronic
+                                            items and $1,500 for jewelry. To include pricier items in
+                                            your policy, you may need to purchase additional coverage,
+                                            called endorsements, for individual items, or standalone
+                                            policies, like jewelry insurance.</p>
+                                    </div>
+
+                                    <div className="w-40 h-40 md:w-1/3 lg:h-32 ">
+                                        <img className="w-full h-full" src="https://img.freepik.com/free-vector/precious-pearl-opened-shell_1441-2699.jpg?w=1380&t=st=1662964556~exp=1662965156~hmac=a52e9b42ac22b5a19da1e9129509f5540e48769b03188943925d8d075a0c0e80"/>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div className=' flex flex-col lg:flex-row gap-6 lg:mt-20'>
+                                    <div className="w-full md:w-2/3 lg:h-40 ">  
+                                        <p className="w-full h-full">
+                                        <span className="font-bold">Damages from terrorism or nuclear war: </span>Before 9/11,
+                                        standard renters insurance policies tended to include
+                                        protection against terrorism at no cost. But today, you’d
+                                        need to pay an extra cost to receive coverage, and even
+                                        then, it would only cover damages in your apartment, not
+                                        to the rest of the building, unless your landlord or property
+                                        owner paid for separate terrorism coverage.
+                                        </p>
+                                    </div>
+                                    <div className="w-40 h-40 md:w-1/3 lg:h-40 ">
+                                        <img className="w-full h-full" src=" https://img.freepik.com/free-vector/terrorism-icons-set_1284-10681.jpg?w=1380&t=st=1662964686~exp=1662965286~hmac=9829a3b95166316b09c63b2ee4b4bf71fef25a0389cc232958db987a8b45b4a3"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div><span className="font-bold">Other exceptions: </span>While renters insurance may cover
+                                losses to items stolen from your car, it won’t cover your
+                                vehicle; that’s what your auto insurance is for. And while it
+                                may protect items you’ve borrowed from someone else if
+                                they become damaged in your apartment, your policy won’t
+                                automatically cover the property of a roommate. They’d
+                                need to buy their own renters insurance to cover their
+                                property. Alternatively, roommates can purchase a joint
+                                renters insurance policy. If you choose to do this, however,
+                                remember that the payout in the event of a claim will be
+                                split between you both. Renters insurance also won't cover
+                                a lost security deposit.</div>
                         </article>
                     </section>
                     <br />

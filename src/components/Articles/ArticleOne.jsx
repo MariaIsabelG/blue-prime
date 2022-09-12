@@ -4,29 +4,31 @@ import { useHistory } from "react-router-dom";
 function ArticleOne() {
 
     const history = useHistory();
-    
+
     return (
         <div>
-            <div className="mt-5 lg:mt-5 ml-5">
+            <div className="fixed lg:ml-10 ml-3">
                 <button
                     onClick={() => history.push('/resources')}
-                    className="text-xs lg:text-lg hover:bg-gray-50 hover:rounded-sm">...Back to Resources</button>
+                    className="text-md lg:text-4xl hover:bg-gray-50 hover:rounded-sm">🔙</button>
             </div>
-            <div className="h-full mt-20 mr-20 ml-20">
-                <h1 className=" text-2xl lg:text-4xl font-bold capitalize">How to shop homeowners insurance in 2022</h1>
-                <div className="text-lg lg:text-xl">
-                    <section className="mt-10 flex flex-col lg:text-lg">
-                        <h3>How to buy homeowners insurance in 5 easy steps:</h3>
-                        <article className="list-decimal leading-relaxed ml-5 mt-3">
-                            {/* <ol > */}
-                            <li>Learn about how much Coverage you need</li>
-                            <li>Get familiar with home insurance policy terms</li>
-                            <li>Gather information about the home</li>
-                            <li>Compare different home insurance quotes</li>
-                            <li>Choose the policy that's right for you</li>
-                            {/* </ol> */}
-                        </article>
-                        <br></br>
+            <div className="mt-10  lg:mt-20 lg:mr-40 lg:ml-40">
+                <h1 className=" text-2xl lg:text-4xl text-center font-bold capitalize border-b-2 pb-2">How to shop homeowners insurance in 2022</h1>
+                <div className="text-sm lg:text-md ml-10 mr-10 mt-10 lg:mt-20">
+                    <section className=" flex flex-col">
+
+                        <div className="flex flex-col items-center m-3">
+                            <h3 className="font-bold mb-3">How to buy homeowners insurance in 5 easy steps:</h3>
+                            <ol className="list-decimal leading-relaxed">
+                                <li>Learn about how much Coverage you need</li>
+                                <li>Get familiar with home insurance policy terms</li>
+                                <li>Gather information about the home</li>
+                                <li>Compare different home insurance quotes</li>
+                                <li>Choose the policy that's right for you</li>
+                            </ol>
+                        </div>
+
+                        <br />
                         <article >
                             <p>The best way to shop for homeowners insurance is to compare quotes from at least three insurance
                                 companies so that you're not missing out on better or more affordable coverage in your area. With
@@ -36,13 +38,16 @@ function ArticleOne() {
 
                         </article>
                     </section>
-                    <br></br>
+                    <br />
                     <section className="">
                         <article>
-                            1. Learn about how much coverage you need.
-                            When you get home insurance quotes, the coverage amounts listed are often estimates — not an
-                            exact calculation of how much coverage you’ll need. To make sure you’re being quoted for the
-                            right amount of coverage, consider getting a more accurate estimate of the following:
+                            <p> <span className="font-bold">1. Learn about how much coverage you need.</span>
+                                <br />
+                                <br />
+                                When you get home insurance quotes, the coverage amounts listed are often estimates — not an
+                                exact calculation of how much coverage you’ll need. To make sure you’re being quoted for the
+                                right amount of coverage, consider getting a more accurate estimate of the following:</p>
+<br />
                             <ul className="list-disc ml-10">
                                 <li>
                                     <span className="font-bold">The replacement cost of your home:</span> The amount of insurance on your
@@ -63,21 +68,24 @@ function ArticleOne() {
 
                                 </li>
                             </ul>
+                            <br />
                             Your homeowners insurance coverage needs will also depend on your home’s location and the
                             risks (wildfires, hurricanes, tornadoes) where you live. If you live in a high-risk coastal area or
                             region that experiences frequent wildfires, your coverage needs will be different than if you lived
                             somewhere with a more mild climate.
                         </article>
                     </section>
-                    <br></br>
+                    <br />
                     <section className="">
                         <article>
-                            2. Get familiar with home insurance policy terms:
-                            There are six types of coverages that are in every standard homeowners insurance policy.
-                            Understanding how you’re protected by each of the coverage types in a standard policy will be
-                            useful when comparing policies.
-
-                            <ul className="list-disc ml-10">
+                            <p><span className="font-bold">2. Get familiar with home insurance policy terms:</span>
+                                <br />
+                                <br />
+                                There are six types of coverages that are in every standard homeowners insurance policy.
+                                Understanding how you’re protected by each of the coverage types in a standard policy will be
+                                useful when comparing policies.</p>
+                            <br />
+                            <ul className="list-disc ml-10 columns-2">
                                 <li><span className="font-bold">Dwelling:</span> Covers physical damage to the structure of your home and any
                                     attached structures, like a garage or porch</li>
 
@@ -96,8 +104,9 @@ function ArticleOne() {
                                 <li><span className="font-bold">Medical payments:</span> Covers guests’ medical expenses if they’re injured on
                                     your property</li>
                             </ul>
+                            <br />
                             <p>You’ll also have to choose between three levels of coverage:</p>
-
+                            <br />
                             <ul className="list-disc ml-10">
                                 <li><span className="font-bold">Actual cash value:</span> The cheapest option, actual cash value reimburses you
                                     for the value of your property minus the cost of depreciation, or wear and
@@ -115,13 +124,15 @@ function ArticleOne() {
 
                         </article>
                     </section>
-                    <br></br>
+                    <br />
                     <section className="">
                         <article>
-                            <p>3. Gather information about the home:
+                            <p><span className="font-bold">3. Gather information about the home:</span>
+                                <br /> <br />
                                 To get an accurate quote estimate, you’ll need to give the insurer information about yourself and
-                                the type of property you’re insuring.</p> <br></br>
+                                the type of property you’re insuring.</p> <br />
                             <p>Here’s some of what you’ll need to provide when you shop homeowners insurance policies.</p>
+                            <br />
                             <ul className="list-disc ml-10">
                                 <li>Your home’s square footage and roof type (like hip or gable)</li>
                                 <li>The heating type of your home’s appliances (gas or electric)</li>
@@ -130,27 +141,29 @@ function ArticleOne() {
                                 <li>Whether it's your primary or second home</li>
                                 <li>Whether you rent it out in the short or long term</li>
                             </ul>
-                            <br></br>
+                            <br />
                             <p>The more details you give about your home, the more accurate your quote will be. If you’re
                                 simply swapping out policies, most of this information will be available on your old policy.
                                 Otherwise, you can find your home’s structural details by searching for your property on your
                                 county’s property appraiser website.</p>
                         </article>
                     </section>
-                    <br></br>
+                    <br />
                     <section>
                         <article>
-                            <p>4. Compare different home insurance quotes:
+                            <p><span className="font-bold">4. Compare different home insurance quotes:</span>
+                                <br />
+                                <br />
                                 The easiest way to buy homeowners insurance is through a marketplace like BlueVest Pro,
                                 where you can compare quotes across multiple companies in your area. Once you apply, a
                                 licensed expert will reach out with policy recommendations that match your coverage needs and
                                 budget. They’ll also nail down any home insurance discounts you qualify for.</p>
-                            <br></br>
+                            <br />
                             <p>We recommend paying close attention to quotes from any insurance companies you already have
                                 a relationship with, as they often offer lower rates for existing customers. So if you already have
                                 an auto or umbrella insurance policy with a specific carrier, you may get a bundling discount for
                                 signing up for home insurance with that same insurer.</p>
-                            <br></br>
+                            <br />
                             <p>Apart from the policy itself, you’ll also want to look into the insurance company’s background.
                                 Check to see if the company insuring your house is financially stable, read reviews, and check
                                 ratings with third-party sites like AM Best, J.D. Power, and Consumer Reports.</p>
@@ -158,23 +171,26 @@ function ArticleOne() {
                         </article>
 
                     </section>
-                    <br></br>
+                    <br />
                     <section>
                         <article>
-                            <p>5. Choose the policy that’s right for you.
+                            <p><span className="font-bold">5. Choose the policy that’s right for you.</span>
+                                <br /><br />
                                 Once you’ve compared quotes, it’s time to select a policy and customize it to suit your coverage
                                 needs.</p>
-                            <br></br>
+                            <br />
                             <p>If you have a mortgage, ask your loan officer if the coverage in your policy meets the lender’s
                                 insurance requirements. Homeowners insurance doesn’t cover water damage caused by flooding,
                                 for example, so you may need to get separate flood insurance if you live in a high-risk flood
                                 zone.</p>
-                            <br></br>
+                            <br />
                             <p>There are also several optional home insurance endorsements that can be added to your policy
                                 for an additional cost.
-                                <br></br>
-                                <span className="font-bold">Some of the most common endorsements are:</span></p>
-                            <ul className="list-disc ml-10">
+                                <br />
+                                <br />
+                            Some of the most common endorsements are:</p>
+                            <br />
+                            <ul className="list-disc ml-10 columns-2">
                                 <li>Water backup coverage</li>
                                 <li>Appliance breakdown coverage</li>
                                 <li>Service line coverage</li>

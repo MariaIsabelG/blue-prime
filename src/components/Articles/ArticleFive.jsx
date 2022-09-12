@@ -9,10 +9,10 @@ function ArticleFive() {
     return (
 
         <div>
-            <div className="mt-5 lg:mt-5 ml-5">
+            <div className="fixed lg:ml-10 ml-3">
                 <button
                     onClick={() => history.push('/resources')}
-                    className="text-xs lg:text-lg hover:bg-gray-50 hover:rounded-sm">...Back to Resources</button>
+                    className="text-md lg:text-4xl hover:bg-gray-50 hover:rounded-sm">🔙</button>
             </div>
             <div className="mt-10 lg:mt-20 lg:mr-40 lg:ml-40">
                 <h1 className=" text-2xl lg:text-5xl text-center font-bold capitalize">Types of Life Insurance</h1>
@@ -23,16 +23,17 @@ function ArticleFive() {
                                 Term and whole are the two main types of life insurance, but there are a few other
                                 options to consider before buying a policy.
                             </p>
-                            <br />
-                            <ol className="list-decimal ml-10 leading-relaxed">
-                                <li>Term Life Insurance</li>
-                                <li>Whole Life Insurance</li>
-                                <li>Universal Life Insurance</li>
-                                <li>Variable Life Insurance</li>
-                                <li>Group Life Insurance</li>
-                                <li>What type of life insurance is best for you?</li>
-                            </ol>
-                            <br />
+                            <div className="flex items-center justify-center my-5">
+                                <ol className="list-decimal ml-10 leading-relaxed">
+                                    <li>Term Life Insurance</li>
+                                    <li>Whole Life Insurance</li>
+                                    <li>Universal Life Insurance</li>
+                                    <li>Variable Life Insurance</li>
+                                    <li>Group Life Insurance</li>
+                                    <li>What type of life insurance is best for you?</li>
+                                </ol>
+                            </div>
+
                             <p className="leading-relaxed">Shopping for life insurance can seem overwhelming, but deciding which type
                                 of policy you need is actually simple. There are only two main policy
                                 categories to choose from: <span className="font-bold">term life insurance </span>and <span className="font-bold">permanent life insurance.</span>
@@ -57,18 +58,21 @@ function ArticleFive() {
                                 a lump sum or an annuity. Most people choose to receive the death benefit
                                 as a lump sum to avoid taxes.</p>
                             <br />
-                            <ul className="list-disc ml-10 leading-relaxed">
-                                <li><span className="font-bold">Pro: </span>affordability. Term life insurance policies are less
+                            <div className="flex flex-row  p-2 leading-relaxed gap-2">
+                                <div className="w-1/2 border-r-2"><span className="font-bold ">Pro</span> <br />Affordability. Term life insurance policies are less
                                     expensive than other types of life insurance policies and
-                                    generally have lower premium costs.</li>
-                                <li><span className="font-bold">Con: </span>length. Term life insurance has an expiration date,
+                                    generally have lower premium costs.</div>
+                                <div className="w-1/2 border-l-2 pl-4"><span className="font-bold ">Con</span> <br />Length. Term life insurance has an expiration date,
                                     which can align with a mortgage or when your children
                                     graduate college. Those looking for lifelong coverage
-                                    should opt for permanent life insurance instead.</li>
-                                <li><span className="font-bold">Who it’s for: </span>most life insurance shoppers. Those
-                                    looking for cheaper life insurance for up to 30 years should
-                                    buy term life insurance.</li>
-                            </ul>
+                                    should opt for permanent life insurance instead.</div>
+                            </div>
+                            <br />
+                            <div className="border-t-2  p-2">
+                                <span className="font-bold ">Who it’s for: </span> <br />Most life insurance shoppers. Those
+                                looking for cheaper life insurance for up to 30 years should
+                                buy term life insurance.
+                            </div>
 
                         </article>
                     </section>
@@ -83,22 +87,24 @@ function ArticleFive() {
                                 value, an investment-like, tax-deferred savings account, included in the
                                 policy.</p>
                             <br />
-                            <ul className="list-disc ml-10 leading-relaxed">
-                                <li><span className="font-bold">Pro:</span> cash value & lifelong coverage. The cash value
+                            <div className="flex flex-row  p-2 leading-relaxed gap-2">
+                                <div className="w-1/2 border-r-2"><span className="font-bold">Pro</span> <br />Cash value & lifelong coverage. The cash value
                                     component can cover endowments or estate plans. And
                                     since this coverage lasts for your entire life, it can help
                                     support long-term dependents such as children with
-                                    disabilities.</li>
-                                <li><span className="font-bold">Con: </span>cost & complexity. A whole life insurance policy can
+                                    disabilities.</div>
+                                <div className="w-1/2 border-l-2 pl-4"><span className="font-bold">Con </span><br />Cost & complexity. A whole life insurance policy can
                                     cost five to 15 times more than a term life policy for the
                                     same death benefit amount. The cash value component
                                     makes whole life more complex than term life because of
-                                    fees, taxes, interest, and other stipulations.</li>
-                                <li><span className="font-bold">Who it’s for:</span> younger buyers who can pay
-                                    more. People who anticipate lifelong dependents or a need
-                                    for permanent insurance with minimal complexities can
-                                    benefit from whole life.</li>
-                            </ul>
+                                    fees, taxes, interest, and other stipulations.</div>
+                            </div>
+                            <div className="border-t-2  p-2">
+                                <span className="font-bold">Who it’s for:</span> <br />Younger buyers who can pay
+                                more. People who anticipate lifelong dependents or a need
+                                for permanent insurance with minimal complexities can
+                                benefit from whole life.
+                            </div>
 
                         </article>
                     </section>
@@ -107,9 +113,10 @@ function ArticleFive() {
                         <article>
                             <h2 className="text-xl lg:text-2xl font-bold">Universal life insurance</h2>
                             <br />
-                            <p className="leading-relaxed">There are three types of universal life insurance (UL): indexed universal
-                                life insurance (IUL), guaranteed universal life insurance (GUL), and variable
-                                universal life insurance (VUL). All have a cash value, just like a whole life
+                            <p className="leading-relaxed">There are three types of Universal Life Insurance (UL): 
+                            <sp className='italic '>Indexed Universal Life Insurance </sp>
+                                (IUL), <sp className='italic '>Guaranteed Universal Life Insurance </sp>(GUL), 
+                                and <sp className='italic '>Variable Universal Life Insurance </sp>(VUL). All have a cash value, just like a whole life
                                 insurance policy. Your premiums go toward both the cash value and the
                                 death benefit.
 
@@ -119,70 +126,71 @@ function ArticleFive() {
                                 premiums, the difference is withdrawn from your policy’s cash value.
                             </p>
                             <br />
-                            <h3 className="underline capitalize">Indexed universal life insurance</h3>
-                            <p className="leading-relaxed">Indexed universal life insurance (IUL) is the most popular type of UL. The
+                            {/* <h3 className="underline capitalize">Indexed universal life insurance</h3> */}
+                            <p className="leading-relaxed indent-6">⸺ <span className="italic capitalize"> Indexed Universal Life Insurance</span>  (IUL) is the most popular type of UL. The
                                 cash value account has a minimum (and maximum) guaranteed interest rate
                                 based on a stock market index (like the S&P 500), chosen by the insurer.
                             </p>
                             <br />
-                            <ul className="list-disc ml-10 leading-relaxed">
-                                <li><span className="font-bold">Pro:</span>  cash value gains. There’s potential for bigger gains
+                            <div className="flex flex-row  p-2 leading-relaxed gap-2">
+                                <div className="w-1/2 border-r-2"><span className="font-bold">Pro</span> <br/>Cash value gains. There’s potential for bigger gains
                                     in the cash value account compared to other permanent life
                                     insurance policies, depending on stock market
-                                    performance.</li>
-                                <li><span className="font-bold">Con:</span>  investment caps. Most insurers set limits on cash
+                                    performance.</div>
+                                <div className="w-1/2 border-l-2 pl-4"><span className="font-bold">Con</span> <br/>Investment caps. Most insurers set limits on cash
                                     value gains. You won’t lose your base cash value, but
-                                    dedicated investment accounts offer higher returns.</li>
-                                <li><span className="font-bold">Who it’s for:</span>  portfolio enhancers. If you’ve maxed out
+                                    dedicated investment accounts offer higher returns.</div>
+                            </div>
+                                <div className="border-t-2  p-2"><span className="font-bold">Who it’s for</span> <br/>Portfolio enhancers. If you’ve maxed out
                                     other investment accounts or are looking for a relatively
                                     safe investment with guaranteed minimum values, IUL
-                                    might be right for you.</li>
-                            </ul>
+                                    might be right for you.</div>
                             <br />
-                            <h3 className="underline capitalize">Guaranteed universal life insurance</h3>
+                            {/* <h3 className="underline capitalize">Guaranteed universal life insurance</h3> */}
 
-                            <p className="leading-relaxed">Guaranteed universal life insurance (GUL) is universal life insurance without
+                            <p className="leading-relaxed indent-6">⸺ <span className="italic capitalize "> Guaranteed universal life </span>insurance (GUL) is universal life insurance without
                                 the market risk. Your premiums stay the same regardless of how market
                                 indexes perform, as your plan’s interest rates are baked into the premiums
                                 when you sign up for the policy. This type of life insurance has a “no-lapse”
                                 guarantee, meaning that as long as you pay your premiums, you’ll have
                                 coverage.</p>
                             <br />
-                            <ul className="list-disc ml-10 leading-relaxed">
-                                <li><span className="font-bold">Pro: </span> stability. Guaranteed universal life insurance
+                            <div className="flex flex-row p-2 leading-relaxed gap-2">
+                                <div className="w-1/2 border-r-2"><span className="font-bold">Pro</span> <br/> Stability. Guaranteed universal life insurance
                                     provides lifelong coverage without the market fluctuations
-                                    of indexed or variable policies.</li>
-                                <li><span className="font-bold">Con: </span> no cash guarantee. Unlike some permanent life
+                                    of indexed or variable policies.</div>
+                                <div className="w-1/2 border-l-2 pl-4"><span className="font-bold">Con</span> <br/>No cash guarantee. Unlike some permanent life
                                     insurance, GUL doesn’t allow for premium payments from
                                     the cash value account. If you skip a premium payment,
-                                    your policy will lapse.</li>
-                                <li><span className="font-bold">Who it’s for: </span> risk-averse people with permanent
+                                    your policy will lapse.</div>
+                            </div>
+                                <div className="border-t-2  p-2"><span className="font-bold">Who it’s for </span> <br/> Risk-averse people with permanent
                                     insurance needs. Guaranteed universal life insurance is a
                                     relatively affordable permanent option, sort of like a term
                                     life insurance policy where the term lasts the rest of your
-                                    life.</li>
-                            </ul>
+                                    life.</div>
                             <br />
-                            <h3 className="underline capitalize">Variable universal life insurance</h3>
-                            <p className="leading-relaxed">Variable universal life insurance (VUL) has a variable interest rate set by the
+                            {/* <h3 className="italic font-bold capitalize">Variable universal life insurance</h3> */}
+                            <p className="leading-relaxed indent-6">⸺ <sp className='italic capitalize'>Variable Universal Life Insurance</sp> (VUL) has a variable interest rate set by the
                                 life insurance company. Cash value is invested in mutual funds that can
                                 increase or decrease. It shares elements from universal and variable life
                                 insurance policies.</p>
                             <br />
-                            <ul className="list-disc ml-10 leading-relaxed">
-                                <li><span className="font-bold">Pro:</span>  cash value gains. There’s a potential to see bigger
+                            <div className="flex flex-row  p-2 leading-relaxed gap-2">
+                                <div className="w-1/2 border-r-2"><span className="font-bold">Pro</span> <br/> Cash value gains. There’s a potential to see bigger
                                     gains in the cash value account compared to other
                                     permanent life insurance policies, depending on your
-                                    investment choices.</li>
-                                <li><span className="font-bold">Con: </span> too hands-on. The policyholder, not the insurance
+                                    investment choices.</div>
+                                <div className="w-1/2 border-l-2 pl-4">
+                                    <span className="font-bold">Con </span> <br/>Too hands-on. The policyholder, not the insurance
                                     company, manages the investment portfolio. Unlike other
                                     types of permanent insurance, you’ll need to manage your
                                     own cash value investments or work with your own
-                                    financial advisor.</li>
-                                <li><span className="font-bold">Who it’s for:</span>  DIY investors. There’s a big potential
+                                    financial advisor.</div>
+                            </div>
+                                <div className="border-t-2  p-2"><span className="font-bold">Who it’s for</span> <br/> DIY investors. There’s a big potential
                                     upside for policyholders who don’t mind being involved in
-                                    money management.</li>
-                            </ul>
+                                    money management.</div>
 
                         </article>
                     </section>

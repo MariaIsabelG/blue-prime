@@ -6,16 +6,17 @@ function ArticleThree() {
 
     return (
         <div>
-            <div className="mt-5 lg:mt-5 ml-5">
+            <div className="fixed lg:ml-10 ml-3">
                 <button
                     onClick={() => history.push('/resources')}
-                    className="text-xs lg:text-lg hover:bg-gray-50 hover:rounded-sm">...Back to Resources</button>
+                    className="text-md lg:text-4xl hover:bg-gray-50 hover:rounded-sm">🔙</button>
             </div>
             <div className=" mt-10 lg:mt-20 lg:mr-40 lg:ml-40">
-                <h1 className=" text-2xl lg:text-5xl text-center font-bold capitalize">Guide to Long-Term Disability Insurance</h1>
+                <h1 className=" text-2xl lg:text-4xl text-center font-bold capitalize border-b-2 pb-2">Guide to Long-Term Disability Insurance</h1>
                 <div className="text-sm lg:text-md ml-10 mr-10">
                     <section className="mt-10 flex flex-col">
                         <article>
+                            <div className="flex flex-col items-center">
                             Long-term disability insurance provides coverage for multiple years, even
                             decades.
                             <ol className="list-decimal leading-relaxed ml-10 mt-3">
@@ -23,6 +24,7 @@ function ArticleThree() {
                                 <li>How Long-Term disability works</li>
                                 <li>Do you need long-term disability insurance?</li>
                             </ol>
+                            </div>
                             <br />
                             <p className="leading-relaxed">
                                 Around one in four people will become disabled before they retire. As you
