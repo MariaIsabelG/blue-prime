@@ -22,6 +22,16 @@ function ClientItem({ client }) {
 		document.body.style.overflow = 'unset';
 	};
 
+	const openDeleteModel = () => {
+		setDeleteModel(true);
+		document.body.style.overflow = 'hidden';
+	};
+
+	const closeDeleteModel = () => {
+		setDeleteModel(false);
+		document.body.style.overflow = 'unset';
+	};
+
 	const submitEdit = (e) => {
 		const id = client.id;
 		e.preventDefault();
@@ -57,7 +67,7 @@ function ClientItem({ client }) {
 						<button onClick={openModel} className='btn btn-ghost'>
 							Edit
 						</button>
-						<button onClick={() => setDeleteModel(true)} className='btn btn-ghost'>
+						<button onClick={openDeleteModel} className='btn btn-ghost'>
 							Delete
 						</button>
 					</div>
@@ -201,11 +211,11 @@ function ClientItem({ client }) {
 				<div
 					id='popup-modal'
 					tabIndex='-1'
-					className='flex overflow-y-auto overflow-x-hidden fixed items-center justify-center left-0 z-50 md:inset-0 h-modal md:h-full'>
+					className='flex overflow-y-auto overflow-x-hidden fixed items-center justify-center top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full'>
 					<div className='relative p-4 w-full max-w-md h-full md:h-auto'>
 						<div className='relative bg-white rounded-lg shadow dark:bg-gray-700'>
 							<button
-								onClick={() => setDeleteModel(false)}
+								onClick={closeDeleteModel}
 								type='button'
 								className='absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white'
 								data-modal-toggle='popup-modal'>
@@ -246,7 +256,7 @@ function ClientItem({ client }) {
 									Yes, I'm sure
 								</button>
 								<button
-									onClick={() => setDeleteModel(false)}
+									onClick={closeDeleteModel}
 									data-modal-toggle='popup-modal'
 									type='button'
 									className='text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600'>
