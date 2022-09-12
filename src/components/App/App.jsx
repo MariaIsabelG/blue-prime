@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
+
 import ProtectedRouteAdmin from '../ProtectedRoute/ProtectedRouteAdmin';
 import ProtectedRouteAgent from '../ProtectedRoute/ProtectedRouteAgent';
 
@@ -46,6 +48,7 @@ function App() {
 	return (
 		<Router>
 			<div>
+				<ScrollToTop />
 				<Nav />
 				<Switch>
 					{/* Articles */}

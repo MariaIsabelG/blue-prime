@@ -22,7 +22,7 @@ function ArticleFour() {
                         <article>
                             <p className='leading-relaxed'>
                                 Renters insurance covers your personal property if it is damaged or stolen, medical
-                                and elgal bills if you are found liable for damaging someone’s property, or injuring
+                                and legal bills if you are found liable for damaging someone’s property, or injuring
                                 them, and temporary living expenses if your rental home is currently uninhabitable.
                             </p>
                             <br />
