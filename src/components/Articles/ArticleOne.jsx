@@ -44,40 +44,40 @@ function ArticleOne() {
                     <br />
                     <section className="">
                         <article>
-<div>
-                            <p> <span className="font-bold">1. Learn about how much coverage you need.</span>
+                            <div>
+                                <p> <span className="font-bold">1. Learn about how much coverage you need.</span>
+                                    <br />
+                                    <br />
+                                    When you get home insurance quotes, the coverage amounts listed are often estimates — not an
+                                    exact calculation of how much coverage you’ll need. To make sure you’re being quoted for the
+                                    right amount of coverage, consider getting a more accurate estimate of the following:</p>
                                 <br />
+
+                                <ul className="list-disc ml-10">
+                                    <li className="mt-4">
+                                        <span className="font-semibold">The replacement cost of your home:</span> The amount of insurance on your
+                                        house should be equal to its replacement cost — the amount it would cost
+                                        to rebuild the home from the ground up after a disaster. Insurers often
+                                        provide their own replacement cost estimate using online estimation tools,
+                                        but for a more precise calculation, consider hiring a professional appraiser.
+                                    </li>
+                                    <li className="mt-2">
+                                        <span className="font-semibold">The total value of your personal belongings:</span> You’ll want
+                                        enough personal property coverage to cover the value of all of your stuff,
+                                        like appliances, furniture, and electronics.
+
+                                    </li>
+                                    <li className="mt-2 mb-4">
+                                        <span className="font-semibold">The total value of all of your assets:</span> You should have enough personal
+                                        liability coverage to cover your entire net worth in case you’re sued.
+
+                                    </li>
+                                </ul>
                                 <br />
-                                When you get home insurance quotes, the coverage amounts listed are often estimates — not an
-                                exact calculation of how much coverage you’ll need. To make sure you’re being quoted for the
-                                right amount of coverage, consider getting a more accurate estimate of the following:</p>
-<br />
-
-                            <ul className="list-disc ml-10">
-                                <li className="mt-4">
-                                    <span className="font-semibold">The replacement cost of your home:</span> The amount of insurance on your
-                                    house should be equal to its replacement cost — the amount it would cost
-                                    to rebuild the home from the ground up after a disaster. Insurers often
-                                    provide their own replacement cost estimate using online estimation tools,
-                                    but for a more precise calculation, consider hiring a professional appraiser.
-                                </li>
-                                <li className="mt-2">
-                                    <span className="font-semibold">The total value of your personal belongings:</span> You’ll want
-                                    enough personal property coverage to cover the value of all of your stuff,
-                                    like appliances, furniture, and electronics.
-
-                                </li>
-                                <li className="mt-2 mb-4">
-                                    <span className="font-semibold">The total value of all of your assets:</span> You should have enough personal
-                                    liability coverage to cover your entire net worth in case you’re sued.
-
-                                </li>
-                            </ul>
-                            <br />
-                            Your homeowners insurance coverage needs will also depend on your home’s location and the
-                            risks (wildfires, hurricanes, tornadoes) where you live. If you live in a high-risk coastal area or
-                            region that experiences frequent wildfires, your coverage needs will be different than if you lived
-                            somewhere with a more mild climate.
+                                Your homeowners insurance coverage needs will also depend on your home’s location and the
+                                risks (wildfires, hurricanes, tornadoes) where you live. If you live in a high-risk coastal area or
+                                region that experiences frequent wildfires, your coverage needs will be different than if you lived
+                                somewhere with a more mild climate.
                             </div>
                         </article>
                     </section>
@@ -92,7 +92,7 @@ function ArticleOne() {
                                 Understanding how you’re protected by each of the coverage types in a standard policy will be
                                 useful when comparing policies.</p>
                             <br />
-                            <ul className="list-disc ml-10 columns-2">
+                            <ul className="columns-2 gap-6">
                                 <li><span className="font-bold">Dwelling:</span> Covers physical damage to the structure of your home and any
 
                                     attached structures, like a garage or porch</li>
@@ -115,7 +115,6 @@ function ArticleOne() {
 
                             <br />
                             <p>You’ll also have to choose between three levels of coverage:</p>
-                            <br />
 
                             <ul className="list-disc ml-10">
                                 <li className="mt-4"><span className="font-semibold">Actual cash value:</span> The cheapest option, actual cash value reimburses you
@@ -144,9 +143,8 @@ function ArticleOne() {
                                 To get an accurate quote estimate, you’ll need to give the insurer information about yourself and
                                 the type of property you’re insuring.</p> <br />
                             <p>Here’s some of what you’ll need to provide when you shop homeowners insurance policies.</p>
-                            <br />
-                            <ul className="list-disc ml-10">
-                                <li className="mt-4">Your home’s square footage and roof type (like hip or gable)</li>
+                            <ul className="list-disc ml-10 columns-2 mt-4">
+                                <li className="">Your home’s square footage and roof type (like hip or gable)</li>
                                 <li className="mt-2">The heating type of your home’s appliances (gas or electric)</li>
                                 <li className="mt-2">The renovation history of your home</li>
                                 <li className="mt-2">Whether you have any pets, trampolines, or a pool</li>
@@ -173,10 +171,13 @@ function ArticleOne() {
                                 licensed expert will reach out with policy recommendations that match your coverage needs and
                                 budget. They’ll also nail down any home insurance discounts you qualify for.</p>
                             <br />
-                            <p>We recommend paying close attention to quotes from any insurance companies you already have
-                                a relationship with, as they often offer lower rates for existing customers. So if you already have
-                                an auto or umbrella insurance policy with a specific carrier, you may get a bundling discount for
-                                signing up for home insurance with that same insurer.</p>
+                                <img className=" float-right w-48 lg:w-60 h-full" src="https://images.freeimages.com/images/large-previews/542/balance-1172786.jpg" />
+                                <p>We recommend paying close attention to quotes from any insurance companies you already have
+                                    a relationship with, as they often offer lower rates for existing customers. So if you already have
+                                    an auto or umbrella insurance policy with a specific carrier, you may get a bundling discount for
+                                    signing up for home insurance with that same insurer.
+                                </p>
+
                             <br />
                             <p>Apart from the policy itself, you’ll also want to look into the insurance company’s background.
                                 Check to see if the company insuring your house is financially stable, read reviews, and check
@@ -205,7 +206,7 @@ function ArticleOne() {
                                 for an additional cost.
                                 <br />
                                 <br />
-                            Some of the most common endorsements are:</p>
+                                Some of the most common endorsements are:</p>
                             <br />
                             <ul className="list-disc ml-10 columns-2">
                                 <li>Water backup coverage</li>
