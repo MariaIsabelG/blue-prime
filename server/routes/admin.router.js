@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/agents', (req, res) => {
 	if (req.user) {
 		const queryText =
-			'SELECT id, first_name, last_name, company, email, phone_number FROM "user" WHERE access_level = 2;';
+			'SELECT id, first_name, last_name, company, email, phone_number FROM "user" WHERE access_level = 2 ORDER BY UPPER(last_name);';
 		pool
 			.query(queryText)
 			.then((result) => {
@@ -54,7 +54,7 @@ router.delete('/agents/:id', (req, res) => {
 
 router.get('/clients', (req, res) => {
 	if (req.user) {
-		const queryText = 'SELECT * FROM "client";';
+		const queryText = 'SELECT * FROM "client" ORDER BY UPPER(last_name);';
 		pool
 			.query(queryText)
 			.then((result) => {
@@ -104,7 +104,7 @@ router.delete('/clients/:id', (req, res) => {
 router.get('/leads', (req, res) => {
 	if (req.user) {
 		const queryText =
-			'SELECT client_user.id AS id, client.first_name AS client_firstname, client.last_name AS client_lastname, "user".first_name AS agent_firstname, "user".last_name AS agent_lastname, "user".email AS agent_email FROM client_user JOIN "user" ON "user".id = client_user.user_id JOIN client ON client.id = client_user.client_id  WHERE client_user."isSent" = false;';
+			'SELECT client_user.id AS id, client.first_name AS client_firstname, client.last_name AS client_lastname, "user".first_name AS agent_firstname, "user".last_name AS agent_lastname, "user".email AS agent_email FROM client_user JOIN "user" ON "user".id = client_user.user_id JOIN client ON client.id = client_user.client_id  WHERE client_user."isSent" = false ORDER BY id DESC;';
 		pool
 			.query(queryText)
 			.then((result) => {
