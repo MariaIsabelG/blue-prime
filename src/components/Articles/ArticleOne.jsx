@@ -1,5 +1,4 @@
-import { useHistory } from "react-router-dom";
-
+import { useHistory } from 'react-router-dom';
 
 function ArticleOne() {
 
@@ -227,8 +226,6 @@ function ArticleOne() {
             </div>
         </div>
     )
-
-
 }
 
 export default ArticleOne;
