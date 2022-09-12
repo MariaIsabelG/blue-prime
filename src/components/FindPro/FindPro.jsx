@@ -13,8 +13,8 @@ function FindPro() {
                         <li className="py-2 text-lg">Provide your basic information to help us match you with a Financial Professional</li>
                         <li className="py-2 text-sm list-none italic ">Simplify the process by importing your current insurance information through Canopy Connect. Our professionals can get straight to work using this information to compare rates and give you the best pricing</li>
                         <a href="https://usecanopy.com/" className="text-xs text-slate-600 underline underline-offset-4 italic hover:text-blue-600">To find out more about Canopy Connect please click here</a>
-                        <h3 className="font-semibold  py-4">- OR -</h3>
-                        <li className="py-2 text-lg"> Submit your basic information and one of our Financial Professionals will contact you to gather further details</li>
+                        <h3 className="font-semibold py-6">- OR -</h3>
+                        <li className="text-lg"> Submit your basic information and one of our Financial Professionals will contact you to gather further details</li>
                     </div>
                 </div>
             </div>

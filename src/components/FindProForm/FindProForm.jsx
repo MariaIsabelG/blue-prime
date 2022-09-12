@@ -113,7 +113,7 @@ function FindProForm() {
 									<div>
 										<input
 											required
-											className='peer border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
+											className='peer font-normal border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
 											type='text'
 											value={firstName}
 											onChange={(event) => setFirstName(event.target.value)}
@@ -132,7 +132,7 @@ function FindProForm() {
 									<div>
 										<input
 											required
-											className='peer border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
+											className='peer font-normal border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
 											type='text'
 											value={lastName}
 											onChange={(event) => setLastName(event.target.value)}
@@ -153,7 +153,7 @@ function FindProForm() {
 									<div>
 										<input
 											required
-											className='peer border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
+											className='peer font-normal border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
 											type='text'
 											value={phoneNumber}
 											onChange={(event) => setPhoneNumber(event.target.value)}
@@ -172,7 +172,7 @@ function FindProForm() {
 									<div>
 										<input
 											required
-											className='peer border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
+											className='peer font-normal border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
 											type='email'
 											value={email}
 											onChange={(event) => setEmail(event.target.value)}
@@ -193,7 +193,7 @@ function FindProForm() {
 									<div>
 										<input
 											required
-											className='peer border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
+											className='peer font-normal border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
 											type='text'
 											value={zipCode}
 											onChange={(event) => setZipCode(event.target.value)}
@@ -212,7 +212,7 @@ function FindProForm() {
 									<div>
 										<select
 											required
-											className='peer border rounded-sm  hover:bg-white border-slate-400 bg-slate-100 px-6 shadow-sm pb-1 pt-1 mt-1'
+											className='peer font-normal border rounded-sm  hover:bg-white border-slate-400 bg-slate-100 px-6 shadow-sm pb-1 pt-1 mt-1'
 											type='text'
 											value={state}
 											onChange={(event) => setState(event.target.value)}>
@@ -241,7 +241,7 @@ function FindProForm() {
 								<div>
 									<textarea
 										rows='4'
-										className='lg:w-96 w-48 border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
+										className='font-normal lg:w-96 w-48 border rounded-sm hover:bg-white border-slate-400 bg-slate-100 px-1 shadow-sm'
 										type='text'
 										value={comments}
 										onChange={(event) => setComments(event.target.value)}
@@ -252,18 +252,18 @@ function FindProForm() {
 					</div>
 					<div className='mb-10 text-center pt-14'>
 						<button
-							className='w-48 h-12 py-1 px-2 mb-5 border border-transparent rounded-md shadow-sm text-md font-bold text-white bg-blue-600 hover:bg-blue-700'
+							className='w-60 h-18 py-1 px-2 mb-5 border border-transparent rounded-md shadow-sm text-md font-bold text-white bg-blue-600 hover:bg-blue-700'
 							onClick={canopyClient}>
-							Import Insurance
+							Submit + Import Insurance via Canopy 
 						</button>
 
 						<div className='flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5'>
 							<p className='text-center font-semibold mx-4'>Or</p>
 						</div>
 						<button
-							className='w-60 h-12 py-1 px-2 mt-5 border border-transparent rounded-md shadow-sm text-md font-bold text-white bg-blue-600 hover:bg-blue-700'
+							className='w-60 h-18 py-1 px-2 mt-5 border border-transparent rounded-md shadow-sm text-md font-bold text-white bg-blue-600 hover:bg-blue-700'
 							onClick={basicClient}>
-							Submit Basic Information
+							Submit + Request To Be Contacted
 						</button>
 					</div>
 				</div>
