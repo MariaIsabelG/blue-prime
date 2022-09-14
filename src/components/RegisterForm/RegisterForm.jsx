@@ -24,6 +24,7 @@ function RegisterForm() {
 
 	const registerUser = (event) => {
 		event.preventDefault();
+		history.push('/login');
 
 		dispatch({
 			type: 'REGISTER',
@@ -205,7 +206,7 @@ function RegisterForm() {
 						<a>Selected States:</a>
 						{agentstates.map((agentstate) => {
 							return (
-								<div className='mt-1'>
+								<div key={agentstate.id} className='mt-1'>
 									<a className='rounded-l-sm px-2 text-black bg-stone-100'>{agentstate.name}</a>
 									<button
 										className=' rounded-sm bg-stone-100'
@@ -223,7 +224,7 @@ function RegisterForm() {
 							type='submit'
 							name='submit'
 							value='Register'
-							onClick={() => history.push('/login')}>
+							onClick={registerUser}>
 							Register
 						</button>
 					</div>
