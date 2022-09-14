@@ -22,7 +22,6 @@ import ArticleThree from '../Articles/ArticleThree';
 import ArticleFour from '../Articles/ArticleFour';
 import ArticleFive from '../Articles/ArticleFive';
 
-
 import FindPro from '../FindPro/FindPro';
 import Canopy from '../Canopy/Canopy';
 import ClientConfirmation from '../ClientConfirmation/ClientConfirmation';
@@ -53,27 +52,27 @@ function App() {
 				<Switch>
 					{/* Articles */}
 
-					<Route exact path="/a1">
+					<Route exact path='/a1'>
 						<ArticleOne />
 					</Route>
 
-					<Route exact path="/a2">
+					<Route exact path='/a2'>
 						<ArticleTwo />
 					</Route>
 
-					<Route exact path="/a3">
+					<Route exact path='/a3'>
 						<ArticleThree />
 					</Route>
 
-					<Route exact path="/a4">
+					<Route exact path='/a4'>
 						<ArticleFour />
 					</Route>
 
-					<Route exact path="/a5">
+					<Route exact path='/a5'>
 						<ArticleFive />
 					</Route>
 
-					<Route exact path='/registerforbluevest2022'>
+					<Route exact path='/QWnRuzFggZjP8EUdwh4IzBH2z'>
 						<RegisterPage />
 					</Route>
 
