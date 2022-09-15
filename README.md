@@ -4,30 +4,18 @@
 
 _Duration: 2 Week Sprint_
 
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it? 
+We built this application for BlueVest. They needed a way match new clients with agents, keep track of the clients and agents that they were currently working with, as well as connect with potential agents and clients. They also had a goal to create a quicker and simplified client onboarding process. We created two different onboarding processes, one for agents and one for clients. Interested agents have the ability to schedule an informational onboarding meeting without ever leaving the site. Potential clients only have to fill out a short form before being matched with agents. They also have the ability to import their current insurance information using the Canopy Connect API which drastically reduces the amount of time and energy spent to get a quote. We also built two unique dashboards, one for an admin user and another for agents. Agents are able to log in to their dashboard and see all of the clients they are working with sorted by status. They are able to update that clients status as they move them through the process and eventually remove them from their dashboard. The Admin is able to see all of the current agents, clients and new leads in their dashboard. Matching clients to leads is automatic with the use of our application. Agents also recieve an email notification when they have recieved a new lead. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam at massa in faucibus. Etiam volutpat, risus non mollis convallis, velit nisi pulvinar mi, eu faucibus orci nisi eget nibh. Integer a velit pretium, volutpat arcu eleifend, fringilla elit. Cras erat sapien, convallis venenatis tellus vitae, feugiat dictum felis.
-
-Suspendisse euismod volutpat aliquet. Maecenas vulputate mauris in pellentesque facilisis. Phasellus varius malesuada semper. Cras sollicitudin diam mollis maximus aliquam.
-
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
+To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](https://bluevest.herokuapp.com/#/)
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
 
 ### Prerequisites
 
-Link to software that is required to install the app (e.g. node).
-
 - [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
 
 ## Installation
-
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
-
-If your application has secret keys (for example --  Twilio), make sure you tell them how to set that up, both in getting the key and then what to call it in the `.env` file.
 
 1. Create a database named `blue_vest`,
 2. The queries in the `tables.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries, 
